@@ -118,6 +118,45 @@ ul,ol{
     margin:3rem auto;
 }
 
+/* solution in workWorld pg - start */
+#eWorkWorldPg #eSolutionsWrapperWrapper{
+    background-color:#77acc4;
+    padding:5rem;
+}
+#eWorkWorldPg #eSolutionsWrapper .solution>.visual{
+    border-radius:50%;
+    width:153px;
+    height:153px;
+    margin:auto;
+}
+#eWorkWorldPg #eSolutionsWrapper .solution>.caption{
+    font-weight:normal;
+    font-size:1.2rem;
+}
+
+.solution .visual.pileOfBooksLightGreen{
+    background-color:white;
+    background-image:url(../images/pileOfBooks_lightgreen.png);
+}
+.solution .visual.pileOfBooksTurquoise{
+    background-color:white;
+    background-image:url(../images/pileOfBooks_turquoise.png);
+}
+.solution .visual.pileOfBooksBlue{
+    background-color:white;
+    background-image:url(../images/pileOfBooks_blue.png);
+}
+.solution .visual.pileOfBooksLightBlue{
+    background-color:white;
+    background-image:url(../images/pileOfBooks_lightblue.png);
+}
+.solution .visual.pileOfBooksBrown{
+    background-color:white;
+    background-image:url(../images/pileOfBooks_brown.png);
+}
+/* solution in workWorld pg - end */
+
+
 /* solutions wrapper - end */
 
 /* content stripes general - start */
@@ -211,6 +250,76 @@ ul,ol{
     }
 /* content stripes in about page - end */
 
+/* content stripes in work world page - start */
+
+    #eFirstStripeInWorkWorldPgWrapperWrapper{
+        background-color:orange;
+        margin-bottom:100px;
+    }
+    #eFirstStripeInWorkWorldPgWrapper>.visual{
+        background-image:url(../images/peopleChatting.png);
+        width:524px;
+        height:546px;
+        transform:translateY(60px);
+    }
+    #eFirstStripeInWorkWorldPgWrapper>.content{
+        color:black;
+    }
+    #eFirstStripeInWorkWorldPgWrapper>.content>.caption{
+        font-size:4rem;
+        margin:0 0 1rem 0;
+    }
+    #eFirstStripeInWorkWorldPgWrapper>.content>.content{
+        font-size:2rem;
+    }
+
+    #eWrongAndRightStripeInWorkWorldWrapper,
+    #eProfDeptStripeInWorkWorldWrapper,
+    #eJournalStripeInWorkWorldWrapper{
+        margin:3rem auto;
+    }
+    #eWrongAndRightStripeInWorkWorldWrapper>.visual{
+        background-image:url(../images/vi_large.png);
+    }
+    #eJournalStripeInWorkWorldWrapper>.visual{
+        background-image:url(../images/journal_large.png);
+    }
+    #eProfDeptStripeInWorkWorldWrapper>.visual{
+        background-image:url(../images/workWorld_large.png);
+    }
+    #eWrongAndRightStripeInWorkWorldWrapper>.visual,
+    #eProfDeptStripeInWorkWorldWrapper>.visual,
+    #eJournalStripeInWorkWorldWrapper>.visual {
+        background-position:center;
+        background-repeat:no-repeat;
+        width:218px;
+        height:218px;
+        border:4px solid #bfc0c2;
+        box-sizing:border-box;
+    }
+    #eWrongAndRightStripeInWorkWorldWrapper>.content,
+    #eProfDeptStripeInWorkWorldWrapper>.content,
+    #eJournalStripeInWorkWorldWrapper>.content{
+        font-size:1.2rem;
+        color:rgb(128,130,133);
+    }
+    #eWrongAndRightStripeInWorkWorldWrapper>.content,
+    #eJournalStripeInWorkWorldWrapper>.content{
+        padding:0 4rem 0 0;
+    }
+    #eProfDeptStripeInWorkWorldWrapper>.content{
+        padding:0 0 0 4rem;
+    }
+    #eWrongAndRightStripeInWorkWorldWrapper>.content>.caption,
+    #eProfDeptStripeInWorkWorldWrapper>.content>.caption,
+    #eJournalStripeInWorkWorldWrapper>.content>.caption{
+        font-size:2.5rem;
+        margin-bottom:2rem;
+        color:#77acc4;
+    }
+
+    /* content stripes in work world page - end */
+
     /* recommenders - start */
     #eRecommendersWrapper{
         display:flex;
@@ -265,7 +374,22 @@ ul,ol{
     
     /* recommenders - end */
 
+/* free try reg - start */
+    #eFreeTryRegWrapper{
+        display:flex;
+        justify-content:space-between;
+    }
+    #eFreeTryRegWrapper>.textWrapper{
+        width:30rem;
+    }
+    #eFreeTryRegWrapper>.formWrapper{
+        flex-grow:1;
+        display:flex;
+        flex-direction: column;
+    }
 
+
+/* free try reg - end */
 
 /* footer content - start*/
     #eMainNavInFtrWrapper{
@@ -280,7 +404,8 @@ ul,ol{
         justify-content:space-between;
         color:white;
     }
-    #eAboutPg #eMainNavInFtr{
+    #eAboutPg #eMainNavInFtr,
+    #eWorkWorldPg #eMainNavInFtr{
         color:black;
     }
     #eMainNavInFtr .hdr{
@@ -313,7 +438,8 @@ ul,ol{
     #eEmailInputInNewsletterReg::placeholder{
         color:white;
     }
-    #eAboutPg #eEmailInputInNewsletterReg::placeholder{
+    #eAboutPg #eEmailInputInNewsletterReg::placeholder,
+    #eWorkWorldPg #eEmailInputInNewsletterReg::placeholder{
         color:black;
     }
     #eSendBtnInNewsletterReg{
@@ -328,7 +454,8 @@ ul,ol{
         border:1px solid white;
         color:white;
     }
-    #eAboutPg #eEmailInputInNewsletterReg,#eSendBtnInNewsletterReg{
+    #eAboutPg #eEmailInputInNewsletterReg,#eSendBtnInNewsletterReg,
+    #eWorkWorldPg #eEmailInputInNewsletterReg,#eSendBtnInNewsletterReg{
         border:1px solid black;
         color:black;
     }
@@ -355,6 +482,9 @@ ul,ol{
     .hideMe{
         display:none !important;
     }
+    .boldMe{
+        font-weight:bold;
+    }
     a.removeFontSpecialTraits{
         color:inherit;
         text-decoration: none;
@@ -362,13 +492,13 @@ ul,ol{
 /* helper classes - end */
 
 
-header,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeContent,#eRecommendersWrapper{
+header,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeContent,#eRecommendersWrapper,#eFreeTryRegWrapper{
     margin:auto;
 }
 
 /* desktop */
 @media screen and (min-width:980px){
-    #mainNav,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeContent,#eRecommendersWrapper{
+    #mainNav,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeContent,#eRecommendersWrapper,#eFreeTryRegWrapper{
         width:1024px;
     }
     #mainNav>ul>li:first-of-type{
@@ -408,7 +538,7 @@ header,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeCo
 }
 /* tablet */
 @media screen and (max-width:979px){
-    #mainNav,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeContent,#eRecommendersWrapper{
+    #mainNav,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeContent,#eRecommendersWrapper,#eFreeTryRegWrapper{
         width:98%;
     }
     #mainNav, #mainNav ul{
@@ -443,7 +573,7 @@ header,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeCo
 }
 /* mobile*/
 @media screen and (max-width:500px){
-    #mainNav,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,#eFirstStripeInHomePgWrapper,#eRecommendersWrapper{
+    #mainNav,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,#eFirstStripeInHomePgWrapper,#eRecommendersWrapper,#eFreeTryRegWrapper{
         width:98%;
     }
     #mainNav, #mainNav ul{
