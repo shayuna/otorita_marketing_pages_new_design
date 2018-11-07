@@ -1,0 +1,491 @@
+
+/* global - start */
+body,html{
+    direction:rtl;
+    font-family:arial;
+}
+
+ul,ol{
+    padding:0;
+    margin:0;
+}
+
+
+/*  main navigator bar - start */
+#mainHdr{
+    background-color:white;
+    z-index:1;
+    width:100%;
+    border-bottom:1px solid #eee;
+}
+#eMainHdrSpacer{
+    height:75px;
+}
+#mainNav{
+    margin:auto;
+}
+#mainNav .hdr{
+    margin:0.5rem;
+}
+#mainNav, #mainNav ul{
+    display:flex;
+    font-size:1.23rem;
+    color:rgba(100,102,102,1);
+
+
+}
+#mainNav li{
+    text-align:center;
+}
+#mainNav ul{
+    list-style-type:none;
+}
+#mainNav>ul>li{
+    padding:1rem;
+}
+
+#mainNav li:hover{
+    color:rgba(119,172,196,1);
+    cursor:pointer;
+}
+#eLoginItm:hover,#eProductsItm:hover{
+    cursor:default !important;
+    color:rgba(100,102,102,1) !important;
+}
+
+#mainNav{
+    align-items:center;
+}
+#eLoginItm,#eProductsItm{
+    position:relative;
+}
+#eLoginItm,#eLoginOptionsItm,#eProductsItm,#eProductsOptionsItm{
+    display:flex;
+    flex-direction:column;
+}
+#eLoginOptionsItm,#eProductsOptionsItm{
+    padding:1.4rem 0.6rem 0.6rem 0.6rem;
+    background-color:#fff;
+    position:absolute;
+    white-space:nowrap;
+    left:0;
+    display:none !important;
+    top:40px;
+    line-height:2rem;
+    width:100%;
+    box-sizing:border-box;
+}
+#eLoginItm:hover *,#eProductsItm:hover *{
+    display:flex !important;
+    flex-direction:column;
+}
+
+.solution{
+    width:170px;
+    text-align: center;
+    margin:1em;
+}
+
+.solution .visual{
+    height:170px;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+.solution .caption{
+    margin:0.6em 0;
+}
+.solution .visual.monetaryWorld{
+    background-color:#68b04d;
+    background-image:url(../images/monetaryWorld.png);
+}
+.solution .visual.journal{
+    background-color:#007db6;
+    background-image:url(../images/journal.png);
+}
+.solution .visual.law{
+    background-color:#002b4e;
+    background-image:url(../images/law.png);
+}
+.solution .visual.workWorld{
+    background-color:#77acc4;
+    background-image:url(../images/workWorld.png);
+}
+.solution .visual.academy{
+    background-color:#d26028;
+    background-image:url(../images/academy.png);
+}
+#eAboutPg #eSolutionsWrapper{
+    margin:3rem auto;
+}
+
+/* solutions wrapper - end */
+
+/* content stripes general - start */
+    .stripe{
+    }
+    .stripeContent{
+        display:table;
+        height:100%;
+    }
+    .stripeContent>.visual,.stripeContent>.content{
+        display:table-cell;
+    }
+    .stripeContent>.visual{
+        background-repeat:no-repeat;
+    }
+    .stripeContent>.content{
+        color:white;
+        vertical-align:middle;
+    }
+/* content stripes general - end */
+
+/* content stripes in home page - start */
+
+    #eFirstStripeInHomePgWrapperWrapper{
+        background-color:orange;
+        margin-bottom:50px;
+    }
+    #eSecondStripeInHomePgWrapperWrapper{
+        background-color:#a0a09f;
+    }
+    #eFirstStripeInHomePgWrapper>.visual{
+        background-image:url(../images/ipad.png);
+        width:465px;
+        height:519px;
+        transform:translateY(50px);
+    }
+    #eSecondStripeInHomePgWrapper>.visual{
+        background-image:url(../images/whiteStripes_medium.png);
+        width:500px;
+        height:436px;
+    }
+    #eSecondStripeInHomePgWrapper.stripeContent>.content{
+        padding:0 4rem 0 0;
+    }
+    #eFirstStripeInHomePgWrapper>.content>.caption{
+        font-size:4rem;
+        margin:0 0 1rem 0;
+    }
+    #eFirstStripeInHomePgWrapper>.content>.content{
+        font-size:2rem;
+    }
+    #eSecondStripeInHomePgWrapper>.content>.caption{
+        font-size:2.2rem;
+        margin:0 0 1rem 0;
+    }
+    #eSecondStripeInHomePgWrapper>.content>.content{
+        font-size:1.2rem;
+        line-height:1.5rem;    
+    }
+/* content stripes in home page - end */
+
+/* content stripes in about page - start */
+
+    #eFirstStripeInAboutPgWrapperWrapper,#eSecondStripeInAboutPgWrapperWrapper{
+        background-color:#a0a09f;
+    }
+    #eFirstStripeInAboutPgWrapperWrapper>.stripeContent>.content>.itm{
+        padding:0.7rem;
+        font-size:1.2rem;
+        width:60%;
+    }
+    #eSecondStripeInAboutPgWrapper>.visual{
+        background-image:url(../images/whiteStripes_small.png);
+        width:353px;
+        height:307px;
+    }
+    #eSecondStripeInAboutPgWrapper.stripeContent>.content{
+        padding:0 4rem 0 0;
+    }
+    #eSecondStripeInAboutPgWrapperWrapper>.stripeContent>.content>.itm{
+        padding:0.7rem;
+        font-size:1.2rem;
+    }
+    #eClientsStripeInAboutPgWrapper{
+        margin:4rem auto;
+    }
+    #eClientsStripeInAboutPgWrapper>.visual{
+        background-image:url(../images/clients.png);
+        width:975px;
+        height:506px;
+    }
+/* content stripes in about page - end */
+
+    /* recommenders - start */
+    #eRecommendersWrapper{
+        display:flex;
+        flex-direction:column;
+    }
+    #eRecommendersWrapper .recommender{
+        width:154px;
+        text-align:center;
+        font-size:1.2em;
+        margin:1rem;
+    }
+    #eRecommendersWrapper .recommender>.visual{
+        height:155px;
+        border-radius:50%;
+        background-repeat:no-repeat;
+    }
+    #eRecommendersWrapper .recommender>.visual.galz{
+        background-image:url(../images/gal_z.png);
+    }
+
+    #eRecommendersWrapper .recommender>.visual.hadarabm{
+        background-image:url(../images/hadara_bm.png);
+    }
+    #eRecommendersWrapper .recommender>.visual.galg{
+        background-image:url(../images/gal_g.png);
+    }
+    #eRecommendersWrapper .recommender>.visual.haimm{
+        background-image:url(../images/haim_m.png);
+    }
+    #eRecommendersWrapper .recommender>.visual.ornach{
+        background-image:url(../images/orna_ch.png);
+    }
+    #eRecommendersWrapper .recommender>.visual.kobiy{
+        background-image:url(../images/kobi_y.png);
+    }
+    #eRecommendersWrapper .recommender>.visual.yehudap{
+        background-image:url(../images/yehuda_p.png);
+    }
+    #eRecommendersWrapper .recommender>.visual.avik{
+        background-image:url(../images/avi_k.png);
+    }
+
+
+    #eRecommendersWrapper .recommender>.caption>.recommenderName{
+        font-size:1.7rem;
+        margin:1rem;
+    }
+    #eRecommendersWrapper .recommender>.caption{
+        margin:0.5rem;
+    }
+    
+    
+    /* recommenders - end */
+
+
+
+/* footer content - start*/
+    #eMainNavInFtrWrapper{
+        background-color:orange;
+        padding:5em;
+    }
+    #eAboutPg #eMainNavInFtrWrapper{
+        background-color:#a0a09f;
+    }
+    #eMainNavInFtr{
+        display:flex;
+        justify-content:space-between;
+        color:white;
+    }
+    #eAboutPg #eMainNavInFtr{
+        color:black;
+    }
+    #eMainNavInFtr .hdr{
+        margin:0 0 0.2em 0;
+    }
+    #eMainNavInFtr>.section{
+        line-height:1.5em;
+    }
+    #eMainNavInFtr .itm{
+        cursor:pointer;
+    }
+    #eMainNavInFtr .itmWrapper{
+        list-style:none;
+    }
+    #eMainNavInFtr .itm:before{
+        content:"";
+        display:inline-block;
+        width:16px;
+        height:16px;
+        background-image:url(../images/arrow_left.png);
+        vertical-align:-3px;
+        margin-left:5px;
+
+    }
+    #eEmailInputInNewsletterReg{
+        flex-grow:1;
+        margin-left:1.5em;
+        padding:0.5em 0.2em;
+    }
+    #eEmailInputInNewsletterReg::placeholder{
+        color:white;
+    }
+    #eAboutPg #eEmailInputInNewsletterReg::placeholder{
+        color:black;
+    }
+    #eSendBtnInNewsletterReg{
+        flex-grow:0;
+        padding:0 1em;
+    }
+    #eSendBtnInNewsletterReg:hover{
+        cursor:pointer;
+    }
+    #eEmailInputInNewsletterReg,#eSendBtnInNewsletterReg{
+        background-color:transparent;
+        border:1px solid white;
+        color:white;
+    }
+    #eAboutPg #eEmailInputInNewsletterReg,#eSendBtnInNewsletterReg{
+        border:1px solid black;
+        color:black;
+    }
+    #eSocialNewtworksControlPanel{
+        margin:1em auto !important;
+    }
+    #eSocialNewtworksControlPanel .itm{
+        margin-left:1em;
+
+    }
+    #eSocialNewtworksControlPanel .itm:hover{
+        cursor:pointer;
+    }
+/* footer content - end*/
+
+/* helper classes - start */
+    .flex-column{
+        display:flex;
+        flex-direction:column;
+    }
+    .bgcolor1{
+        background-color:#ddd;
+    }
+    .hideMe{
+        display:none !important;
+    }
+    a.removeFontSpecialTraits{
+        color:inherit;
+        text-decoration: none;
+    }
+/* helper classes - end */
+
+
+header,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeContent,#eRecommendersWrapper{
+    margin:auto;
+}
+
+/* desktop */
+@media screen and (min-width:980px){
+    #mainNav,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeContent,#eRecommendersWrapper{
+        width:1024px;
+    }
+    #mainNav>ul>li:first-of-type{
+        margin-right:2rem !important;
+    }
+    #mainHdr{
+        position:fixed;
+    }
+    #eLoginOptionsItm{
+        width:auto;
+        transform:translateX(-30px);
+    }
+    /* solutions wrapper - start*/
+    #eSolutionsWrapper{
+        display:flex;
+        justify-content:space-between;
+    }
+    .recommendersRow{
+        display:flex;
+        justify-content:space-between;
+    }
+    #eNewsletterRegInputFldsWrapper{
+        margin-top:1em;
+        display:flex;
+    }
+    /* about page - start */
+    #eFirstStripeInAboutPgWrapperWrapper{
+        background-image:url(../images/whiteStripes_large.png);
+        height:456px;
+        width:100%;
+        background-repeat:no-repeat;
+    }
+    #eAboutPg #eSolutionsWrapper .solution>.visual{
+        border-radius:50%;
+    }
+        /* about page - end */
+}
+/* tablet */
+@media screen and (max-width:979px){
+    #mainNav,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeContent,#eRecommendersWrapper{
+        width:98%;
+    }
+    #mainNav, #mainNav ul{
+        flex-direction:column;
+    }
+    #eMainNavInFtr{
+        flex-direction:column;
+    }
+    /* solutions wrapper - start*/
+    #eSolutionsWrapper{
+        display:flex;
+        justify-content:space-between;
+    }
+    .recommendersRow{
+        display:flex;
+        justify-content:space-between;
+    }
+    #eNewsletterRegInputFldsWrapper{
+        margin-top:1em;
+        display:flex;
+    }
+    /* about page - start */
+
+    #eFirstStripeInAboutPgWrapperWrapper>.stripeContent>.content>.itm{
+        margin:auto;
+    }
+    #eAboutPg #eSolutionsWrapper .solution>.visual{
+        border-radius:50%;
+    }
+    
+    /*about page - end */
+}
+/* mobile*/
+@media screen and (max-width:500px){
+    #mainNav,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,#eFirstStripeInHomePgWrapper,#eRecommendersWrapper{
+        width:98%;
+    }
+    #mainNav, #mainNav ul{
+        flex-direction:column;
+    }
+    .stripeContent>.visual{
+        display:none;
+    }
+    .stripeContent>.content{
+        padding:1rem !important;
+    }   
+    #eMainNavInFtr{
+        flex-direction:column;
+    }
+    /* solutions wrapper - start*/
+    #eSolutionsWrapper{
+        display:block;
+    }
+    .recommendersRow{
+        display:block;
+        text-align: center;
+    }
+    .recommender{
+        display:inline-block;
+    }
+    #eNewsletterRegInputFldsWrapper{
+        display:block;
+    }
+    #eSendBtnInNewsletterReg{
+        margin-top:1rem;
+    }
+    .stripeContent>.content{
+        padding:1rem;
+    }
+    /* about page - start */
+
+    #eFirstStripeInAboutPgWrapperWrapper>.stripeContent>.content>.itm{
+        margin:auto;
+    }
+    #eAboutPg #eSolutionsWrapper .solution>.visual{
+        border-radius:0;
+    }
+    
+    /*about page - end */
+}
