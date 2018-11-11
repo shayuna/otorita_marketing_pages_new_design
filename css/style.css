@@ -1,8 +1,28 @@
 
 /* global - start */
+
+@font-face{
+    font-family:TypoPasRegular;
+    src:url(../resources/fonts/typopasregular-webfont.eot);
+    src:url(../resources/fonts/typopasregular-webfont.woff);
+    src:url(../resources/fonts/typopasregular-webfont.woff2);
+}
+@font-face{
+    font-family:TypoPasBlack;
+    src:url(../resources/fonts/typopasblack-webfont.eot);
+    src:url(../resources/fonts/typopasblack-webfont.woff);
+    src:url(../resources/fonts/typopasblack-webfont.woff2);
+}
+@font-face{
+    font-family:TypoPasBold;
+    src:url('../resources/fonts/TypoPas/typopasbold-webfont.eot');
+    src:url('../resources/fonts/TypoPas/typopasbold-webfont.woff');
+    src:url('../resources/fonts/TypoPas/typopasbold-webfont.woff2');
+}
+
 body,html{
     direction:rtl;
-    font-family:arial;
+    font-family:TypoPasBold,Arial, sans-serif;
 }
 
 ul,ol{
@@ -10,6 +30,7 @@ ul,ol{
     margin:0;
 }
 
+/* global - end &/
 
 /*  main navigator bar - start */
 #mainHdr{
@@ -813,6 +834,11 @@ header,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeCo
         margin-top:1em;
         display:flex;
     }
+    #eWorkWorldPg #eSolutionsWrapper,#eMonetaryWorldPg #eSolutionsWrapper{
+        display:block;
+    }
+
+    /* solutions wrapper - end */
     /* about page - start */
 
     #eFirstStripeInAboutPgWrapperWrapper>.stripeContent>.content>.itm{
@@ -823,6 +849,15 @@ header,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeCo
     }
     
     /*about page - end */
+
+    /* contact us page adaptation to mobile - start */
+        #eContactDetailsWrapper>.textWrapper{
+            width:10rem;
+        }
+    /* contact us page adaptation to mobile - end */
+
+
+
 }
 /* mobile*/
 @media screen and (max-width:500px){
@@ -871,4 +906,26 @@ header,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeCo
     }
     
     /*about page - end */
+
+    /* free try reg - start */
+    #eFreeTryRegWrapper{
+        display:block;
+        padding:2rem 0;
+    }
+    /* free try reg - end */
+
+    /* contact us page adaptation to mobile - start */ 
+        #eContactDetailsWrapper,#eContactOptionsWrapper{
+            display:block;
+            padding:2rem 0;
+        }
+        #eContactDetailsWrapper>.textWrapper{
+            margin-left:0;
+            width:auto;
+        }
+        #eContactOptionsWrapper>.contactOption>.content{
+            margin:1rem auto;
+        }
+    /* contact us page adaptation to mobile - end */ 
+
 }
