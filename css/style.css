@@ -156,6 +156,44 @@ ul,ol{
 }
 /* solution in workWorld pg - end */
 
+/* solution in monetary world pg - start */
+#eMonetaryWorldPg #eSolutionsWrapperWrapper{
+    background-color:#68b04d;
+    padding:5rem;
+}
+#eMonetaryWorldPg #eSolutionsWrapper .solution>.visual{
+    border-radius:50%;
+    width:153px;
+    height:153px;
+    margin:auto;
+}
+#eMonetaryWorldPg #eSolutionsWrapper .solution>.caption{
+    font-weight:normal;
+    font-size:1.2rem;
+}
+
+.solution .visual.building{
+    background-color:white;
+    background-image:url(../images/building.png);
+}
+.solution .visual.injured{
+    background-color:white;
+    background-image:url(../images/injured.png);
+}
+.solution .visual.moneyBill{
+    background-color:white;
+    background-image:url(../images/moneyBill.png);
+}
+.solution .visual.arrowInChart{
+    background-color:white;
+    background-image:url(../images/arrowInChart.png);
+}
+.solution .visual.inTheSea{
+    background-color:white;
+    background-image:url(../images/inTheSea.png);
+}
+/* solution in monetary world pg - end */
+
 
 /* solutions wrapper - end */
 
@@ -179,7 +217,6 @@ ul,ol{
 /* content stripes general - end */
 
 /* content stripes in home page - start */
-
     #eFirstStripeInHomePgWrapperWrapper{
         background-color:orange;
         margin-bottom:50px;
@@ -250,46 +287,74 @@ ul,ol{
     }
 /* content stripes in about page - end */
 
-/* content stripes in work world page - start */
+/* content stripes in worlds pages - start */
 
-    #eFirstStripeInWorkWorldPgWrapperWrapper{
+    #eFirstStripeInWorldsPgWrapperWrapper{
         background-color:orange;
         margin-bottom:100px;
     }
-    #eFirstStripeInWorkWorldPgWrapper>.visual{
+    #eWorkWorldPg #eFirstStripeInWorldsPgWrapperWrapper{
+        background-color:#83b3c8;
+    }
+    #eMonetaryWorldPg #eFirstStripeInWorldsPgWrapperWrapper{
+        background-color:#69af58;
+    }
+    #eWorkWorldPg #eFirstStripeInWorldsPgWrapper>.visual{
         background-image:url(../images/peopleChatting.png);
         width:524px;
         height:546px;
         transform:translateY(60px);
     }
-    #eFirstStripeInWorkWorldPgWrapper>.content{
+    #eMonetaryWorldPg #eFirstStripeInWorldsPgWrapper>.visual{
+        background-image:url(../images/financeWorldOnScreen.png);
+        width:654px;
+        height:563px;
+        transform:translateY(40px);
+    }
+    #eFirstStripeInWorldsPgWrapper>.content{
         color:black;
     }
-    #eFirstStripeInWorkWorldPgWrapper>.content>.caption{
+    #eFirstStripeInWorldsPgWrapper>.content>.caption{
         font-size:4rem;
         margin:0 0 1rem 0;
     }
-    #eFirstStripeInWorkWorldPgWrapper>.content>.content{
+    #eFirstStripeInWorldsPgWrapper>.content>.content{
         font-size:2rem;
     }
 
-    #eWrongAndRightStripeInWorkWorldWrapper,
-    #eProfDeptStripeInWorkWorldWrapper,
-    #eJournalStripeInWorkWorldWrapper{
+    #eWrongAndRightStripeInWorldsWrapper,
+    #eProfDeptStripeInWorldsWrapper,
+    #eJournalStripeInWorldsWrapper,
+    #eFinancialManagementStripeInWorldsWrapper,
+    #eFormsInterfaceStripeInWorldsWrapper,
+    #eCloudStripeInWorldsWrapper{
         margin:3rem auto;
+
     }
-    #eWrongAndRightStripeInWorkWorldWrapper>.visual{
+    #eWrongAndRightStripeInWorldsWrapper>.visual{
         background-image:url(../images/vi_large.png);
     }
-    #eJournalStripeInWorkWorldWrapper>.visual{
+    #eJournalStripeInWorldsWrapper>.visual{
         background-image:url(../images/journal_large.png);
     }
-    #eProfDeptStripeInWorkWorldWrapper>.visual{
+    #eProfDeptStripeInWorldsWrapper>.visual{
         background-image:url(../images/workWorld_large.png);
     }
-    #eWrongAndRightStripeInWorkWorldWrapper>.visual,
-    #eProfDeptStripeInWorkWorldWrapper>.visual,
-    #eJournalStripeInWorkWorldWrapper>.visual {
+    #eFinancialManagementStripeInWorldsWrapper>.visual{
+        background-image:url(../images/marksOnAxes_large.png);
+    }
+    #eFormsInterfaceStripeInWorldsWrapper>.visual{
+        background-image:url(../images/documents_large.png);
+    }
+    #eCloudStripeInWorldsWrapper>.visual{
+        background-image:url(../images/cloud_large.png);
+    }
+    #eWrongAndRightStripeInWorldsWrapper>.visual,
+    #eProfDeptStripeInWorldsWrapper>.visual,
+    #eJournalStripeInWorldsWrapper>.visual,
+    #eFinancialManagementStripeInWorldsWrapper>.visual,
+    #eFormsInterfaceStripeInWorldsWrapper>.visual,
+    #eCloudStripeInWorldsWrapper>.visual{
         background-position:center;
         background-repeat:no-repeat;
         width:218px;
@@ -297,28 +362,48 @@ ul,ol{
         border:4px solid #bfc0c2;
         box-sizing:border-box;
     }
-    #eWrongAndRightStripeInWorkWorldWrapper>.content,
-    #eProfDeptStripeInWorkWorldWrapper>.content,
-    #eJournalStripeInWorkWorldWrapper>.content{
+    #eWrongAndRightStripeInWorldsWrapper>.content,
+    #eProfDeptStripeInWorldsWrapper>.content,
+    #eJournalStripeInWorldsWrapper>.content,
+    #eFinancialManagementStripeInWorldsWrapper>.content,
+    #eFormsInterfaceStripeInWorldsWrapper>.content,
+    #eCloudStripeInWorldsWrapper>.content{
         font-size:1.2rem;
         color:rgb(128,130,133);
+        vertical-align:top;
     }
-    #eWrongAndRightStripeInWorkWorldWrapper>.content,
-    #eJournalStripeInWorkWorldWrapper>.content{
+    #eWrongAndRightStripeInWorldsWrapper>.content,
+    #eJournalStripeInWorldsWrapper>.content,
+    #eFinancialManagementStripeInWorldsWrapper>.content,
+    #eCloudStripeInWorldsWrapper>.content{
         padding:0 4rem 0 0;
     }
-    #eProfDeptStripeInWorkWorldWrapper>.content{
+    #eProfDeptStripeInWorldsWrapper>.content,
+    #eFormsInterfaceStripeInWorldsWrapper>.content{
         padding:0 0 0 4rem;
     }
-    #eWrongAndRightStripeInWorkWorldWrapper>.content>.caption,
-    #eProfDeptStripeInWorkWorldWrapper>.content>.caption,
-    #eJournalStripeInWorkWorldWrapper>.content>.caption{
+    #eWrongAndRightStripeInWorldsWrapper>.content>.caption,
+    #eProfDeptStripeInWorldsWrapper>.content>.caption,
+    #eJournalStripeInWorldsWrapper>.content>.caption,
+    #eFinancialManagementStripeInWorldsWrapper>.content>.caption,
+    #eFormsInterfaceStripeInWorldsWrapper>.content>.caption,
+    #eCloudStripeInWorldsWrapper>.content>.caption{
         font-size:2.5rem;
         margin-bottom:2rem;
+    }
+    #eWrongAndRightStripeInWorldsWrapper>.content>.caption,
+    #eProfDeptStripeInWorldsWrapper>.content>.caption,
+    #eJournalStripeInWorldsWrapper>.content>.caption{
         color:#77acc4;
     }
+    #eFinancialManagementStripeInWorldsWrapper>.content>.caption,
+    #eFormsInterfaceStripeInWorldsWrapper>.content>.caption,
+    #eCloudStripeInWorldsWrapper>.content>.caption{
+        color:#68b04d;
+    }
 
-    /* content stripes in work world page - end */
+
+    /* content stripes in worlds pages - end */
 
     /* recommenders - start */
     #eRecommendersWrapper{
@@ -374,27 +459,188 @@ ul,ol{
     
     /* recommenders - end */
 
+
 /* free try reg - start */
     #eFreeTryRegWrapper{
         display:flex;
         justify-content:space-between;
+        align-items:flex-start;
+        padding:7rem 0;
     }
     #eFreeTryRegWrapper>.textWrapper{
-        width:30rem;
+        width:20rem;
+        margin-left:4rem;
+    }
+    #eFreeTryRegWrapper>.textWrapper>.caption{
+        font-size:2.5rem;
+        font-weight:bold;
+    }
+    #eFreeTryRegWrapper>.textWrapper>.content{
+        margin-top:0.5rem;
+        font-size:1.3rem;
+        line-height:1.5rem;
+        color:#c0c0bf;
     }
     #eFreeTryRegWrapper>.formWrapper{
         flex-grow:1;
         display:flex;
         flex-direction: column;
     }
+    #eFreeTryRegWrapper>.formWrapper>.submitBtn{
+        width:auto;
+        align-self: flex-end;
+        color:white;
+        padding:0.4rem;
+        border:0;
+    }
+    #eWorkWorldPg #eFreeTryRegWrapper>.formWrapper>.submitBtn{
+        background-color:#77acc4;
+    }
+    #eMonetaryWorldPg #eFreeTryRegWrapper>.formWrapper>.submitBtn{
+        background-color:#68b04d;
+    }
 
+    #eFreeTryRegWrapper>.formWrapper>.itm{
+        margin:0.2rem 0;
+        padding:0.5rem 0.2rem;
+        font-size:0.9rem;
+        color:#4ea4eb;
+    }
+    #eWorkWorldPg #eFreeTryRegWrapper>.formWrapper>.itm{
+        border:3px solid #77acc4;
+    }
+    #eMonetaryWorldPg #eFreeTryRegWrapper>.formWrapper>.itm{
+        border:3px solid #68b04d;
+    }
 
+    #eFreeTryRegWrapper>.formWrapper>.itm::placeholder{
+        color:#ccc;
+    }
 /* free try reg - end */
+
+/* contact Details Interface - start */
+#eContactDetailsWrapperWrapper{
+    background-color:#ede9e1;
+}
+#eContactDetailsWrapper{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:7rem 0;
+}
+#eContactDetailsWrapper>.textWrapper{
+    width:30rem;
+    margin-left:4rem;
+}
+#eContactDetailsWrapper>.textWrapper>.content{
+    font-size:1.2rem;
+    line-height:1.5rem;
+    color:black;
+}
+#eContactDetailsWrapper>.formWrapper{
+    flex-grow:1;
+    display:flex;
+    flex-direction: column;
+}
+#eContactDetailsWrapper>.formWrapper>.submitBtn{
+    width:auto;
+    align-self: flex-end;
+    color:white;
+    padding:0.4rem;
+    border:0;
+}
+#eContactDetailsWrapper>.formWrapper>.submitBtn{
+    background-color:black;
+}
+
+#eContactDetailsWrapper>.formWrapper>.itm{
+    margin:0.2rem 0;
+    padding:0.5rem 0.2rem;
+    color:black;
+    font-size:1.2rem;
+    border:3px solid black;
+    background-color:transparent;
+
+}
+#eContactDetailsWrapper>.textWrapper>.content>.itm.top{
+    margin-bottom:4rem;
+}
+#eContactDetailsWrapper>.textWrapper>.content>.itm>.caption{
+    font-weight:bold;
+}
+
+#eContactDetailsWrapper>.formWrapper>.itm::placeholder{
+    color:black;
+}
+#eContactDetailsWrapper #eDetails{
+    height:7rem;
+}
+/* contact Details Interface - end */
+
+/* contact options - start */
+    #eContactOptionsWrapper{
+        display:flex;
+        justify-content:space-between;
+        padding:6rem 0;
+    }
+    .contactOption>.visual{
+        border-radius:50%;
+        width:153px;
+        height:153px;
+        margin:auto;
+        background-repeat:no-repeat;
+        background-position:center;
+    }
+    .contactOption>.content{
+        text-align:center;
+        max-width:10rem;
+    }
+    .contactOption>.content>.caption{
+        font-weight:bold;
+        font-size:1.6rem;
+        margin:0.8rem;
+    }
+    .contactOption>.content>.content{
+        font-weight:normal;
+        font-size:1.1rem;
+    }
+    .contactOption>.visual.tel{
+        background-color:white;
+        background-image:url(../images/tel.png);
+        background-color:#4682b4;
+    }
+    .contactOption>.visual.fax{
+        background-color:white;
+        background-image:url(../images/fax.png);
+        background-color:#d0ae33;
+    }
+    .contactOption>.visual.address{
+        background-color:white;
+        background-image:url(../images/address.png);
+        background-color:#77acc4;
+    }
+    .contactOption>.visual.email{
+        background-color:white;
+        background-image:url(../images/email.png);
+        background-color:#68b04d;
+    }
+/* contact options - end */
+
+
 
 /* footer content - start*/
     #eMainNavInFtrWrapper{
         background-color:orange;
         padding:5em;
+    }
+    #eWorkWorldPg #eMainNavInFtrWrapper{
+        background-color:#83b3c8;
+    }
+    #eMonetaryWorldPg #eMainNavInFtrWrapper{
+        background-color:#69af58;
+    }
+    #eContactUsPg #eMainNavInFtrWrapper{
+        background-color:#ede9e1;
     }
     #eAboutPg #eMainNavInFtrWrapper{
         background-color:#a0a09f;
@@ -405,7 +651,9 @@ ul,ol{
         color:white;
     }
     #eAboutPg #eMainNavInFtr,
-    #eWorkWorldPg #eMainNavInFtr{
+    #eWorkWorldPg #eMainNavInFtr,
+    #eContactUsPg #eMainNavInFtr,
+    #eMonetaryWorldPg #eMainNavInFtr{
         color:black;
     }
     #eMainNavInFtr .hdr{
@@ -439,7 +687,9 @@ ul,ol{
         color:white;
     }
     #eAboutPg #eEmailInputInNewsletterReg::placeholder,
-    #eWorkWorldPg #eEmailInputInNewsletterReg::placeholder{
+    #eWorkWorldPg #eEmailInputInNewsletterReg::placeholder,
+    #eMonetaryWorldPg #eEmailInputInNewsletterReg::placeholder,
+    #eContactUsPg #eEmailInputInNewsletterReg::placeholder{
         color:black;
     }
     #eSendBtnInNewsletterReg{
@@ -455,7 +705,10 @@ ul,ol{
         color:white;
     }
     #eAboutPg #eEmailInputInNewsletterReg,#eSendBtnInNewsletterReg,
-    #eWorkWorldPg #eEmailInputInNewsletterReg,#eSendBtnInNewsletterReg{
+    #eWorkWorldPg #eEmailInputInNewsletterReg,
+    #eMonetaryWorldPg #eEmailInputInNewsletterReg,
+    #eContactUsPg #eEmailInputInNewsletterReg,
+    #eSendBtnInNewsletterReg{
         border:1px solid black;
         color:black;
     }
@@ -492,13 +745,13 @@ ul,ol{
 /* helper classes - end */
 
 
-header,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeContent,#eRecommendersWrapper,#eFreeTryRegWrapper{
+header,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeContent,#eRecommendersWrapper,#eFreeTryRegWrapper,#eContactDetailsWrapper,#eContactOptionsWrapper{
     margin:auto;
 }
 
 /* desktop */
 @media screen and (min-width:980px){
-    #mainNav,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeContent,#eRecommendersWrapper,#eFreeTryRegWrapper{
+    #mainNav,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeContent,#eRecommendersWrapper,#eFreeTryRegWrapper,#eContactDetailsWrapper,#eContactOptionsWrapper{
         width:1024px;
     }
     #mainNav>ul>li:first-of-type{
@@ -538,7 +791,7 @@ header,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeCo
 }
 /* tablet */
 @media screen and (max-width:979px){
-    #mainNav,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeContent,#eRecommendersWrapper,#eFreeTryRegWrapper{
+    #mainNav,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeContent,#eRecommendersWrapper,#eFreeTryRegWrapper,#eContactDetailsWrapper,#eContactOptionsWrapper{
         width:98%;
     }
     #mainNav, #mainNav ul{
@@ -573,7 +826,7 @@ header,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeCo
 }
 /* mobile*/
 @media screen and (max-width:500px){
-    #mainNav,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,#eFirstStripeInHomePgWrapper,#eRecommendersWrapper,#eFreeTryRegWrapper{
+    #mainNav,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,#eFirstStripeInHomePgWrapper,#eRecommendersWrapper,#eFreeTryRegWrapper,#eContactDetailsWrapper,#eContactOptionsWrapper{
         width:98%;
     }
     #mainNav, #mainNav ul{
