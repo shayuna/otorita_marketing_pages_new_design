@@ -713,7 +713,7 @@ ul,ol{
     }
     #eSendBtnInNewsletterReg{
         flex-grow:0;
-        padding:0 1em;
+        padding:0 1rem;
     }
     #eSendBtnInNewsletterReg:hover{
         cursor:pointer;
@@ -799,7 +799,7 @@ header,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeCo
     justify-content: flex-end;
 }
 #eGuestsLoginTilesWrapper>.row>.itm{
-    height:178px;
+    min-height:178px;
     border:5px solid white;
     display:flex;
     flex-direction:column;
@@ -931,18 +931,26 @@ header,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeCo
     #eMainNavInFtr{
         flex-direction:column;
     }
+    .stripeContent>.visual{
+        display:none;
+    }
+    .stripeContent>.content{
+        padding:1rem !important;
+    }   
     /* solutions wrapper - start*/
     #eSolutionsWrapper{
         display:flex;
         justify-content:space-between;
     }
     .recommendersRow{
-        display:flex;
-        justify-content:space-between;
+        display:block;
+        text-align: center;
     }
-    #eNewsletterRegInputFldsWrapper{
-        margin-top:1em;
-        display:flex;
+    .recommender{
+        margin:3rem auto !important;
+    }
+    .recommendersRow:not(.firstRow)>.recommender:first-child{
+        margin-top:0 !important;
     }
     #eWorkWorldPg #eSolutionsWrapper,#eMonetaryWorldPg #eSolutionsWrapper{
         display:block;
@@ -966,8 +974,38 @@ header,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeCo
         }
     /* contact us page adaptation to mobile - end */
 
+   /* guest login pg tablet and mobile adaptation - start */
+   #eGuestsLoginPg{
+        background-color:white;
+    }
+    #eGuestsLoginPg #eCloseBtn{
+        position:static;
+        display:block;  
+        background-repeat:no-repeat;
+        background-position:right center;
+        margin:1rem 1rem 0 1rem;
+    }
+    #eGuestsLoginTilesWrapper{
+        width:auto;
+        position:static;
+        transform:none;
+    }
+    #eGuestsLoginTilesWrapper>.row{
+        display:block;
+    }
+    #eGuestsLoginTilesWrapper>.row>.itm{
+        width:auto;
+        margin:0.5rem auto;
+    }
 
+   /* guest login pg tablet and mobile adaptation - end */
 
+   /* newsletter reg in footer- start*/
+    #eSendBtnInNewsletterReg{
+        margin:1rem 0;
+        padding:0.5rem 1rem;
+    }
+    /* newsletter reg in footer- end*/
 }
 /* mobile*/
 @media screen and (max-width:500px){
@@ -986,25 +1024,8 @@ header,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeCo
     #eMainNavInFtr{
         flex-direction:column;
     }
-    /* solutions wrapper - start*/
     #eSolutionsWrapper{
         display:block;
-    }
-    .recommendersRow{
-        display:block;
-        text-align: center;
-    }
-    .recommender{
-        display:inline-block;
-    }
-    #eNewsletterRegInputFldsWrapper{
-        display:block;
-    }
-    #eSendBtnInNewsletterReg{
-        margin-top:1rem;
-    }
-    .stripeContent>.content{
-        padding:1rem;
     }
     /* about page - start */
 
@@ -1038,28 +1059,14 @@ header,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeCo
         }
     /* contact us page adaptation to mobile - end */ 
 
-    /* guest login pg mobile adaptation - start */
-        #eGuestsLoginPg{
-            background-color:white;
-        }
-        #eGuestsLoginPg #eCloseBtn{
-            position:static;
-            display:block;  
-            background-repeat:no-repeat;
-            background-position:right center;
-            margin:1rem;
-        }
-        #eGuestsLoginTilesWrapper{
-            width:auto;
-            position:static;
-            transform:none;
-        }
-        #eGuestsLoginTilesWrapper>.row{
-            display:block;
-        }
-        #eGuestsLoginTilesWrapper>.row>.itm{
-            margin:0.5rem auto;
-        }
-    
-    /* guest login pg mobile adaptation - end */
+    /* newsletter reg in footer- start*/
+    #eNewsletterRegInputFldsWrapper{
+        margin-top:1em;
+        display:block;
+    }
+    #eSendBtnInNewsletterReg{
+        margin:1rem 0;
+        padding:0.5rem 1rem;
+    }
+    /* newsletter reg in footer- end*/
 }
