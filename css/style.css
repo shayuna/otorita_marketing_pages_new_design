@@ -219,8 +219,6 @@ ul,ol{
 /* solutions wrapper - end */
 
 /* content stripes general - start */
-    .stripe{
-    }
     .stripeContent{
         display:table;
         height:100%;
@@ -810,7 +808,7 @@ header,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeCo
     width:176px;
 }
 #eGuestsLoginTilesWrapper>.row>.itm>.content{
-    margin-top:1.2rem;
+    margin-top:1rem;
 }
 #eGuestsLoginTilesWrapper>.row>.itm>.content>.content{
     text-align:center;
