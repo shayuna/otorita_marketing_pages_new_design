@@ -805,9 +805,12 @@ header,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeCo
     border:5px solid white;
     display:flex;
     flex-direction:column;
-    justify-content: space-around;
+    justify-content: center;
     box-sizing:border-box;
     width:176px;
+}
+#eGuestsLoginTilesWrapper>.row>.itm>.content{
+    margin-top:1.2rem;
 }
 #eGuestsLoginTilesWrapper>.row>.itm>.content>.content{
     text-align:center;
