@@ -692,10 +692,15 @@ ul,ol{
         display:inline-block;
         width:16px;
         height:16px;
-        background-image:url(../images/arrow_left.png);
         vertical-align:-3px;
         margin-left:5px;
 
+    }
+    #eMainNavInFtr .itm:before{
+        background-image:url(../images/arrow_left.png);
+    }
+    #eMainPg #eMainNavInFtr .itm:before{
+        background-image:url(../images/arrow_left_white.png);
     }
     #eEmailInputInNewsletterReg{
         flex-grow:1;
@@ -775,7 +780,7 @@ header,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeCo
 }
 
 #eGuestsLoginPg #eCloseBtn{
-    background-image:url(../images/x.png);
+    background-image:url(../images/x_white.png);
     width:32px;
     height:32px;
     position:absolute;
