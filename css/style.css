@@ -3,26 +3,26 @@
 
 @font-face{
     font-family:TypoPasRegular;
-    src:url(../resources/fonts/typopasregular-webfont.eot);
-    src:url(../resources/fonts/typopasregular-webfont.woff);
-    src:url(../resources/fonts/typopasregular-webfont.woff2);
+    src:url(../resources/fonts/TypoPas/subset-TypoPas-Regular.eot);
+    src:url(../resources/fonts/TypoPas/subset-TypoPas-Regular.woff);
+    src:url(../resources/fonts/TypoPas/subset-TypoPas-Regular.woff2);
 }
 @font-face{
     font-family:TypoPasBlack;
-    src:url(../resources/fonts/typopasblack-webfont.eot);
-    src:url(../resources/fonts/typopasblack-webfont.woff);
-    src:url(../resources/fonts/typopasblack-webfont.woff2);
+    src:url(../resources/fonts/TypoPas/subset-TypoPas-Black.eot);
+    src:url(../resources/fonts/TypoPas/subset-TypoPas-Black.woff);
+    src:url(../resources/fonts/TypoPas/subset-TypoPas-Black.woff2);
 }
 @font-face{
     font-family:TypoPasBold;
-    src:url('../resources/fonts/TypoPas/typopasbold-webfont.eot');
-    src:url('../resources/fonts/TypoPas/typopasbold-webfont.woff');
-    src:url('../resources/fonts/TypoPas/typopasbold-webfont.woff2');
+    src:url(../resources/fonts/TypoPas/subset-TypoPas-Bold.eot);
+    src:url(../resources/fonts/TypoPas/subset-TypoPas-Bold.woff);
+    src:url(../resources/fonts/TypoPas/subset-TypoPas-Bold.woff2);
 }
 
 body,html{
     direction:rtl;
-    font-family:TypoPasBold,Arial, sans-serif;
+    font-family:TypoPasRegular, sans-serif;
 }
 
 ul,ol{
@@ -317,6 +317,19 @@ ul,ol{
     }
     #eMonetaryWorldPg #eFirstStripeInWorldsPgWrapperWrapper{
         background-color:#69af58;
+    }
+    #eFirstStripeInWorldsPgWrapperWrapper{
+        position:relative;
+        opacity:0.9;
+        overflow:hidden;
+    }
+    #eFirstStripeInWorldsPgWrapperWrapper>.videoContainer{
+        position:absolute;
+        top:0;
+        left:0;
+        opacity:0.3;
+        width:100%;
+        object-fit:fill;/* stretching, not clipping. the best of worst cases in my opinion */
     }
     #eWorkWorldPg #eFirstStripeInWorldsPgWrapper>.visual{
         background-image:url(../images/peopleChatting.png);
@@ -728,11 +741,14 @@ ul,ol{
         border:1px solid white;
         color:white;
     }
-    #eAboutPg #eEmailInputInNewsletterReg,#eSendBtnInNewsletterReg,
+    #eAboutPg #eEmailInputInNewsletterReg,
     #eWorkWorldPg #eEmailInputInNewsletterReg,
     #eMonetaryWorldPg #eEmailInputInNewsletterReg,
     #eContactUsPg #eEmailInputInNewsletterReg,
-    #eSendBtnInNewsletterReg{
+    #eAboutPg #eSendBtnInNewsletterReg,
+    #eWorkWorldPg #eSendBtnInNewsletterReg,
+    #eMonetaryWorldPg #eSendBtnInNewsletterReg,
+    #eContactUsPg #eSendBtnInNewsletterReg{
         border:1px solid black;
         color:black;
     }

@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="./css/style.css"/>
         <link rel="stylesheet" href="./css/normalize.css"/>
     </head>
-    <body id="eMonetaryWorldPg">
+    <body id="eMonetaryWorldPg" onload="onLoad()">
         <header id="mainHdr">
             <nav id="mainNav">
                 <h2 class="hdr"><a class="removeFontSpecialTraits" href="./main.htm"><img src="./images/logo.jpg"/></a></h2>
@@ -38,6 +38,9 @@
         <main>
             <div id="eMainHdrSpacer"></div>
             <div id="eFirstStripeInWorldsPgWrapperWrapper">
+                <video class="videoContainer" autoplay="autoplay" loop="loop">
+                        <source src="./images/data.mp4" type="video/mp4"/>
+                </video>
                 <div id="eFirstStripeInWorldsPgWrapper" class="stripeContent">
                     <div class="content">
                         <h2 class="caption">
@@ -166,7 +169,17 @@
                 <a class="removeFontSpecialTraits itm" href="https://www.youtube.com/channel/UCqd4O0mgDS6LarcUVrkIhFg" target="youtubeWnd"><img src="./images/youtube.png"/></a>
                 <a class="removeFontSpecialTraits itm" href="https://www.linkedin.com/company/otorita?trk=nmp_rec_act_company_photo" target="linkedinWnd"><img src="./images/linkedin.png"/></a>
             </div>
-    </footer>
-    <iframe id="frm" name="frm" class="hideMe"></iframe>
+        </footer>
+        <iframe id="frm" name="frm" class="hideMe"></iframe>
+        <script>
+            function onLoad(){
+                if ("object-fit" in document.documentElement.style){
+                    document.querySelector("#eFirstStripeInWorldsPgWrapperWrapper>.videoContainer").style.height="100%";/* by this we apply the stretch mode in chrome */
+         }
+                window.setTimeout(function(){
+                    document.querySelector("#eFirstStripeInWorldsPgWrapperWrapper>.videoContainer").play();
+                },1000);
+            }
+        </script>
     </body>
 </html>

@@ -1,16 +1,47 @@
 <!doctype html>
 <html>
     <head>
-        <title>אוטוריטה - עולם הכספים</title>
+        <title>test1</title>
         <meta name="viewport" content="user-scalable=no,width=device-width, initial-scale=1.0, maximum-scale=1.0" />	
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta charset="utf-8"/>
         <link rel="stylesheet" href="./css/style.css"/>
         <link rel="stylesheet" href="./css/normalize.css"/>
+        <style>
+            #eWrapper{
+                height:500px;
+                width:100%;
+                position:relative;
+                overflow:hidden;
+                background-color:red;
+            }
+            video#eMainVideo {
+                position:absolute;
+                width:100%;
+/*                height:100%;*/
+                object-fit: fill;
+            }
+        </style>
     </head>
-    <body id="eTestPg">
-        <video autoplay="autoplay" loop="loop">
-            <source src="./images/data.mp4" type="video/mp4"/>
-        </video>
+    <body id="eTestPg" onload="onLoad()">
+        <div id="eWrapper">
+            <video id="eMainVideo" autoplay="autoplay" loop="loop">
+<!--                <source src="./images/data.mp4" type="video/mp4"/> -->
+            </video>
+        </div>
+        <script type="text/javascript">
+            function onLoad(){
+                if ('object-fit' in document.documentElement.style){
+                    alert ("property is found");
+                    document.querySelector("#eMainVideo").style.height="100%";
+                }
+                else{
+                    alert ("property isn't found");
+                }
+                window.setTimeout(()=>{
+                    document.querySelector("#eMainVideo").play();
+                },100)
+            }
+        </script>
     </body>
 </html>
