@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="./css/style.css"/>
         <link rel="stylesheet" href="./css/normalize.css"/>
     </head>
-    <body id="eMonetaryWorldPg" onload="onLoad()">
+    <body id="eMonetaryWorldPg">
         <header id="mainHdr">
             <nav id="mainNav">
                 <h2 class="hdr"><a class="removeFontSpecialTraits" href="./main.htm"><img src="./images/logo.jpg"/></a></h2>
@@ -171,15 +171,5 @@
             </div>
         </footer>
         <iframe id="frm" name="frm" class="hideMe"></iframe>
-        <script>
-            function onLoad(){
-                if ("object-fit" in document.documentElement.style){
-                    document.querySelector("#eFirstStripeInWorldsPgWrapperWrapper>.videoContainer").style.height="100%";/* by this we apply the stretch mode in chrome */
-         }
-                window.setTimeout(function(){
-                    document.querySelector("#eFirstStripeInWorldsPgWrapperWrapper>.videoContainer").play();
-                },1000);
-            }
-        </script>
     </body>
 </html>
