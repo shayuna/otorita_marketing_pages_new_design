@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="./css/style.css"/>
         <link rel="stylesheet" href="./css/normalize.css"/>
     </head>
-    <body id="eMonetaryWorldPg">
+    <body id="eMonetaryWorldPg" onload="onLoad()">
         <header id="mainHdr">
             <nav id="mainNav">
                 <h2 class="hdr"><a class="removeFontSpecialTraits" href="./main.htm"><img src="./images/logo.jpg"/></a></h2>
@@ -38,9 +38,7 @@
         <main>
             <div id="eMainHdrSpacer"></div>
             <div id="eFirstStripeInWorldsPgWrapperWrapper">
-                <video class="videoContainer" autoplay="autoplay" loop="loop">
-                        <source src="./images/data.mp4" type="video/mp4"/>
-                </video>
+                <div class="vidWrapper"><video class="vid" autoplay="autoplay" loop="loop" src="./images/data.mp4" type="video/mp4"></video></div>
                 <div id="eFirstStripeInWorldsPgWrapper" class="stripeContent">
                     <div class="content">
                         <h2 class="caption">
@@ -171,5 +169,11 @@
             </div>
         </footer>
         <iframe id="frm" name="frm" class="hideMe"></iframe>
+        <script>
+            function onLoad(){
+                setVidWidth();
+            }
+        </script>
+        <script src="./js/helper.js"></script>
     </body>
 </html>

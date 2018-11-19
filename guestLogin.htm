@@ -9,7 +9,8 @@
         <link rel="stylesheet" href="./css/style.css"/>
         <link rel="stylesheet" href="./css/normalize.css"/>
     </head>
-    <body id="eGuestsLoginPg">
+    <body id="eGuestsLoginPg" onload="onLoad()">
+        <div class="vidWrapper"><video class="vid" autoplay="autoplay" loop="loop" src="./images/officeRumble.mp4"></video></div>
         <a id="eCloseBtn" href="main.htm"></a>
         <div id="eGuestsLoginTilesWrapper">
             <div class="row">
@@ -67,5 +68,11 @@
                 </a>
             </div>
         </div>
+        <script>
+            function onLoad(){
+                setVidWidth();
+            }
+        </script>
+        <script src="./js/helper.js"></script>
     </body>
 </html>

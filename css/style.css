@@ -23,7 +23,6 @@
 body,html{
     direction:rtl;
     font-family:subset-TypoPas-Regular, sans-serif;
-    overflow-x:hidden;/* this is a hack intended to prevent another hack's (in .videoContainer) (stretching video) evil symptoms: overflowing horizontally */
 }
 
 ul,ol{
@@ -238,7 +237,6 @@ ul,ol{
 
 /* content stripes in home page - start */
     #eFirstStripeInHomePgWrapperWrapper{
-        background-color:orange;
         margin-bottom:50px;
     }
     #eSecondStripeInHomePgWrapperWrapper{
@@ -319,17 +317,26 @@ ul,ol{
     #eMonetaryWorldPg #eFirstStripeInWorldsPgWrapperWrapper{
         background-color:#69af58;
     }
-    #eFirstStripeInWorldsPgWrapperWrapper{
+    #eFirstStripeInWorldsPgWrapperWrapper,#eFirstStripeInHomePgWrapperWrapper{
         position:relative;
-        opacity:0.9;
     }
-    #eFirstStripeInWorldsPgWrapperWrapper>.videoContainer{
+    .vidWrapper{
         position:absolute;
-        opacity:0.3;
+        left:0;
+        top:0;
         height:100%;
         width:100%;
-        transform:scaleX(2); /* object-fit and transform:scaleX can't live together. otherwise the on screen result will be catastrophic. object-fit is better because it doesn't have symptoms like horizontally overflowing, but it's only working on chrome and firefox, so we have to use scaleX */
-        /*object-fit:fill;*/
+    }
+    .vidWrapper>.vid{
+        display:block;
+        height:100%;
+        margin:auto;
+    }
+    #eFirstStripeInHomePgWrapperWrapper>.vidWrapper{
+        z-index:-1;
+    }
+    #eFirstStripeInWorldsPgWrapperWrapper>.vidWrapper>.vid{
+        opacity:0.3;
     }
     #eWorkWorldPg #eFirstStripeInWorldsPgWrapper>.visual{
         background-image:url(../images/peopleChatting.png);
@@ -793,8 +800,16 @@ header,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeCo
 
 #eGuestsLoginPg{
     background-color:#ddd;
+    display:flex;
+    width:100vw;
+    height:100vh;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
 }
-
+#eGuestsLoginPg>.vidWrapper{
+    z-index:-1;
+}
 #eGuestsLoginPg #eCloseBtn{
     background-image:url(../images/x_white.png);
     width:32px;
@@ -808,10 +823,14 @@ header,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeCo
     display:flex;
     flex-direction:column;
     width:684px;
+
+    
+/*
     position:absolute;
     top:50%;
     left:50%;
     transform:translate(-50%,-50%);
+*/
     padding:0.5rem;
     background-color:white;
 }
