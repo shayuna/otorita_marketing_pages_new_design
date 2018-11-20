@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="./css/style.css"/>
         <link rel="stylesheet" href="./css/normalize.css"/>
     </head>
-    <body id="eAboutPg">
+    <body id="eAboutPg" onload="onLoad()">
         <header id="mainHdr">
             <nav id="mainNav">
                 <h2 class="hdr"><a class="removeFontSpecialTraits" href="./main.htm"><img src="./images/logo.jpg"/></a></h2>
@@ -44,6 +44,7 @@
                         <div class="itm">עם השנים ולאחר הפרידה מהשם דטהפקס, שדרגנו את אוטוריטה לשירות ניהולי מקצועי ברמה חדשה לגמרי של יעילות בעבודה - ללא בזבוז זמן יקר ותוך הימנעות מטעויות.</div>
                         <div class="itm">מתוך הבנה שכבר לא מספיק להכיר רק כללים בסיסיים ותיאוריות, בנינו מעטפת שלמה של שירותים מקצועיים והרחבנו את תחומי הפעילות; להתנהלות נכונה ובטוחה בתחום יחסי העבודה, המשפט והפיננסים.</div>
                     </div>
+                    <div class="visual"><div class="playVideoButton standout"></div></div>
                 </div>
             </div>
 
@@ -123,7 +124,38 @@
                 <a class="removeFontSpecialTraits itm" href="https://www.youtube.com/channel/UCqd4O0mgDS6LarcUVrkIhFg" target="youtubeWnd"><img src="./images/youtube.png"/></a>
                 <a class="removeFontSpecialTraits itm" href="https://www.linkedin.com/company/otorita?trk=nmp_rec_act_company_photo" target="linkedinWnd"><img src="./images/linkedin.png"/></a>
             </div>
-    </footer>
-    <iframe id="frm" name="frm" class="hideMe"></iframe>
+        </footer>
+        <iframe id="frm" name="frm" class="hideMe"></iframe>
+        <div id="player"></div>
+        <div id="curtain" class="hideMe"></div>
+
+<!--        <div class="screen hideMe"></div> -->
+<!--        <div class="otoritaVideoWrapper"><video class="otoritaVideo hideMe" controls tabindex="-1" controlslist="nodownload" src="blob:https://youtu.be/drYwSOndEVM"></video></div> -->
+        <script src="./js/jquery-1.10.2.min.js"></script>
+        <script src="./js/helper.js?v=201118_2"></script>
+        <script>
+            function onLoad(){
+                document.querySelector(".playVideoButton").addEventListener("click",function(e){
+                    showPlayer();
+                });
+                document.querySelector("#curtain").addEventListener("click",function(e){
+                    hidePlayer();
+                });
+                createPlayer();
+
+/*
+                document.querySelector(".playVideoButton").addEventListener("click",function(e){
+                    document.querySelector(".otoritaVideo").classList.remove("hideMe");
+                    document.querySelector(".screen").classList.remove("hideMe");
+                    document.querySelector(".playVideoButton").classList.remove("standout");
+                })
+                document.querySelector(".screen").addEventListener("click",function(e){
+                    document.querySelector(".otoritaVideo").classList.add("hideMe");
+                    document.querySelector(".screen").classList.add("hideMe");
+                    document.querySelector(".playVideoButton").classList.add("standout");
+                })
+  */
+            }
+        </script>
     </body>
 </html>

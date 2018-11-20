@@ -29,7 +29,15 @@ ul,ol{
     padding:0;
     margin:0;
 }
-
+#curtain{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.5);
+    z-index:100;
+}
 /* global - end */
 
 /*  main navigator bar - start */
@@ -308,7 +316,6 @@ ul,ol{
 /* content stripes in worlds pages - start */
 
     #eFirstStripeInWorldsPgWrapperWrapper{
-        background-color:orange;
         margin-bottom:100px;
     }
     #eWorkWorldPg #eFirstStripeInWorldsPgWrapperWrapper{
@@ -326,6 +333,7 @@ ul,ol{
         top:0;
         height:100%;
         width:100%;
+/*        z-index:-1;*/
     }
     .vidWrapper>.vid{
         display:block;
@@ -336,13 +344,14 @@ ul,ol{
         z-index:-1;
     }
     #eFirstStripeInWorldsPgWrapperWrapper>.vidWrapper>.vid{
-        opacity:0.3;
+        opacity:0.1;
     }
     #eWorkWorldPg #eFirstStripeInWorldsPgWrapper>.visual{
         background-image:url(../images/peopleChatting.png);
         width:524px;
         height:546px;
         transform:translateY(60px);
+        display:flex;
     }
     #eMonetaryWorldPg #eFirstStripeInWorldsPgWrapper>.visual{
         background-image:url(../images/financeWorldOnScreen.png);
@@ -669,14 +678,19 @@ ul,ol{
 
 /* footer content - start*/
     #eMainNavInFtrWrapper{
-        background-color:orange;
-        padding:5em;
+        padding:6em;
+        position:relative;
+        font-size:1.2em;
     }
     #eWorkWorldPg #eMainNavInFtrWrapper{
         background-color:#83b3c8;
     }
     #eMonetaryWorldPg #eMainNavInFtrWrapper{
         background-color:#69af58;
+    }
+    #eWorkWorldPg #eMainNavInFtrWrapper>.vidWrapper>.vid,
+    #eMonetaryWorldPg #eMainNavInFtrWrapper>.vidWrapper>.vid{
+        opacity:0.1;
     }
     #eContactUsPg #eMainNavInFtrWrapper{
         background-color:#ede9e1;
@@ -700,6 +714,11 @@ ul,ol{
     }
     #eMainNavInFtr>.section{
         line-height:1.5em;
+        z-index:1;
+    }
+    #eMainNavInFtr>.section:nth-child(1),#eMainNavInFtr>.section:nth-child(2){
+        padding-left:5rem;
+        white-space:nowrap;
     }
     #eMainNavInFtr .itm{
         cursor:pointer;
@@ -918,6 +937,37 @@ header,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeCo
 
 /* guests login - end */
 
+/* otorita video - start */
+/*
+.otoritaVideoWrapper{
+    position:fixed;
+    width: 745px;
+    height: 419px;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    z-index:200;
+}
+.otoritaVideo{
+    width: 100%;
+    height: 100%;
+}
+*/
+#player{
+    position:fixed;
+    width: 745px;
+    height: 419px;
+/*
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+*/
+    z-index:200;
+}
+
+/* otorita video - end */
+
+
 
 
 /* desktop */
@@ -950,10 +1000,60 @@ header,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeCo
     }
     /* about page - start */
     #eFirstStripeInAboutPgWrapperWrapper{
+        height:456px;
+    
+    }
+    #eFirstStripeInAboutPgWrapperWrapper>.stripeContent>.content>.itm{
+        width:100%;
+    }
+    #eFirstStripeInAboutPgWrapperWrapper>.stripeContent>.visual{
         background-image:url(../images/whiteStripes_large.png);
         height:456px;
-        width:100%;
+        width:523px;
+        position:relative;
+        right:100px;
+        display:flex;
+    }
+    #eFirstStripeInAboutPgWrapperWrapper>.stripeContent>.visual>.playVideoButton{
+        width:81px;
+        height:81px;
+        background-color:rgba(100, 102, 102, 1);
+        background-image:url(../images/arrow_right_black.png);
         background-repeat:no-repeat;
+        background-position:center;
+        border-radius:50%;
+        margin:auto;
+        cursor:pointer;
+    }
+    #eWorkWorldPg .stripeContent>.visual>.playVideoButton{
+        width:65px;
+        height:63px;
+        background-image:url(../images/round.png);
+        background-repeat:no-repeat;
+        background-position:center;
+        border-radius:50%;
+        cursor:pointer;
+        position:absolute;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        left:30px;
+        top:150px;
+    }
+    #eMonetaryWorldPg .stripeContent>.visual>.playVideoButton{
+        width:97px;
+        height:102px;
+        background-color:red;
+        cursor:pointer;
+        position:absolute;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        right:25px;
+        top:238px;
+    }
+    .stripeContent>.visual>.playVideoButton.standout{
+        z-index:300;
     }
     #eAboutPg #eSolutionsWrapper .solution>.visual{
         border-radius:50%;
