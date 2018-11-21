@@ -6,7 +6,7 @@
         <meta name="viewport" content="user-scalable=no,width=device-width, initial-scale=1.0, maximum-scale=1.0" />	
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta charset="utf-8"/>
-        <link rel="stylesheet" href="./css/style.css?v=191118_1"/>
+        <link rel="stylesheet" href="./css/style.css?v=201118_1"/>
         <link rel="stylesheet" href="./css/normalize.css"/>
     </head>
     <body id="eMainPg" onload="onLoad()">
@@ -38,7 +38,7 @@
         <main>
             <div id="eMainHdrSpacer"></div>
             <div id="eFirstStripeInHomePgWrapperWrapper">
-                <div class="vidWrapper"><video class="vid" autoplay="autoplay" loop="loop" src="./images/officeRumble.mp4"></video></div>
+                <div class="vidWrapper"><video class="vid" preload="auto" loop="loop" src="./images/officeRumble.mp4"></video></div>
                 <div id="eFirstStripeInHomePgWrapper" class="stripeContent">
                     <div class="content">
                         <h2 class="caption">
@@ -181,7 +181,7 @@
         </main>
         <footer id="mainFtr">
             <div id="eMainNavInFtrWrapper">
-                <div class="vidWrapper"><video class="vid" autoplay="autoplay" loop="loop" src="./images/officeRumble.mp4"></video></div>
+                <div class="vidWrapper"><video class="vid" preload="auto" loop="loop" src="./images/officeRumble.mp4"></video></div>
                 <div id="eMainNavInFtr">
                     <div id="eProfGuidesAreaInFtr" class="section">
                         <h4 class="hdr">מדריכים מקצועיים</h4>
@@ -221,10 +221,10 @@
             </div>
         </footer>
         <iframe id="frm" name="frm" class="hideMe"></iframe>
-        <script src="./js/helper.js?v=201118_3"></script>
+        <script src="./js/helper.js?v=211118_2"></script>
         <script>
             function onLoad(){
-                setVidWidth();
+                setBackgroundVid();
             }
         </script>
     </body>

@@ -5,24 +5,25 @@
     font-family:subset-TypoPas-Regular;
     src:url(../resources/fonts/TypoPas/subset-TypoPas-Regular.eot);
     src:url(../resources/fonts/TypoPas/subset-TypoPas-Regular.woff);
-    src:url(../resources/fonts/TypoPas/subset-TypoPas-Regular.woff2);
+/*    src:url(../resources/fonts/TypoPas/subset-TypoPas-Regular.woff2);*/
 }
 @font-face{
     font-family:subset-TypoPas-Black;
     src:url(../resources/fonts/TypoPas/subset-TypoPas-Black.eot);
     src:url(../resources/fonts/TypoPas/subset-TypoPas-Black.woff);
-    src:url(../resources/fonts/TypoPas/subset-TypoPas-Black.woff2);
+/*    src:url(../resources/fonts/TypoPas/subset-TypoPas-Black.woff2);*/
 }
 @font-face{
     font-family:subset-TypoPas-Bold;
     src:url(../resources/fonts/TypoPas/subset-TypoPas-Bold.eot);
     src:url(../resources/fonts/TypoPas/subset-TypoPas-Bold.woff);
-    src:url(../resources/fonts/TypoPas/subset-TypoPas-Bold.woff2);
+/*    src:url(../resources/fonts/TypoPas/subset-TypoPas-Bold.woff2);*/
 }
 
 body,html{
     direction:rtl;
-    font-family:subset-TypoPas-Regular, sans-serif;
+/*    font-family:subset-TypoPas-Regular, sans-serif;*/
+      font-family:subset-TypoPas-Regular, serif;
 }
 
 ul,ol{
@@ -314,7 +315,6 @@ ul,ol{
 /* content stripes in about page - end */
 
 /* content stripes in worlds pages - start */
-
     #eFirstStripeInWorldsPgWrapperWrapper{
         margin-bottom:100px;
     }
@@ -716,10 +716,6 @@ ul,ol{
         line-height:1.5em;
         z-index:1;
     }
-    #eMainNavInFtr>.section:nth-child(1),#eMainNavInFtr>.section:nth-child(2){
-        padding-left:5rem;
-        white-space:nowrap;
-    }
     #eMainNavInFtr .itm{
         cursor:pointer;
     }
@@ -1059,8 +1055,14 @@ header,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeCo
         border-radius:50%;
     }
         /* about page - end */
+    /* footer - start */
+        #eMainNavInFtr>.section:nth-child(1),#eMainNavInFtr>.section:nth-child(2){
+            padding-left:5rem;
+            white-space:nowrap;
+        }
+    /* footer - end */
 }
-/* tablet */
+/* tablet + mobile - anything that's not a desktop */
 @media screen and (max-width:979px){
     #mainNav,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeContent,#eRecommendersWrapper,#eFreeTryRegWrapper,#eContactDetailsWrapper,#eContactOptionsWrapper{
         width:98%;
@@ -1146,6 +1148,39 @@ header,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeCo
         padding:0.5rem 1rem;
     }
     /* newsletter reg in footer- end*/
+
+    /* what are we going to do with the videos in the mobile world? hide them for starters- start */
+    .vidWrapper{
+        display:none;
+    }
+    /* what are we going to do with the videos in the mobile world? hide them for starters- start */
+
+    /* footer - start */
+        #eMainNavInFtrWrapper{
+            padding:2rem;
+        }
+        #eMainNavInFtr>.section:nth-child(2),#eMainNavInFtr>.section:nth-child(3){
+            padding-top:2rem;
+        }
+        #eMainPg #eMainNavInFtrWrapper{
+            background-color:#ef7700;
+        }
+        /* footer - end */
+    /* home page - general - start */
+        #eFirstStripeInHomePgWrapperWrapper{
+            background-color:#ef7700;
+        }
+    /* home page - general - end */
+
+    /* worlds pages - general - start */
+    #eFirstStripeInWorldsPgWrapper>.visual{
+        display:none !important;
+    }
+    #eFirstStripeInWorldsPgWrapperWrapper{
+        margin-bottom:20px !important;
+    }
+    /* worlds pages - general - end */
+
 }
 /* mobile*/
 @media screen and (max-width:500px){
