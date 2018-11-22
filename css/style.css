@@ -350,7 +350,7 @@ ul,ol{
     #eFirstStripeInWorldsPgWrapperWrapper,#eFirstStripeInHomePgWrapperWrapper{
         position:relative;
     }
-    .vidWrapper{
+    body:not(#eMainPg) .vidWrapper{
         position:absolute;
         left:0;
         top:0;
@@ -358,11 +358,29 @@ ul,ol{
         width:100%;
 /*        z-index:-1;*/
     }
-    .vidWrapper>.vid{
+    body:not(#eMainPg) .vidWrapper>.vid{
         display:block;
         height:100%;
         margin:auto;
     }
+    .vidWrapperWrapper{
+        position:absolute;
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        overflow:hidden;
+    }
+    .vidWrapperWrapper>.vidWrapper{
+        position:relative;
+    }
+    #eMainPg #eVidInFirstStripe.vidWrapperWrapper>.vidWrapper{
+        bottom:0px;
+    }
+    #eMainPg #eVidInFooter.vidWrapperWrapper>.vidWrapper{
+        bottom:400px;
+    }
+    #eMainPg .vidWrapperWrapper>.vidWrapper
     #eFirstStripeInHomePgWrapperWrapper>.vidWrapper{
         z-index:-1;
     }

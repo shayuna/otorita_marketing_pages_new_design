@@ -4,16 +4,14 @@
 	<title>t1</title>
 	<meta charset="utf-8"/>
     <style>
-		.main{
+		.vidWrapperWrapper{
 			border:1px solid red;
-			height:500px;
-			overflow:hidden;
+			height:519px;
 
 		}
 		.vidWrapper{
-			overflow-x:hidden;
 			position:relative;
-			bottom:300px;
+			bottom:0;
 		}
 		.vidWrapper>.vid{
 /*
@@ -24,9 +22,7 @@
 	</style>
 </head>
 <body onload="onLoad()">
-	<div class="main">
-		<div class="vidWrapper"><video class="vid" autoplay="autoplay" loop="loop" src="./images/officeRumble.mp4"></video></div>
-	</div>
+	<div class="vidWrapperWrapper"><div class="vidWrapper"><video class="vid" autoplay="autoplay" loop="loop" src="./images/officeRumble.mp4"></video></div></div>
 	<script>
 		function onLoad(){
 			setVidWidth();
