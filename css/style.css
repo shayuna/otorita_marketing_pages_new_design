@@ -49,13 +49,17 @@ ul,ol{
     border-bottom:1px solid #eee;
 }
 #eMainHdrSpacer{
-    height:75px;
+    height:73px;
 }
 #mainNav{
     margin:auto;
 }
-#mainNav .hdr{
+#mainNav>.hdr{
     margin:0.5rem;
+}
+#mainNav>.hdr img{
+    width:200px;
+    height:45px;
 }
 #mainNav, #mainNav ul{
     display:flex;
@@ -111,13 +115,14 @@ ul,ol{
 }
 
 .solution{
-    width:170px;
+    width:153px;
     text-align: center;
     margin:1em;
 }
 
 .solution .visual{
-    height:170px;
+    height:153px;
+    width:153px;
     background-position:center;
     background-repeat:no-repeat;
 }
@@ -127,6 +132,9 @@ ul,ol{
 .solution>.caption{
     font-family:subset-TypoPas-bold;
     font-size:2rem;
+}
+#eMainPg .solution>.caption{
+    font-size:1.75rem;
 }
 #eAboutPg .solution>.caption{
     font-size:1.8rem;
@@ -155,7 +163,7 @@ ul,ol{
     background-image:url(../images/academy.png);
 }
 #eAboutPg #eSolutionsWrapper{
-    margin:3rem auto;
+    margin:1rem auto;
 }
 
 /* solution in workWorld pg - start */
@@ -594,7 +602,7 @@ ul,ol{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:7rem 0;
+    padding:4rem 0;
     font-size:1.23rem;
 }
 #eContactDetailsWrapper>.textWrapper{
@@ -1007,8 +1015,8 @@ header,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeCo
     #eSolutionsWrapper{
         display:flex;
         justify-content:space-between;
-        padding-top:4rem;
-        padding-bottom:4rem;
+        padding-top:3rem;
+        padding-bottom:3rem;
     }
     #eRecommendersWrapper{
         margin:5rem auto;
@@ -1276,6 +1284,10 @@ header,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeCo
         margin:2rem auto;
     }
     /* about page - start */
+
+    .solution>.visual{
+        width:auto;
+    }
 
     #eFirstStripeInAboutPgWrapperWrapper>.stripeContent>.content>.itm{
         margin:auto;

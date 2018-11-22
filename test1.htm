@@ -4,34 +4,40 @@
 	<title>t1</title>
 	<meta charset="utf-8"/>
     <style>
-		#eFirstStripeInHomePgWrapper{
+		.main{
+			border:1px solid red;
 			height:500px;
-			margin-top:80px;
+			overflow:hidden;
+
 		}
 		.vidWrapper{
-			height:100%;
-			width:100%;
+			overflow-x:hidden;
+			position:relative;
+			bottom:300px;
 		}
 		.vidWrapper>.vid{
-			display:block;
+/*
 			height:100%;
 			margin:auto;
+*/			
 		}
 	</style>
 </head>
 <body onload="onLoad()">
-    <div id="eFirstStripeInHomePgWrapper">
-        <div class="vidWrapper"><video class="vid" autoplay="autoplay" loop="loop" src="./images/officeRumble1.mp4" poster="./images/officeRumble.webp"></video></div>
+	<div class="main">
+		<div class="vidWrapper"><video class="vid" autoplay="autoplay" loop="loop" src="./images/officeRumble.mp4"></video></div>
 	</div>
 	<script>
 		function onLoad(){
 			setVidWidth();
 		}
 		function setVidWidth(){
+/*
 			window.setTimeout(function(){
 				let dWRatio=document.querySelector(".vidWrapper").offsetWidth/document.querySelector(".vid").offsetWidth;
 				document.querySelector(".vid").style.transform="scaleX("+dWRatio+")";
 			},100);
+*/			
 		}
 	</script>
 </body>
