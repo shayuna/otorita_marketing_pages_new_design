@@ -1,11 +1,16 @@
 function setBackgroundVid(){
     window.setTimeout(function(){
-        for (var jj=0;jj<document.querySelectorAll(".vidWrapper").length;jj++){
-            var elm=document.querySelectorAll(".vidWrapper")[jj];
-            let dWRatio=elm.offsetWidth/elm.querySelector(".vid").offsetWidth;
-            elm.querySelector(".vid").style.transform="scaleX("+dWRatio+")";
-            elm.querySelector(".vid").play();
-        }
+      for (var jj=0;jj<document.querySelectorAll(".vidWrapper").length;jj++){
+          var elm=document.querySelectorAll(".vidWrapper")[jj];
+          let dWRatio=elm.offsetWidth/elm.querySelector(".vid").offsetWidth;
+          elm.querySelector(".vid").style.transform="scaleX("+dWRatio+")";
+          elm.querySelector(".vid").addEventListener("ended",function(e){
+              e.target.play();
+          });
+          elm.querySelector(".vid").addEventListener("canplay",function(e){
+            e.target.play();
+        });
+    }
     },100);
 }
 var player=null;
