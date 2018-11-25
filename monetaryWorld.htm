@@ -6,7 +6,7 @@
         <meta name="viewport" content="user-scalable=no,width=device-width, initial-scale=1.0, maximum-scale=1.0" />	
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta charset="utf-8"/>
-        <link rel="stylesheet" href="./css/style.css?v=221118_3"/>
+        <link rel="stylesheet" href="./css/style.css?v=251118_2"/>
         <link rel="stylesheet" href="./css/normalize.css"/>
     </head>
     <body id="eMonetaryWorldPg" onload="onLoad()">
@@ -38,7 +38,7 @@
         <main>
             <div id="eMainHdrSpacer"></div>
             <div id="eFirstStripeInWorldsPgWrapperWrapper">
-                <div class="vidWrapper"><video class="vid" autoplay="autoplay" loop="loop" muted="muted" src="./images/data.mp4" type="video/mp4"></video></div>
+                <div class="vidWrapperWrapper"><div class="vidWrapper"><video class="vid" autoplay="autoplay" loop="loop" muted="muted" src="./images/data.mp4"></video></div></div>
                 <div id="eFirstStripeInWorldsPgWrapper" class="stripeContent">
                     <div class="content">
                         <h2 class="caption">
@@ -130,7 +130,7 @@
         </main>
         <footer id="mainFtr">
             <div id="eMainNavInFtrWrapper">
-                <div class="vidWrapper"><video class="vid" autoplay="autoplay" loop="loop" muted="muted" src="./images/data.mp4" type="video/mp4"></video></div>
+                <div class="vidWrapperWrapper"><div class="vidWrapper"><video class="vid" autoplay="autoplay" loop="loop" muted="muted" src="./images/data.mp4"></video></div></div>
                 <div id="eMainNavInFtr">
                     <div id="eProfGuidesAreaInFtr" class="section">
                         <h4 class="hdr">מדריכים מקצועיים</h4>
@@ -176,7 +176,6 @@
         <script src="./js/helper.js?v=211118_3"></script>
         <script>
             function onLoad(){
-                setBackgroundVid();
                 document.querySelector(".playVideoButton").addEventListener("click",function(e){
                     showPlayer();
                 });

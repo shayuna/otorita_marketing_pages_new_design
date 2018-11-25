@@ -340,6 +340,7 @@ ul,ol{
 /* content stripes in worlds pages - start */
     #eFirstStripeInWorldsPgWrapperWrapper{
         margin-bottom:100px;
+        z-index:-1;
     }
     #eWorkWorldPg #eFirstStripeInWorldsPgWrapperWrapper{
         background-color:#83b3c8;
@@ -350,43 +351,8 @@ ul,ol{
     #eFirstStripeInWorldsPgWrapperWrapper,#eFirstStripeInHomePgWrapperWrapper{
         position:relative;
     }
-    body:not(#eMainPg) .vidWrapper{
-        position:absolute;
-        left:0;
-        top:0;
-        height:100%;
-        width:100%;
-/*        z-index:-1;*/
-    }
-    body:not(#eMainPg) .vidWrapper>.vid{
-        display:block;
-        height:100%;
-        margin:auto;
-    }
-    .vidWrapperWrapper{
-        position:absolute;
-        left:0;
-        top:0;
-        height:100%;
-        width:100%;
-        overflow:hidden;
-    }
-    .vidWrapperWrapper>.vidWrapper{
-        position:relative;
-    }
-    #eMainPg #eVidInFirstStripe.vidWrapperWrapper>.vidWrapper{
-        bottom:0px;
-    }
-    #eMainPg #eVidInFooter.vidWrapperWrapper>.vidWrapper{
-        bottom:400px;
-    }
-    #eMainPg .vidWrapperWrapper>.vidWrapper
-    #eFirstStripeInHomePgWrapperWrapper>.vidWrapper{
-        z-index:-1;
-    }
-    #eFirstStripeInWorldsPgWrapperWrapper>.vidWrapper>.vid{
-        opacity:0.1;
-    }
+
+
     #eWorkWorldPg #eFirstStripeInWorldsPgWrapper>.visual{
         background-image:url(../images/peopleChatting.png);
         width:524px;
@@ -496,6 +462,30 @@ ul,ol{
     }
 
     /* content stripes in worlds pages - end */
+
+    /* background videos - start */
+    .vidWrapperWrapper{
+        position:absolute;
+        left:0;
+        top:0;
+        height:100%;
+        width:100%;
+        overflow:hidden;
+        z-index:-1;
+    }
+    .vidWrapperWrapper>.vidWrapper{
+        position:relative;
+        top:-66px;
+    }
+    .vidWrapperWrapper>.vidWrapper>.vid{
+        width:100%;
+    }
+    #eFirstStripeInWorldsPgWrapperWrapper>.vidWrapperWrapper,
+    #eWorkWorldPg #eMainNavInFtrWrapper>.vidWrapperWrapper,
+    #eMonetaryWorldPg #eMainNavInFtrWrapper>.vidWrapperWrapper{
+        opacity:0.2;
+    }
+    /* background videos - end */
 
     /* recommenders - start */
     #eRecommendersWrapper{
@@ -726,6 +716,7 @@ ul,ol{
         padding:6em;
         position:relative;
         font-size:1.23rem;
+        z-index:-1;
     }
     #eWorkWorldPg #eMainNavInFtrWrapper{
         background-color:#83b3c8;
