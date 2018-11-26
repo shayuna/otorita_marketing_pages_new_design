@@ -265,11 +265,12 @@ ul,ol{
 /* content stripes general - end */
 
 /* content stripes in home page - start */
+    #eFirstStripeInHomePgWrapperWrapper,
+    #eSecondStripeInHomePgWrapperWrapper{
+        background-color:#ef7700;
+    }
     #eFirstStripeInHomePgWrapperWrapper{
         margin-bottom:40px;
-    }
-    #eSecondStripeInHomePgWrapperWrapper{
-        background-color:#a0a09f;
     }
     #eFirstStripeInHomePgWrapper>.visual{
         background-image:url(../images/ipad.png);
@@ -1261,11 +1262,6 @@ header,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeCo
             background-color:#ef7700;
         }
         /* footer - end */
-    /* home page - general - start */
-        #eFirstStripeInHomePgWrapperWrapper{
-            background-color:#ef7700;
-        }
-    /* home page - general - end */
 }
 /* mobile*/
 @media screen and (max-width:500px){
