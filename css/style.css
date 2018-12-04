@@ -267,7 +267,8 @@ ul,ol{
 /* content stripes in home page - start */
     #eFirstStripeInHomePgWrapperWrapper,
     #eSecondStripeInHomePgWrapperWrapper{
-        background-color:#ef7700;
+        background-color:#a0a09f;
+        z-index:-1;
     }
     #eFirstStripeInHomePgWrapperWrapper{
         margin-bottom:40px;
@@ -718,6 +719,9 @@ ul,ol{
         position:relative;
         font-size:1.23rem;
         z-index:-1;
+    }
+    #eMainPg #eMainNavInFtrWrapper{
+        background-color:#a0a09f;
     }
     #eWorkWorldPg #eMainNavInFtrWrapper{
         background-color:#83b3c8;
