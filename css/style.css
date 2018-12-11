@@ -117,7 +117,7 @@ ul,ol{
 .solution{
     width:153px;
     text-align: center;
-    margin:1em;
+    margin:1rem;
 }
 
 .solution .visual{
@@ -265,343 +265,344 @@ ul,ol{
 /* content stripes general - end */
 
 /* content stripes in home page - start */
-    #eFirstStripeInHomePgWrapperWrapper,
-    #eSecondStripeInHomePgWrapperWrapper{
-        background-color:#a0a09f;
-        z-index:-1;
-    }
-    #eFirstStripeInHomePgWrapperWrapper{
-        margin-bottom:40px;
-    }
-    #eFirstStripeInHomePgWrapper>.visual{
-        background-image:url(../images/ipad.png);
-        width:465px;
-        height:519px;
-        transform:translateY(50px);
-    }
-    #eSecondStripeInHomePgWrapper>.visual{
-        background-image:url(../images/whiteStripes_medium.png);
-        width:500px;
-        height:436px;
-    }
-    #eSecondStripeInHomePgWrapper.stripeContent>.content{
-        padding:0 4rem 0 0;
-    }
-    #eFirstStripeInHomePgWrapper>.content>.caption{
-        font-size:5rem;
-        line-height:100%;
-        font-family:subset-TypoPas-Bold;
-        margin:0 0 1rem 0;
-    }
-    #eFirstStripeInHomePgWrapper>.content>.content{
-        font-size:2.1rem;
-        line-height:120%;
-    }
-    #eSecondStripeInHomePgWrapper>.content>.caption{
-        font-family:subset-Typopas-bold;
-        font-size:2.1rem;
-        line-height:2.6rem;
-        margin:0 0 1rem 0;
-    }
-    #eSecondStripeInHomePgWrapper>.content>.content{
-        font-size:1.23rem;
-        line-height:1.7rem;    
-    }
+#eFirstStripeInHomePgWrapperWrapper,
+#eSecondStripeInHomePgWrapperWrapper{
+    background-color:#a0a09f;
+}
+#eFirstStripeInHomePgWrapperWrapper{
+    margin-bottom:40px;
+}
+#eFirstStripeInHomePgWrapper>.visual{
+    background-image:url(../images/ipad.png);
+    width:465px;
+    height:519px;
+    transform:translateY(50px);
+}
+#eSecondStripeInHomePgWrapper>.visual{
+    background-image:url(../images/whiteStripes_medium.png);
+    width:500px;
+    height:436px;
+}
+#eSecondStripeInHomePgWrapper.stripeContent>.content{
+    padding:0 4rem 0 0;
+}
+#eFirstStripeInHomePgWrapper>.content{
+    position:relative; /* this is needed in order for the content to be displayed on top of the video */
+}
+#eFirstStripeInHomePgWrapper>.content>.caption{
+    font-size:5rem;
+    line-height:100%;
+    font-family:subset-TypoPas-Bold;
+    margin:0 0 1rem 0;
+}
+#eFirstStripeInHomePgWrapper>.content>.content{
+    font-size:2.1rem;
+    line-height:120%;
+}
+#eSecondStripeInHomePgWrapper>.content>.caption{
+    font-family:subset-Typopas-bold;
+    font-size:2.1rem;
+    line-height:2.6rem;
+    margin:0 0 1rem 0;
+}
+#eSecondStripeInHomePgWrapper>.content>.content{
+    font-size:1.23rem;
+    line-height:1.7rem;    
+}
 /* content stripes in home page - end */
 
 /* content stripes in about page - start */
 
-    #eFirstStripeInAboutPgWrapperWrapper,#eSecondStripeInAboutPgWrapperWrapper{
-        background-color:#a0a09f;
-    }
-    #eFirstStripeInAboutPgWrapperWrapper>.stripeContent>.content>.itm{
-        padding:0.7rem;
-        font-size:1.23rem;
-        line-height:1.5rem;
-        width:60%;
-    }
-    #eSecondStripeInAboutPgWrapper>.visual{
-        background-image:url(../images/whiteStripes_small.png);
-        width:353px;
-        height:307px;
-    }
-    #eSecondStripeInAboutPgWrapper.stripeContent>.content{
-        padding:0 4rem 0 0;
-    }
-    #eSecondStripeInAboutPgWrapperWrapper>.stripeContent>.content>.itm{
-        padding:0.7rem;
-        font-size:1.23rem;
-    }
-    #eClientsStripeInAboutPgWrapper>.visual{
-        background-image:url(../images/clients.png);
-        width:975px;
-        height:506px;
-    }
+#eFirstStripeInAboutPgWrapperWrapper,#eSecondStripeInAboutPgWrapperWrapper{
+    background-color:#a0a09f;
+}
+#eFirstStripeInAboutPgWrapperWrapper>.stripeContent>.content>.itm{
+    padding:0.7rem;
+    font-size:1.23rem;
+    line-height:1.5rem;
+    width:60%;
+}
+#eSecondStripeInAboutPgWrapper>.visual{
+    background-image:url(../images/whiteStripes_small.png);
+    width:353px;
+    height:307px;
+}
+#eSecondStripeInAboutPgWrapper.stripeContent>.content{
+    padding:0 4rem 0 0;
+}
+#eSecondStripeInAboutPgWrapperWrapper>.stripeContent>.content>.itm{
+    padding:0.7rem;
+    font-size:1.23rem;
+}
+#eClientsStripeInAboutPgWrapper>.visual{
+    background-image:url(../images/clients.png);
+    width:975px;
+    height:506px;
+}
 /* content stripes in about page - end */
 
 /* content stripes in worlds pages - start */
-    #eFirstStripeInWorldsPgWrapperWrapper{
-        margin-bottom:100px;
-        z-index:-1;
-    }
-    #eWorkWorldPg #eFirstStripeInWorldsPgWrapperWrapper{
-        background-color:#83b3c8;
-    }
-    #eMonetaryWorldPg #eFirstStripeInWorldsPgWrapperWrapper{
-        background-color:#69af58;
-    }
-    #eFirstStripeInWorldsPgWrapperWrapper,#eFirstStripeInHomePgWrapperWrapper{
-        position:relative;
-    }
+#eFirstStripeInWorldsPgWrapperWrapper{
+    margin-bottom:100px;
+}
+#eWorkWorldPg #eFirstStripeInWorldsPgWrapperWrapper{
+    background-color:#83b3c8;
+}
+#eMonetaryWorldPg #eFirstStripeInWorldsPgWrapperWrapper{
+    background-color:#69af58;
+}
+#eFirstStripeInWorldsPgWrapperWrapper,#eFirstStripeInHomePgWrapperWrapper{
+    position:relative;
+}
 
 
-    #eWorkWorldPg #eFirstStripeInWorldsPgWrapper>.visual{
-        background-image:url(../images/peopleChatting.png);
-        width:524px;
-        height:546px;
-        transform:translateY(60px);
-        display:flex;
-    }
-    #eMonetaryWorldPg #eFirstStripeInWorldsPgWrapper>.visual{
-        background-image:url(../images/financeWorldOnScreen.png);
-        width:654px;
-        height:563px;
-        transform:translateY(40px);
-    }
-    #eFirstStripeInWorldsPgWrapper>.content{
-        color:black;
-    }
-    #eFirstStripeInWorldsPgWrapper>.content>.caption{
-        font-family:subset-TypoPas-bold;
-        font-size:5rem;
-        line-height:100%;
-        margin:0 0 1rem 0;
-    }
-    #eFirstStripeInWorldsPgWrapper>.content>.content{
-        font-size:2.1rem;
-        line-height:120%;
-    }
+#eWorkWorldPg #eFirstStripeInWorldsPgWrapper>.visual{
+    background-image:url(../images/peopleChatting.png);
+    width:524px;
+    height:546px;
+    transform:translateY(60px);
+    display:flex;
+}
+#eMonetaryWorldPg #eFirstStripeInWorldsPgWrapper>.visual{
+    background-image:url(../images/financeWorldOnScreen.png);
+    width:654px;
+    height:563px;
+    transform:translateY(40px);
+}
+#eFirstStripeInWorldsPgWrapper>.content{
+    color:black;
+    position:relative; /* this is needed in order for the content to be displayed on top of the video */
+}
+#eFirstStripeInWorldsPgWrapper>.content>.caption{
+    font-family:subset-TypoPas-bold;
+    font-size:5rem;
+    line-height:100%;
+    margin:0 0 1rem 0;
+}
+#eFirstStripeInWorldsPgWrapper>.content>.content{
+    font-size:2.1rem;
+    line-height:120%;
+}
 
-    #eWrongAndRightStripeInWorldsWrapper,
-    #eProfDeptStripeInWorldsWrapper,
-    #eJournalStripeInWorldsWrapper,
-    #eFinancialManagementStripeInWorldsWrapper,
-    #eFormsInterfaceStripeInWorldsWrapper,
-    #eCloudStripeInWorldsWrapper{
-        margin:3rem auto;
-    }
-    #eJournalStripeInWorldsWrapper{
-        margin:3rem auto 6rem;
-    }
-    #eWrongAndRightStripeInWorldsWrapper>.visual{
-        background-image:url(../images/vi_large.png);
-    }
-    #eJournalStripeInWorldsWrapper>.visual{
-        background-image:url(../images/journal_large.png);
-    }
-    #eProfDeptStripeInWorldsWrapper>.visual{
-        background-image:url(../images/workWorld_large.png);
-    }
-    #eFinancialManagementStripeInWorldsWrapper>.visual{
-        background-image:url(../images/marksOnAxes_large.png);
-    }
-    #eFormsInterfaceStripeInWorldsWrapper>.visual{
-        background-image:url(../images/documents_large.png);
-    }
-    #eCloudStripeInWorldsWrapper>.visual{
-        background-image:url(../images/cloud_large.png);
-    }
-    #eWrongAndRightStripeInWorldsWrapper>.visual,
-    #eProfDeptStripeInWorldsWrapper>.visual,
-    #eJournalStripeInWorldsWrapper>.visual,
-    #eFinancialManagementStripeInWorldsWrapper>.visual,
-    #eFormsInterfaceStripeInWorldsWrapper>.visual,
-    #eCloudStripeInWorldsWrapper>.visual{
-        background-position:center;
-        background-repeat:no-repeat;
-        width:218px;
-        height:218px;
-        border:4px solid #bfc0c2;
-        box-sizing:border-box;
-    }
-    #eWrongAndRightStripeInWorldsWrapper>.content,
-    #eProfDeptStripeInWorldsWrapper>.content,
-    #eJournalStripeInWorldsWrapper>.content,
-    #eFinancialManagementStripeInWorldsWrapper>.content,
-    #eFormsInterfaceStripeInWorldsWrapper>.content,
-    #eCloudStripeInWorldsWrapper>.content{
-        font-size:1.23rem;
-        color:rgb(128,130,133);
-        line-height:150%;
-    }
-    #eWrongAndRightStripeInWorldsWrapper>.content,
-    #eJournalStripeInWorldsWrapper>.content,
-    #eFinancialManagementStripeInWorldsWrapper>.content,
-    #eCloudStripeInWorldsWrapper>.content{
-        padding:0 4rem 0 0;
-    }
-    #eProfDeptStripeInWorldsWrapper>.content,
-    #eFormsInterfaceStripeInWorldsWrapper>.content{
-        padding:0 0 0 4rem;
-    }
-    #eWrongAndRightStripeInWorldsWrapper>.content>.caption,
-    #eProfDeptStripeInWorldsWrapper>.content>.caption,
-    #eJournalStripeInWorldsWrapper>.content>.caption,
-    #eFinancialManagementStripeInWorldsWrapper>.content>.caption,
-    #eFormsInterfaceStripeInWorldsWrapper>.content>.caption,
-    #eCloudStripeInWorldsWrapper>.content>.caption{
-        font-size:2.75rem;
-    }
-    #eWrongAndRightStripeInWorldsWrapper>.content>.caption,
-    #eProfDeptStripeInWorldsWrapper>.content>.caption,
-    #eJournalStripeInWorldsWrapper>.content>.caption{
-        color:#77acc4;
-    }
-    #eFinancialManagementStripeInWorldsWrapper>.content>.caption,
-    #eFormsInterfaceStripeInWorldsWrapper>.content>.caption,
-    #eCloudStripeInWorldsWrapper>.content>.caption{
-        color:#68b04d;
-    }
+#eWrongAndRightStripeInWorldsWrapper,
+#eProfDeptStripeInWorldsWrapper,
+#eJournalStripeInWorldsWrapper,
+#eFinancialManagementStripeInWorldsWrapper,
+#eFormsInterfaceStripeInWorldsWrapper,
+#eCloudStripeInWorldsWrapper{
+    margin:3rem auto;
+}
+#eJournalStripeInWorldsWrapper{
+    margin:3rem auto 6rem;
+}
+#eWrongAndRightStripeInWorldsWrapper>.visual{
+    background-image:url(../images/vi_large.png);
+}
+#eJournalStripeInWorldsWrapper>.visual{
+    background-image:url(../images/journal_large.png);
+}
+#eProfDeptStripeInWorldsWrapper>.visual{
+    background-image:url(../images/workWorld_large.png);
+}
+#eFinancialManagementStripeInWorldsWrapper>.visual{
+    background-image:url(../images/marksOnAxes_large.png);
+}
+#eFormsInterfaceStripeInWorldsWrapper>.visual{
+    background-image:url(../images/documents_large.png);
+}
+#eCloudStripeInWorldsWrapper>.visual{
+    background-image:url(../images/cloud_large.png);
+}
+#eWrongAndRightStripeInWorldsWrapper>.visual,
+#eProfDeptStripeInWorldsWrapper>.visual,
+#eJournalStripeInWorldsWrapper>.visual,
+#eFinancialManagementStripeInWorldsWrapper>.visual,
+#eFormsInterfaceStripeInWorldsWrapper>.visual,
+#eCloudStripeInWorldsWrapper>.visual{
+    background-position:center;
+    background-repeat:no-repeat;
+    width:218px;
+    height:218px;
+    border:4px solid #bfc0c2;
+    box-sizing:border-box;
+}
+#eWrongAndRightStripeInWorldsWrapper>.content,
+#eProfDeptStripeInWorldsWrapper>.content,
+#eJournalStripeInWorldsWrapper>.content,
+#eFinancialManagementStripeInWorldsWrapper>.content,
+#eFormsInterfaceStripeInWorldsWrapper>.content,
+#eCloudStripeInWorldsWrapper>.content{
+    font-size:1.23rem;
+    color:rgb(128,130,133);
+    line-height:150%;
+}
+#eWrongAndRightStripeInWorldsWrapper>.content,
+#eJournalStripeInWorldsWrapper>.content,
+#eFinancialManagementStripeInWorldsWrapper>.content,
+#eCloudStripeInWorldsWrapper>.content{
+    padding:0 4rem 0 0;
+}
+#eProfDeptStripeInWorldsWrapper>.content,
+#eFormsInterfaceStripeInWorldsWrapper>.content{
+    padding:0 0 0 4rem;
+}
+#eWrongAndRightStripeInWorldsWrapper>.content>.caption,
+#eProfDeptStripeInWorldsWrapper>.content>.caption,
+#eJournalStripeInWorldsWrapper>.content>.caption,
+#eFinancialManagementStripeInWorldsWrapper>.content>.caption,
+#eFormsInterfaceStripeInWorldsWrapper>.content>.caption,
+#eCloudStripeInWorldsWrapper>.content>.caption{
+    font-size:2.75rem;
+}
+#eWrongAndRightStripeInWorldsWrapper>.content>.caption,
+#eProfDeptStripeInWorldsWrapper>.content>.caption,
+#eJournalStripeInWorldsWrapper>.content>.caption{
+    color:#77acc4;
+}
+#eFinancialManagementStripeInWorldsWrapper>.content>.caption,
+#eFormsInterfaceStripeInWorldsWrapper>.content>.caption,
+#eCloudStripeInWorldsWrapper>.content>.caption{
+    color:#68b04d;
+}
 
-    /* content stripes in worlds pages - end */
+/* content stripes in worlds pages - end */
 
-    /* background videos - start */
-    .vidWrapperWrapper{
-        position:absolute;
-        left:0;
-        top:0;
-        height:100%;
-        width:100%;
-        overflow:hidden;
-        z-index:-1;
-    }
-    .vidWrapperWrapper>.vidWrapper{
-        position:relative;
-        top:-66px;
-    }
-    .vidWrapperWrapper>.vidWrapper>.vid{
-        width:100%;
-    }
-    #eFirstStripeInWorldsPgWrapperWrapper>.vidWrapperWrapper,
-    #eWorkWorldPg #eMainNavInFtrWrapper>.vidWrapperWrapper,
-    #eMonetaryWorldPg #eMainNavInFtrWrapper>.vidWrapperWrapper{
-        opacity:0.2;
-    }
-    /* background videos - end */
+/* background videos - start */
+.vidWrapperWrapper{
+    position:absolute;
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    overflow:hidden;
+}
+.vidWrapperWrapper>.vidWrapper{
+    position:relative;
+    top:-66px;
+}
+.vidWrapperWrapper>.vidWrapper>.vid{
+    width:100%;
+}
+#eFirstStripeInWorldsPgWrapperWrapper>.vidWrapperWrapper,
+#eWorkWorldPg #eMainNavInFtrWrapper>.vidWrapperWrapper,
+#eMonetaryWorldPg #eMainNavInFtrWrapper>.vidWrapperWrapper{
+    opacity:0.2;
+}
+/* background videos - end */
 
-    /* recommenders - start */
-    #eRecommendersWrapper{
-        display:flex;
-        flex-direction:column;
-    }
-    #eRecommendersWrapper .recommender{
-        width:154px;
-        text-align:center;
-        font-size:1.23em;
-        margin:1rem;
-    }
-    #eRecommendersWrapper .recommender>.visual{
-        height:155px;
-        border-radius:50%;
-        background-repeat:no-repeat;
-    }
-    #eRecommendersWrapper .recommender>.visual.galz{
-        background-image:url(../images/gal_z.png);
-    }
+/* recommenders - start */
+#eRecommendersWrapper{
+    display:flex;
+    flex-direction:column;
+}
+#eRecommendersWrapper .recommender{
+    width:154px;
+    text-align:center;
+    font-size:1.23rem;
+    margin:1rem;
+}
+#eRecommendersWrapper .recommender>.visual{
+    height:155px;
+    border-radius:50%;
+    background-repeat:no-repeat;
+}
+#eRecommendersWrapper .recommender>.visual.galz{
+    background-image:url(../images/gal_z.png);
+}
 
-    #eRecommendersWrapper .recommender>.visual.hadarabm{
-        background-image:url(../images/hadara_bm.png);
-    }
-    #eRecommendersWrapper .recommender>.visual.galg{
-        background-image:url(../images/gal_g.png);
-    }
-    #eRecommendersWrapper .recommender>.visual.haimm{
-        background-image:url(../images/haim_m.png);
-    }
-    #eRecommendersWrapper .recommender>.visual.ornach{
-        background-image:url(../images/orna_ch.png);
-    }
-    #eRecommendersWrapper .recommender>.visual.kobiy{
-        background-image:url(../images/kobi_y.png);
-    }
-    #eRecommendersWrapper .recommender>.visual.yehudap{
-        background-image:url(../images/yehuda_p.png);
-    }
-    #eRecommendersWrapper .recommender>.visual.avik{
-        background-image:url(../images/avi_k.png);
-    }
+#eRecommendersWrapper .recommender>.visual.hadarabm{
+    background-image:url(../images/hadara_bm.png);
+}
+#eRecommendersWrapper .recommender>.visual.galg{
+    background-image:url(../images/gal_g.png);
+}
+#eRecommendersWrapper .recommender>.visual.haimm{
+    background-image:url(../images/haim_m.png);
+}
+#eRecommendersWrapper .recommender>.visual.ornach{
+    background-image:url(../images/orna_ch.png);
+}
+#eRecommendersWrapper .recommender>.visual.kobiy{
+    background-image:url(../images/kobi_y.png);
+}
+#eRecommendersWrapper .recommender>.visual.yehudap{
+    background-image:url(../images/yehuda_p.png);
+}
+#eRecommendersWrapper .recommender>.visual.avik{
+    background-image:url(../images/avi_k.png);
+}
 
 
-    #eRecommendersWrapper .recommender>.caption>.recommenderName{
-        font-family:subset-TypoPaS-bold;
-        font-size:1.8rem;
-        margin:1rem auto 0.2rem;
-    }
-    #eRecommendersWrapper .recommender>.caption{
-        margin-bottom:1rem;
-    }
-    
-    
-    /* recommenders - end */
+#eRecommendersWrapper .recommender>.caption>.recommenderName{
+    font-family:subset-TypoPaS-bold;
+    font-size:1.8rem;
+    margin:1rem auto 0.2rem;
+}
+#eRecommendersWrapper .recommender>.caption{
+    margin-bottom:1rem;
+}
+
+
+/* recommenders - end */
 
 
 /* free try reg - start */
-    #eFreeTryRegWrapper{
-        display:flex;
-        justify-content:space-between;
-        align-items:flex-start;
-        padding:7rem 0;
-    }
-    #eFreeTryRegWrapper>.textWrapper{
-        width:20rem;
-        margin-left:4rem;
-    }
-    #eFreeTryRegWrapper>.textWrapper>.caption{
-        font-family:subset-TypoPas-bold;
-        font-size:2.75rem;
-    }
-    #eFreeTryRegWrapper>.textWrapper>.content{
-        margin-top:0.5rem;
-        font-size:1.4rem;
-        line-height:1.5rem;
-        color:#c0c0bf;
-    }
-    #eFreeTryRegWrapper>.formWrapper{
-        flex-grow:1;
-        display:flex;
-        flex-direction: column;
-    }
-    #eFreeTryRegWrapper>.formWrapper>.submitBtn{
-        width:auto;
-        align-self: flex-end;
-        color:white;
-        padding:0.4rem;
-        border:0;
-        font-size:1.23rem;
-    }
-    #eWorkWorldPg #eFreeTryRegWrapper>.formWrapper>.submitBtn{
-        background-color:#77acc4;
-    }
-    #eMonetaryWorldPg #eFreeTryRegWrapper>.formWrapper>.submitBtn{
-        background-color:#68b04d;
-    }
+#eFreeTryRegWrapper{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    padding:7rem 0;
+}
+#eFreeTryRegWrapper>.textWrapper{
+    width:20rem;
+    margin-left:4rem;
+}
+#eFreeTryRegWrapper>.textWrapper>.caption{
+    font-family:subset-TypoPas-bold;
+    font-size:2.75rem;
+}
+#eFreeTryRegWrapper>.textWrapper>.content{
+    margin-top:0.5rem;
+    font-size:1.4rem;
+    line-height:1.5rem;
+    color:#c0c0bf;
+}
+#eFreeTryRegWrapper>.formWrapper{
+    flex-grow:1;
+    display:flex;
+    flex-direction: column;
+}
+#eFreeTryRegWrapper>.formWrapper>.submitBtn{
+    width:auto;
+    align-self: flex-end;
+    color:white;
+    padding:0.4rem;
+    border:0;
+    font-size:1.23rem;
+}
+#eWorkWorldPg #eFreeTryRegWrapper>.formWrapper>.submitBtn{
+    background-color:#77acc4;
+}
+#eMonetaryWorldPg #eFreeTryRegWrapper>.formWrapper>.submitBtn{
+    background-color:#68b04d;
+}
 
-    #eFreeTryRegWrapper>.formWrapper>.itm{
-        margin:0.2rem 0;
-        padding:0.5rem 0.2rem;
-        font-size:1rem;
-        color:#4ea4eb;
-    }
-    #eWorkWorldPg #eFreeTryRegWrapper>.formWrapper>.itm{
-        border:3px solid #77acc4;
-    }
-    #eMonetaryWorldPg #eFreeTryRegWrapper>.formWrapper>.itm{
-        border:3px solid #68b04d;
-    }
+#eFreeTryRegWrapper>.formWrapper>.itm{
+    margin:0.2rem 0;
+    padding:0.5rem 0.2rem;
+    font-size:1rem;
+    color:#4ea4eb;
+}
+#eWorkWorldPg #eFreeTryRegWrapper>.formWrapper>.itm{
+    border:3px solid #77acc4;
+}
+#eMonetaryWorldPg #eFreeTryRegWrapper>.formWrapper>.itm{
+    border:3px solid #68b04d;
+}
 
-    #eFreeTryRegWrapper>.formWrapper>.itm::placeholder{
-        color:#ccc;
-    }
+#eFreeTryRegWrapper>.formWrapper>.itm::placeholder{
+    color:#ccc;
+}
 /* free try reg - end */
 
 /* contact Details Interface - start */
@@ -663,193 +664,212 @@ ul,ol{
 /* contact Details Interface - end */
 
 /* contact options - start */
-    #eContactOptionsWrapper{
-        display:flex;
-        justify-content:space-between;
-        padding:6rem 0;
-    }
-    .contactOption>.visual{
-        border-radius:50%;
-        width:153px;
-        height:153px;
-        margin:auto;
-        background-repeat:no-repeat;
-        background-position:center;
-    }
-    .contactOption>.content{
-        text-align:center;
-        max-width:10rem;
-    }
-    .contactOption>.content>.caption{
-        font-family:subset-TypoPas-Bold;
-        font-size:1.75rem;
-        margin:0.8rem;
-    }
-    .contactOption>.content>.content{
-        font-weight:normal;
-        font-size:1.23rem;
-    }
-    .contactOption>.visual.tel{
-        background-color:white;
-        background-image:url(../images/tel.png);
-        background-color:#4682b4;
-    }
-    .contactOption>.visual.fax{
-        background-color:white;
-        background-image:url(../images/fax.png);
-        background-color:#d0ae33;
-    }
-    .contactOption>.visual.address{
-        background-color:white;
-        background-image:url(../images/address.png);
-        background-color:#77acc4;
-    }
-    .contactOption>.visual.email{
-        background-color:white;
-        background-image:url(../images/email.png);
-        background-color:#68b04d;
-    }
+#eContactOptionsWrapper{
+    display:flex;
+    justify-content:space-between;
+    padding:6rem 0;
+}
+.contactOption>.visual{
+    border-radius:50%;
+    width:153px;
+    height:153px;
+    margin:auto;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+.contactOption>.content{
+    text-align:center;
+    max-width:10rem;
+}
+.contactOption>.content>.caption{
+    font-family:subset-TypoPas-Bold;
+    font-size:1.75rem;
+    margin:0.8rem;
+}
+.contactOption>.content>.content{
+    font-weight:normal;
+    font-size:1.23rem;
+}
+.contactOption>.visual.tel{
+    background-color:white;
+    background-image:url(../images/tel.png);
+    background-color:#4682b4;
+}
+.contactOption>.visual.fax{
+    background-color:white;
+    background-image:url(../images/fax.png);
+    background-color:#d0ae33;
+}
+.contactOption>.visual.address{
+    background-color:white;
+    background-image:url(../images/address.png);
+    background-color:#77acc4;
+}
+.contactOption>.visual.email{
+    background-color:white;
+    background-image:url(../images/email.png);
+    background-color:#68b04d;
+}
 /* contact options - end */
 
 
 
 /* footer content - start*/
-    #eMainNavInFtrWrapper{
-        padding:6em;
-        position:relative;
-        font-size:1.23rem;
-        z-index:-1;
-    }
-    #eMainPg #eMainNavInFtrWrapper{
-        background-color:#a0a09f;
-    }
-    #eWorkWorldPg #eMainNavInFtrWrapper{
-        background-color:#83b3c8;
-    }
-    #eMonetaryWorldPg #eMainNavInFtrWrapper{
-        background-color:#69af58;
-    }
-    #eWorkWorldPg #eMainNavInFtrWrapper>.vidWrapper>.vid,
-    #eMonetaryWorldPg #eMainNavInFtrWrapper>.vidWrapper>.vid{
-        opacity:0.1;
-    }
-    #eContactUsPg #eMainNavInFtrWrapper{
-        background-color:#ede9e1;
-    }
-    #eAboutPg #eMainNavInFtrWrapper{
-        background-color:#a0a09f;
-    }
-    #eMainNavInFtr{
-        display:flex;
-        justify-content:space-between;
-        color:white;
-    }
-    #eAboutPg #eMainNavInFtr,
-    #eWorkWorldPg #eMainNavInFtr,
-    #eContactUsPg #eMainNavInFtr,
-    #eMonetaryWorldPg #eMainNavInFtr{
-        color:black;
-    }
-    #eMainNavInFtr .hdr{
-        font-family:subset-TypoPas-bold;
-        margin:0 0 0.2em 0;
-    }
-    #eMainNavInFtr>.section{
-        line-height:1.5em;
-        z-index:1;
-    }
-    #eMainNavInFtr .itm{
-        cursor:pointer;
-    }
-    #eMainNavInFtr .itmWrapper{
-        list-style:none;
-    }
-    #eMainNavInFtr .itm:before{
-        content:"";
-        display:inline-block;
-        width:16px;
-        height:16px;
-        vertical-align:-3px;
-        margin-left:5px;
+#eMainNavInFtrWrapper{
+    padding:6rem;
+    position:relative;
+    font-size:1.23rem;
+}
+#eMainPg #eMainNavInFtrWrapper{
+    background-color:#a0a09f;
+}
+#eWorkWorldPg #eMainNavInFtrWrapper{
+    background-color:#83b3c8;
+}
+#eMonetaryWorldPg #eMainNavInFtrWrapper{
+    background-color:#69af58;
+}
+#eWorkWorldPg #eMainNavInFtrWrapper>.vidWrapper>.vid,
+#eMonetaryWorldPg #eMainNavInFtrWrapper>.vidWrapper>.vid{
+    opacity:0.1;
+}
+#eContactUsPg #eMainNavInFtrWrapper{
+    background-color:#ede9e1;
+}
+#eAboutPg #eMainNavInFtrWrapper{
+    background-color:#a0a09f;
+}
+#eMainNavInFtr{
+    display:flex;
+    justify-content:space-between;
+    color:white;
+}
+#eAboutPg #eMainNavInFtr,
+#eWorkWorldPg #eMainNavInFtr,
+#eContactUsPg #eMainNavInFtr,
+#eMonetaryWorldPg #eMainNavInFtr{
+    color:black;
+}
+#eMainNavInFtr .hdr{
+    font-family:subset-TypoPas-bold;
+    margin:0 0 0.2em 0;
+}
+#eMainNavInFtr>.section{
+    line-height:1.5rem;
+    z-index:1;
+}
+#eMainNavInFtr .itm{
+    cursor:pointer;
+}
+#eMainNavInFtr .itmWrapper{
+    list-style:none;
+}
 
-    }
-    #eMainNavInFtr .itm:before{
-        background-image:url(../images/arrow_left.png);
-    }
-    #eMainPg #eMainNavInFtr .itm:before{
-        background-image:url(../images/arrow_left_white.png);
-    }
-    #eEmailInputInNewsletterReg{
-        flex-grow:1;
-        margin-left:1.5em;
-        padding:0.5em 0.2em;
-    }
-    #eEmailInputInNewsletterReg::placeholder{
-        color:white;
-    }
-    #eAboutPg #eEmailInputInNewsletterReg::placeholder,
-    #eWorkWorldPg #eEmailInputInNewsletterReg::placeholder,
-    #eMonetaryWorldPg #eEmailInputInNewsletterReg::placeholder,
-    #eContactUsPg #eEmailInputInNewsletterReg::placeholder{
-        color:black;
-    }
-    #eSendBtnInNewsletterReg{
-        flex-grow:0;
-        padding:0 1rem;
-    }
-    #eSendBtnInNewsletterReg:hover{
-        cursor:pointer;
-    }
-    #eEmailInputInNewsletterReg,#eSendBtnInNewsletterReg{
-        background-color:transparent;
-        border:1px solid white;
-        color:white;
-    }
-    #eAboutPg #eEmailInputInNewsletterReg,
-    #eWorkWorldPg #eEmailInputInNewsletterReg,
-    #eMonetaryWorldPg #eEmailInputInNewsletterReg,
-    #eContactUsPg #eEmailInputInNewsletterReg,
-    #eAboutPg #eSendBtnInNewsletterReg,
-    #eWorkWorldPg #eSendBtnInNewsletterReg,
-    #eMonetaryWorldPg #eSendBtnInNewsletterReg,
-    #eContactUsPg #eSendBtnInNewsletterReg{
-        border:1px solid black;
-        color:black;
-    }
-    #eSocialNewtworksControlPanel{
-        margin:1em auto !important;
-    }
-    #eSocialNewtworksControlPanel .itm{
-        margin-left:1em;
+/*
+#eMainNavInFtr .itm:before{
+    content:"";
+    display:inline-block;
+    width:16px;
+    height:16px;
+    vertical-align:-3px;
+    margin-left:5px;
 
-    }
-    #eSocialNewtworksControlPanel .itm:hover{
-        cursor:pointer;
-    }
+}
+#eMainNavInFtr .itm:before{
+    background-image:url(../images/arrow_left.png);
+}
+#eMainPg #eMainNavInFtr .itm:before{
+    background-image:url(../images/arrow_left_white.png);
+}
+*/
+#eMainNavInFtr .itmWrapper{
+    list-style-image: url(../images/arrow_left.png);
+    padding-inline-start:20px;
+}
+#eMainPg #eMainNavInFtr .itmWrapper{
+    list-style-image: url(../images/arrow_left_white.png);
+}
+#eEmailInputInNewsletterReg{
+    flex-grow:1;
+    margin-left:0.45rem;
+    padding:0.5em 0.2rem;
+}
+#eEmailInputInNewsletterReg::placeholder{
+    color:white;
+}
+#eAboutPg #eEmailInputInNewsletterReg::placeholder,
+#eWorkWorldPg #eEmailInputInNewsletterReg::placeholder,
+#eMonetaryWorldPg #eEmailInputInNewsletterReg::placeholder,
+#eContactUsPg #eEmailInputInNewsletterReg::placeholder{
+    color:black;
+}
+#eSendBtnInNewsletterReg{
+    flex-grow:0;
+    padding:0 1rem;
+}
+#eSendBtnInNewsletterReg:hover{
+    cursor:pointer;
+}
+#eEmailInputInNewsletterReg,#eSendBtnInNewsletterReg{
+    background-color:transparent;
+    border:1px solid white;
+    color:white;
+}
+#eAboutPg #eEmailInputInNewsletterReg,
+#eWorkWorldPg #eEmailInputInNewsletterReg,
+#eMonetaryWorldPg #eEmailInputInNewsletterReg,
+#eContactUsPg #eEmailInputInNewsletterReg,
+#eAboutPg #eSendBtnInNewsletterReg,
+#eWorkWorldPg #eSendBtnInNewsletterReg,
+#eMonetaryWorldPg #eSendBtnInNewsletterReg,
+#eContactUsPg #eSendBtnInNewsletterReg{
+    border:1px solid black;
+    color:black;
+}
+#eSocialNetworksControlPanel{
+    margin:1em auto !important;
+}
+#eSocialNetworksControlPanel .itm{
+    margin-left:1rem;
+
+}
+#eSocialNetworksControlPanel .itm:hover{
+    cursor:pointer;
+}
 /* footer content - end*/
 
 /* helper classes - start */
-    .flex-column{
-        display:flex;
-        flex-direction:column;
-    }
-    .bgcolor1{
-        background-color:#ddd;
-    }
-    .hideMe{
-        display:none !important;
-    }
-    .boldMe{
-        font-weight:bold;
-    }
-    a.removeFontSpecialTraits{
-        color:inherit;
-        text-decoration: none;
-    }
+.flex-column{
+    display:flex;
+    flex-direction:column;
+}
+.bgcolor1{
+    background-color:#ddd;
+}
+.hideMe{
+    display:none !important;
+}
+.boldMe{
+    font-weight:bold;
+}
+a.removeFontSpecialTraits{
+    color:inherit;
+    text-decoration: none;
+}
+.cursorDefault{
+    cursor:default;
+}
 /* helper classes - end */
 
+.changeOnHover:hover,.submitBtn:hover,#eSendBtnInNewsletterReg:hover,#eSocialNetworksControlPanel>.itm:hover{
+    opacity:0.8;
+    cursor:pointer;
+}
+#eSocialNetworksControlPanel>.itm:hover{
+    opacity:0.6;
+}
 
-header,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeContent,#eRecommendersWrapper,#eFreeTryRegWrapper,#eContactDetailsWrapper,#eContactOptionsWrapper{
+header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeContent,#eRecommendersWrapper,#eFreeTryRegWrapper,#eContactDetailsWrapper,#eContactOptionsWrapper{
     margin:auto;
 }
 
@@ -1007,12 +1027,9 @@ header,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeCo
 
 /* otorita video - end */
 
-
-
-
 /* desktop */
 @media screen and (min-width:980px){
-    #mainNav,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeContent,#eRecommendersWrapper,#eFreeTryRegWrapper,#eContactDetailsWrapper,#eContactOptionsWrapper{
+    #mainNav,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeContent,#eRecommendersWrapper,#eFreeTryRegWrapper,#eContactDetailsWrapper,#eContactOptionsWrapper{
         width:1024px;
     }
     #mainNav>ul>li:first-of-type{
@@ -1043,9 +1060,17 @@ header,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeCo
         min-height:7rem;
     }
     #eNewsletterRegInputFldsWrapper{
-        margin-top:1em;
+        margin-top:1rem;
         display:flex;
     }
+    #eSecondStripeInHomePgWrapperWrapper{
+        height:435px;/* an essential hack because of a bug in chrome which is responsible for a thin gray line displayed at the top of the element */
+    }
+    #eSecondStripeInHomePgWrapper>.visual{
+        position:relative;
+        bottom:1px;/* an essential hack because of a bug in chrome which is responsible for a thin gray line displayed at the top of the element */
+    }
+    
     /* about page - start */
     #eFirstStripeInAboutPgWrapperWrapper{
         height:456px;
@@ -1072,6 +1097,9 @@ header,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeCo
         border-radius:50%;
         margin:auto;
         cursor:pointer;
+    }
+    #eSecondStripeInAboutPgWrapperWrapper{
+        height:306px;/* an essential hack because of a bug in chrome which is responsible for a thin gray line displayed at the top of the element */
     }
     #eAboutPg .solution>.caption{
         min-height:5rem;
@@ -1109,7 +1137,6 @@ header,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeCo
     #eMonetaryWorldPg .stripeContent>.visual>.playVideoButton{
         width:97px;
         height:102px;
-        background-color:red;
         cursor:pointer;
         position:absolute;
         display:flex;
@@ -1136,7 +1163,7 @@ header,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeCo
 }
 /* tablet + mobile - anything that's not a desktop */
 @media screen and (max-width:979px){
-    #mainNav,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeContent,#eRecommendersWrapper,#eFreeTryRegWrapper,#eContactDetailsWrapper,#eContactOptionsWrapper{
+    #mainNav,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeContent,#eRecommendersWrapper,#eFreeTryRegWrapper,#eContactDetailsWrapper,#eContactOptionsWrapper{
         width:98%;
     }
     #mainNav, #mainNav ul{
@@ -1269,7 +1296,7 @@ header,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeCo
 }
 /* mobile*/
 @media screen and (max-width:500px){
-    #mainNav,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,#eFirstStripeInHomePgWrapper,#eRecommendersWrapper,#eFreeTryRegWrapper,#eContactDetailsWrapper,#eContactOptionsWrapper{
+    #mainNav,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,#eFirstStripeInHomePgWrapper,#eRecommendersWrapper,#eFreeTryRegWrapper,#eContactDetailsWrapper,#eContactOptionsWrapper{
         width:98%;
     }
     #mainNav, #mainNav ul{
@@ -1334,7 +1361,7 @@ header,#eMainNavInFtr,#eSocialNewtworksControlPanel,#eSolutionsWrapper,.stripeCo
 
     /* newsletter reg in footer- start*/
     #eNewsletterRegInputFldsWrapper{
-        margin-top:1em;
+        margin-top:1rem;
         display:block;
     }
     #eSendBtnInNewsletterReg{

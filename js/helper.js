@@ -88,3 +88,26 @@ function playVideo(){
       catch(err){
       }
 }
+
+function setVideoElm(eVid,sVidRelativeAddress){
+  var req = new XMLHttpRequest();
+  req.open('GET', sVidRelativeAddress, true);
+  req.responseType = 'blob';
+  
+  req.onload = function() {
+     // Onload is triggered even on 404
+     // so we need to check the status code
+     if (this.status === 200) {
+        var videoBlob = this.response;
+        var vid = URL.createObjectURL(videoBlob); // IE10+
+        // Video is now downloaded
+        // and we can set it as source on the video element
+        eVid.src = vid;
+     }
+  }
+  req.onerror = function() {
+    console.log ("there was an error in setVideoFile.");
+  }
+  req.send();
+}
+
