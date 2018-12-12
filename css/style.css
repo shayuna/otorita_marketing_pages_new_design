@@ -265,10 +265,6 @@ ul,ol{
 /* content stripes general - end */
 
 /* content stripes in home page - start */
-#eFirstStripeInHomePgWrapperWrapper,
-#eSecondStripeInHomePgWrapperWrapper{
-    background-color:#a0a09f;
-}
 #eFirstStripeInHomePgWrapperWrapper{
     margin-bottom:40px;
 }
@@ -900,6 +896,7 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     display:flex;
     flex-direction:column;
     width:684px;
+    position:relative;/* this is necessary in order for the interface to be displayed on top of the bg video */
 
     
 /*
