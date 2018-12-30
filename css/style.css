@@ -49,7 +49,7 @@ ul,ol{
     border-bottom:1px solid #eee;
 }
 #eMainHdrSpacer{
-    height:73px;
+    height:61px;
 }
 #mainNav{
     margin:auto;
@@ -60,6 +60,7 @@ ul,ol{
 #mainNav>.hdr img{
     width:200px;
     height:45px;
+    display:block;
 }
 #mainNav, #mainNav ul{
     display:flex;
@@ -98,7 +99,7 @@ ul,ol{
     flex-direction:column;
 }
 #eLoginOptionsItm,#eProductsOptionsItm{
-    padding:1.4rem 0.6rem 0.6rem 0.6rem;
+    padding:0.9rem 0.6rem 0.6rem 0.6rem;
     background-color:#fff;
     position:absolute;
     white-space:nowrap;
@@ -267,6 +268,7 @@ ul,ol{
 /* content stripes in home page - start */
 #eFirstStripeInHomePgWrapperWrapper{
     margin-bottom:40px;
+    background:#a0a09f;
 }
 #eFirstStripeInHomePgWrapper>.visual{
     background-image:url(../images/ipad.png);
@@ -634,8 +636,6 @@ ul,ol{
     color:white;
     padding:0.4rem;
     border:0;
-}
-#eContactDetailsWrapper>.formWrapper>.submitBtn{
     background-color:black;
 }
 
@@ -837,6 +837,13 @@ ul,ol{
 }
 /* footer content - end*/
 
+/* general - start */
+.submitBtn{
+    cursor:pointer;
+}
+/* general - end */
+
+
 /* helper classes - start */
 .flex-column{
     display:flex;
@@ -860,13 +867,42 @@ a.removeFontSpecialTraits{
 }
 /* helper classes - end */
 
-.changeOnHover:hover,.submitBtn:hover,#eSendBtnInNewsletterReg:hover,#eSocialNetworksControlPanel>.itm:hover{
-    opacity:0.8;
+/* hover effects - start - here the thumb rule is making things darker on hover, so depending on the background, sometimes we need to increase opacity on hover, */
+/* and sometimes we need to decrease it on hover */
+.changeOnHover,#eSocialNetworksControlPanel>.itm,#eWorkWorldPg .submitBtn,#eMonetaryWorldPg .submitBtn{
+    opacity:0.9;
+}
+.changeOnHover:hover,#eSocialNetworksControlPanel>.itm:hover,#eWorkWorldPg .submitBtn:hover,#eMonetaryWorldPg .submitBtn:hover{
+    opacity:1;
     cursor:pointer;
 }
-#eSocialNetworksControlPanel>.itm:hover{
-    opacity:0.6;
+
+#eWorkWorldPg #eSolutionsWrapper>.changeOnHover,
+#eMonetaryWorldPg #eSolutionsWrapper>.changeOnHover,
+#eContactUsPg .submitBtn{
+    opacity:1;
 }
+#eWorkWorldPg #eSolutionsWrapper>.changeOnHover:hover,
+#eMonetaryWorldPg #eSolutionsWrapper>.changeOnHover:hover,
+#eContactUsPg .submitBtn:hover{
+    opacity:0.9;
+}
+
+#eWorkWorldPg .stripeContent>.visual>.playVideoButton>.img:hover{
+    background-image:url(../images/arrow_right_black_on_transparent.png);
+}
+#eMonetaryWorldPg .stripeContent>.visual>.playVideoButton>.img:hover{
+    background-image:url(../images/arrow_right_red_on_transparent.png);
+}
+:not(#eMainPg) #eSendBtnInNewsletterReg:hover{
+    background:black;
+    color:white;
+}
+#eMainPg #eSendBtnInNewsletterReg:hover{
+    background:white;
+    color:black;
+}
+/* hover effects - end */
 
 header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeContent,#eRecommendersWrapper,#eFreeTryRegWrapper,#eContactDetailsWrapper,#eContactOptionsWrapper{
     margin:auto;
@@ -1134,6 +1170,13 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
         left:30px;
         top:150px;
     }
+    #eWorkWorldPg .stripeContent>.visual>.playVideoButton>.img{
+        background-image:url(../images/arrow_right_white_on_transparent.png);
+        background-size:contain;
+        background-repeat:no-repeat;
+        width:25px;
+        height:25px;
+    }
     #eMonetaryWorldPg .stripeContent>.visual>.playVideoButton{
         width:97px;
         height:102px;
@@ -1144,6 +1187,13 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
         align-items:center;
         right:25px;
         top:238px;
+    }
+    #eMonetaryWorldPg .stripeContent>.visual>.playVideoButton>.img{
+        background-image:url(../images/arrow_right_white_on_transparent.png);
+        background-size:contain;
+        background-repeat:no-repeat;
+        width:31px;
+        height:31px;
     }
     /* worlds pages - end */
 
@@ -1156,8 +1206,11 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
         /* about page - end */
     /* footer - start */
     #eMainNavInFtr>.section:nth-child(1),#eMainNavInFtr>.section:nth-child(2){
-        padding-left:5rem;
+/*        padding-left:5rem;*/
         white-space:nowrap;
+    }
+    #eNewsLetterRegAreaInFtr{
+        width:370px;
     }
     /* footer - end */
 }
@@ -1253,6 +1306,7 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
         margin:1rem 1rem 0 1rem;
         background-image:url(../images/x.png);
         align-self:flex-start;
+        z-index:1;
     }
     #eGuestsLoginTilesWrapper{
         width:auto;
