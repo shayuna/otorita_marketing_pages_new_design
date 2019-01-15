@@ -344,7 +344,7 @@ ul,ol{
 
 /* content stripes in worlds pages - start */
 #eFirstStripeInWorldsPgWrapperWrapper{
-    margin-bottom:100px;
+    margin-bottom:130px;
 }
 #eWorkWorldPg #eFirstStripeInWorldsPgWrapperWrapper{
     background-color:#83b3c8;
@@ -356,12 +356,23 @@ ul,ol{
     position:relative;
 }
 
-
 #eWorkWorldPg #eFirstStripeInWorldsPgWrapper>.visual{
-    background-image:url(../images/peopleChatting.png);
+    position:relative;
+    width:524px;
+    height:546px;
+}
+#eWorkWorldPg #eFirstStripeInWorldsPgWrapper>.visual>img{
+    position:absolute;
+    width:546px;
+    height:626px;
+    left:37px;
+}
+#eWorkWorldPg #eFirstStripeInWorldsPgWrapper>.visual_old{
+    background-image:url(../images/toolbox.png);
     width:524px;
     height:546px;
     transform:translateY(60px);
+/*    background-size:524px 546px;*/
     display:flex;
 }
 #eMonetaryWorldPg #eFirstStripeInWorldsPgWrapper>.visual{
