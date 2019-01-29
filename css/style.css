@@ -19,11 +19,18 @@
     src:url(../resources/fonts/TypoPas/subset-TypoPas-Bold.woff);
 /*    src:url(../resources/fonts/TypoPas/subset-TypoPas-Bold.woff2);*/
 }
+@font-face{
+    font-family:OpenSansHebrew-Bold;
+    src:url(../resources/fonts/OpenSansHebrew/OpenSansHebrew-Bold.ttf);
+}
+@font-face{
+    font-family:OpenSansHebrew-Regular;
+    src:url(../resources/fonts/OpenSansHebrew/OpenSansHebrew-Regular.ttf);
+}
 
 body,html{
     direction:rtl;
-/*    font-family:subset-TypoPas-Regular, sans-serif;*/
-      font-family:subset-TypoPas-Regular, serif;
+      font-family:OpenSansHebrew-Regular, serif;
 }
 
 ul,ol{
@@ -131,7 +138,7 @@ ul,ol{
     margin:0.4em 0 0.2rem 0;
 }
 .solution>.caption{
-    font-family:subset-TypoPas-bold;
+    font-family:OpenSansHebrew-Bold;
     font-size:2rem;
 }
 #eMainPg .solution>.caption{
@@ -179,7 +186,7 @@ ul,ol{
     margin:auto;
 }
 #eWorkWorldPg #eSolutionsWrapper .solution>.caption{
-    font-family:subset-TypoPas-regular;
+    font-family:OpenSansHebrew-Regular;
     font-weight:normal;
     font-size:1.23rem;
 }
@@ -218,7 +225,7 @@ ul,ol{
     margin:auto;
 }
 #eMonetaryWorldPg #eSolutionsWrapper .solution>.caption{
-    font-family:subset-TypoPas-regular;
+    font-family:OpenSansHebrew-Regular;
     font-weight:normal;
     font-size:1.23rem;
 }
@@ -282,7 +289,7 @@ ul,ol{
 #eFirstStripeInHomePgWrapper>.content>.caption{
     font-size:5rem;
     line-height:100%;
-    font-family:subset-TypoPas-Bold;
+    font-family:OpenSansHebrew-Bold;
     margin:0 0 1rem 0;
 }
 #eFirstStripeInHomePgWrapper>.content>.content{
@@ -301,7 +308,7 @@ ul,ol{
     padding:0 4rem 0 0;
 }
 #eSecondStripeInHomePgWrapper>.content>.caption{
-    font-family:subset-Typopas-bold;
+    font-family:OpenSansHebrew-Bold;
     font-size:2.1rem;
     line-height:2.6rem;
     margin:0 0 1rem 0;
@@ -386,7 +393,7 @@ ul,ol{
     position:relative; /* this is needed in order for the content to be displayed on top of the video */
 }
 #eFirstStripeInWorldsPgWrapper>.content>.caption{
-    font-family:subset-TypoPas-bold;
+    font-family:OpenSansHebrew-Bold;
     font-size:5rem;
     line-height:100%;
     margin:0 0 1rem 0;
@@ -546,7 +553,7 @@ ul,ol{
 
 
 #eRecommendersWrapper .recommender>.caption>.recommenderName{
-    font-family:subset-TypoPaS-bold;
+    font-family:OpenSansHebrew-Bold;
     font-size:1.8rem;
     margin:1rem auto 0.2rem;
 }
@@ -570,7 +577,7 @@ ul,ol{
     margin-left:4rem;
 }
 #eFreeTryRegWrapper>.textWrapper>.caption{
-    font-family:subset-TypoPas-bold;
+    font-family:OpenSansHebrew-Bold;
     font-size:2.75rem;
 }
 #eFreeTryRegWrapper>.textWrapper>.content{
@@ -692,7 +699,7 @@ ul,ol{
     max-width:10rem;
 }
 .contactOption>.content>.caption{
-    font-family:subset-TypoPas-Bold;
+    font-family:OpenSansHebrew-Bold;
     font-size:1.75rem;
     margin:0.8rem;
 }
@@ -761,7 +768,7 @@ ul,ol{
     color:black;
 }
 #eMainNavInFtr .hdr{
-    font-family:subset-TypoPas-bold;
+    font-family:OpenSansHebrew-Bold;
     margin:0 0 0.2em 0;
 }
 #eMainNavInFtr>.section{
@@ -980,7 +987,7 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     color:white;
 }
 #eGuestsLoginTilesWrapper>.row>.itm>.content>.caption{
-    font-family:subset-TypoPas-Bold;
+    font-family:OpenSansHebrew-Bold;
     font-size:2.2rem;
     text-align: right;
     margin-bottom: 1rem;
