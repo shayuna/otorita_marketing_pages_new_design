@@ -19,18 +19,23 @@
     src:url(../resources/fonts/TypoPas/subset-TypoPas-Bold.woff);
 /*    src:url(../resources/fonts/TypoPas/subset-TypoPas-Bold.woff2);*/
 }
-@font-face{
-    font-family:OpenSansHebrew-Bold;
-    src:url(../resources/fonts/OpenSansHebrew/OpenSansHebrew-Bold.ttf);
-}
-@font-face{
-    font-family:OpenSansHebrew-Regular;
-    src:url(../resources/fonts/OpenSansHebrew/OpenSansHebrew-Regular.ttf);
-}
-
+@font-face {
+    font-family: newFontRegular;
+    src: 
+        url("../resources/fonts/newFont/newFontRegular.woff") format("woff"),
+        url("../resources/fonts/newFont/newFontRegular.woff2") format("woff2"),
+        url("../resources/fonts/newFont/newFontRegular.ttf") format("ttf");
+}	  
+@font-face {
+    font-family: newFontBold;
+    src: 
+        url("../resources/fonts/newFont/newFontBold.woff") format("woff"),
+        url("../resources/fonts/newFont/newFontBold.woff2") format("woff2"),
+        url("../resources/fonts/newFont/newFontBold.ttf") format("ttf");
+}	  
 body,html{
     direction:rtl;
-      font-family:OpenSansHebrew-Regular, serif;
+      font-family:newFontRegular, sans-serif;
 }
 
 ul,ol{
@@ -57,6 +62,9 @@ ul,ol{
 }
 #eMainHdrSpacer{
     height:61px;
+}
+#mainHdr,#eMainHdrSpacer{
+    padding:0.3rem 0;
 }
 #mainNav{
     margin:auto;
@@ -112,7 +120,7 @@ ul,ol{
     white-space:nowrap;
     left:0;
     display:none !important;
-    top:40px;
+    top:45px;
     line-height:2rem;
     width:100%;
     box-sizing:border-box;
@@ -138,7 +146,7 @@ ul,ol{
     margin:0.4em 0 0.2rem 0;
 }
 .solution>.caption{
-    font-family:OpenSansHebrew-Bold;
+    font-family:newFontBold;
     font-size:2rem;
 }
 #eMainPg .solution>.caption{
@@ -186,7 +194,7 @@ ul,ol{
     margin:auto;
 }
 #eWorkWorldPg #eSolutionsWrapper .solution>.caption{
-    font-family:OpenSansHebrew-Regular;
+    font-family:newFontRegular;
     font-weight:normal;
     font-size:1.23rem;
 }
@@ -225,7 +233,7 @@ ul,ol{
     margin:auto;
 }
 #eMonetaryWorldPg #eSolutionsWrapper .solution>.caption{
-    font-family:OpenSansHebrew-Regular;
+    font-family:newFontRegular;
     font-weight:normal;
     font-size:1.23rem;
 }
@@ -274,7 +282,6 @@ ul,ol{
 
 /* content stripes in home page - start */
 #eFirstStripeInHomePgWrapperWrapper{
-    margin-bottom:40px;
     background:#a0a09f;
 }
 #eFirstStripeInHomePgWrapper>.visual{
@@ -289,7 +296,7 @@ ul,ol{
 #eFirstStripeInHomePgWrapper>.content>.caption{
     font-size:5rem;
     line-height:100%;
-    font-family:OpenSansHebrew-Bold;
+    font-family:newFontBold;
     margin:0 0 1rem 0;
 }
 #eFirstStripeInHomePgWrapper>.content>.content{
@@ -308,7 +315,7 @@ ul,ol{
     padding:0 4rem 0 0;
 }
 #eSecondStripeInHomePgWrapper>.content>.caption{
-    font-family:OpenSansHebrew-Bold;
+    font-family:newFontBold;
     font-size:2.1rem;
     line-height:2.6rem;
     margin:0 0 1rem 0;
@@ -393,7 +400,7 @@ ul,ol{
     position:relative; /* this is needed in order for the content to be displayed on top of the video */
 }
 #eFirstStripeInWorldsPgWrapper>.content>.caption{
-    font-family:OpenSansHebrew-Bold;
+    font-family:newFontBold;
     font-size:5rem;
     line-height:100%;
     margin:0 0 1rem 0;
@@ -505,7 +512,7 @@ ul,ol{
 #eFirstStripeInWorldsPgWrapperWrapper>.vidWrapperWrapper,
 #eWorkWorldPg #eMainNavInFtrWrapper>.vidWrapperWrapper,
 #eMonetaryWorldPg #eMainNavInFtrWrapper>.vidWrapperWrapper{
-    opacity:0.2;
+    opacity:0.1;
 }
 /* background videos - end */
 
@@ -515,11 +522,23 @@ ul,ol{
     flex-direction:column;
 }
 #eRecommendersWrapper .recommender{
-    width:154px;
     text-align:center;
     font-size:1.23rem;
     margin:1rem;
 }
+#eRecommendersWrapper .recommender>.visual,
+#eRecommendersWrapper .recommender>.content,
+#eRecommendersWrapper .recommender>.caption>.content{
+    width:154px;
+}
+#eRecommendersWrapper .recommender>.visual,
+#eRecommendersWrapper .recommender>.content,
+#eRecommendersWrapper .recommender>.caption>.content,
+#eRecommendersWrapper .recommender>.caption>.recommenderName{
+    margin:auto;
+}
+
+
 #eRecommendersWrapper .recommender>.visual{
     height:155px;
     border-radius:50%;
@@ -553,9 +572,10 @@ ul,ol{
 
 
 #eRecommendersWrapper .recommender>.caption>.recommenderName{
-    font-family:OpenSansHebrew-Bold;
+    font-family:newFontBold;
     font-size:1.8rem;
     margin:1rem auto 0.2rem;
+    white-space:nowrap;
 }
 #eRecommendersWrapper .recommender>.caption{
     margin-bottom:1rem;
@@ -577,7 +597,7 @@ ul,ol{
     margin-left:4rem;
 }
 #eFreeTryRegWrapper>.textWrapper>.caption{
-    font-family:OpenSansHebrew-Bold;
+    font-family:newFontBold;
     font-size:2.75rem;
 }
 #eFreeTryRegWrapper>.textWrapper>.content{
@@ -699,7 +719,7 @@ ul,ol{
     max-width:10rem;
 }
 .contactOption>.content>.caption{
-    font-family:OpenSansHebrew-Bold;
+    font-family:newFontBold;
     font-size:1.75rem;
     margin:0.8rem;
 }
@@ -768,7 +788,7 @@ ul,ol{
     color:black;
 }
 #eMainNavInFtr .hdr{
-    font-family:OpenSansHebrew-Bold;
+    font-family:newFontBold;
     margin:0 0 0.2em 0;
 }
 #eMainNavInFtr>.section{
@@ -909,7 +929,8 @@ a.removeFontSpecialTraits{
 #eWorkWorldPg .stripeContent>.visual>.playVideoButton>.img:hover{
     background-image:url(../images/arrow_right_black_on_transparent.png);
 }
-#eMonetaryWorldPg .stripeContent>.visual>.playVideoButton>.img:hover{
+#eMonetaryWorldPg .stripeContent>.visual>.playVideoButton>.img:hover,
+#eAboutPg .stripeContent>.visual>.playVideoButton>.img:hover{
     background-image:url(../images/arrow_right_red_on_transparent.png);
 }
 :not(#eMainPg) #eSendBtnInNewsletterReg:hover{
@@ -987,7 +1008,7 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     color:white;
 }
 #eGuestsLoginTilesWrapper>.row>.itm>.content>.caption{
-    font-family:OpenSansHebrew-Bold;
+    font-family:newFontBold;
     font-size:2.2rem;
     text-align: right;
     margin-bottom: 1rem;
@@ -1087,7 +1108,7 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
         width:1024px;
     }
     #mainNav>ul>li:first-of-type{
-        margin-right:2rem !important;
+        margin-right:5rem !important;
     }
     #mainHdr{
         position:fixed;
@@ -1103,6 +1124,10 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
         padding-top:3rem;
         padding-bottom:3rem;
     }
+    #eMainPg #eSolutionsWrapper{
+        margin-top:40px;
+        margin-bottom:40px;
+    }
     #eRecommendersWrapper{
         margin:5rem auto;
     }
@@ -1111,7 +1136,7 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
         justify-content:space-between;
     }
     #eRecommendersWrapper .recommender>.caption{
-        min-height:7rem;
+        min-height:5rem;
     }
     #eNewsletterRegInputFldsWrapper{
         margin-top:1rem;
@@ -1141,13 +1166,18 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
         right:100px;
         display:flex;
     }
-    #eFirstStripeInAboutPgWrapperWrapper>.stripeContent>.visual>.playVideoButton{
-        width:81px;
-        height:81px;
+    #eAboutPg #eFirstStripeInAboutPgWrapperWrapper>.stripeContent>.visual>.playVideoButton{
+        width:100px;
+        height:100px;
         background-color:rgba(100, 102, 102, 1);
+        display:flex;
+        justify-content:center;
+        align-items: center;
+/*
         background-image:url(../images/arrow_right_black.png);
         background-repeat:no-repeat;
         background-position:center;
+*/
         border-radius:50%;
         margin:auto;
         cursor:pointer;
@@ -1156,7 +1186,7 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
         height:306px;/* an essential hack because of a bug in chrome which is responsible for a thin gray line displayed at the top of the element */
     }
     #eAboutPg .solution>.caption{
-        min-height:5rem;
+/*        min-height:5rem;*/
     }
     #eClientsStripeInAboutPgWrapper{
         margin:6rem auto;
@@ -1206,7 +1236,9 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
         right:25px;
         top:238px;
     }
-    #eMonetaryWorldPg .stripeContent>.visual>.playVideoButton>.img{
+    #eMonetaryWorldPg .stripeContent>.visual>.playVideoButton>.img,
+    #eAboutPg .stripeContent>.visual>.playVideoButton>.img
+    {
         background-image:url(../images/arrow_right_white_on_transparent.png);
         background-size:contain;
         background-repeat:no-repeat;
