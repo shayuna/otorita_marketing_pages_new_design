@@ -12,7 +12,7 @@
     <body id="eWorkWorldPg" onload="onLoad()">
         <header id="mainHdr">
             <nav id="mainNav">
-                <h2 class="hdr"><a class="removeFontSpecialTraits" href="./main.htm"><img src="./images/logo.jpg"/></a></h2>
+                <h2 class="hdr"><a class="removeFontSpecialTraits" href="./main.htm"><img src="./images/logo.png"/></a></h2>
                 <ul>
                     <li id="eLoginItm">
                         <div>כניסה</div>
@@ -38,7 +38,7 @@
         <main>
             <div id="eMainHdrSpacer"></div>
             <div id="eFirstStripeInWorldsPgWrapperWrapper">
-                    <div class="vidWrapperWrapper"><div class="vidWrapper"><video class="vid" autoplay="autoplay" loop="loop" muted="muted" src="./images/people.mp4"></video></div></div>
+                    <div class="vidWrapperWrapper"><div class="vidWrapper"><video class="vid" autoplay="autoplay" loop="loop" muted="muted"></video></div></div>
                     <div id="eFirstStripeInWorldsPgWrapper" class="stripeContent">
                     <div class="content">
                         <h2 class="caption">
@@ -138,7 +138,7 @@
         </main>
         <footer id="mainFtr">
             <div id="eMainNavInFtrWrapper">
-                <div class="vidWrapperWrapper"><div class="vidWrapper"><video class="vid" autoplay="autoplay" loop="loop" muted="muted" src="./images/people.mp4"></video></div></div>
+                <div class="vidWrapperWrapper"><div class="vidWrapper"><video class="vid" autoplay="autoplay" loop="loop" muted="muted"></video></div></div>
                 <div id="eMainNavInFtr">
                     <div id="eProfGuidesAreaInFtr" class="section">
                         <h4 class="hdr">מדריכים מקצועיים</h4>
@@ -184,6 +184,8 @@
         <script src="./js/helper.js?v=211118_3"></script>
         <script>
             function onLoad(){
+                setVideoElm(document.querySelector("#eFirstStripeInWorldsPgWrapperWrapper .vid"),"./images/people.mp4");
+                setVideoElm(document.querySelector("#eMainNavInFtrWrapper .vid"),"./images/people.mp4");
                 document.querySelector(".playVideoButton").addEventListener("click",function(e){
                     showPlayer();
                 });

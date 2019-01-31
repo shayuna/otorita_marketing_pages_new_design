@@ -64,13 +64,13 @@ ul,ol{
     height:61px;
 }
 #mainHdr,#eMainHdrSpacer{
-    padding:0.3rem 0;
+    padding:0.4rem 0;
 }
 #mainNav{
     margin:auto;
 }
 #mainNav>.hdr{
-    margin:0.5rem;
+    margin:0.5rem 0;
 }
 #mainNav>.hdr img{
     width:200px;
@@ -120,7 +120,7 @@ ul,ol{
     white-space:nowrap;
     left:0;
     display:none !important;
-    top:45px;
+    top:50px;
     line-height:2rem;
     width:100%;
     box-sizing:border-box;
@@ -220,6 +220,13 @@ ul,ol{
     background-image:url(../images/pileOfBooks_brown.png);
 }
 /* solution in workWorld pg - end */
+
+/* solution in workWorld pg and in monetaryworldpg - start */
+#eWorkWorldPg #eSolutionsWrapper>.solution,
+#eMonetaryWorldPg #eSolutionsWrapper>.solution{
+    padding-top:1.5rem;
+}
+/* solution in workWorld pg and in monetaryworldpg - end */
 
 /* solution in monetary world pg - start */
 #eMonetaryWorldPg #eSolutionsWrapperWrapper{
@@ -358,7 +365,7 @@ ul,ol{
 
 /* content stripes in worlds pages - start */
 #eFirstStripeInWorldsPgWrapperWrapper{
-    margin-bottom:130px;
+/*    margin-bottom:130px;*/
 }
 #eWorkWorldPg #eFirstStripeInWorldsPgWrapperWrapper{
     background-color:#83b3c8;
@@ -369,17 +376,18 @@ ul,ol{
 #eFirstStripeInWorldsPgWrapperWrapper,#eFirstStripeInHomePgWrapperWrapper{
     position:relative;
 }
-
+#eWorkWorldPg #eFirstStripeInWorldsPgWrapper>.visual,
+#eWorkWorldPg #eFirstStripeInWorldsPgWrapper>.visual>img{
+    width:573px;
+}
 #eWorkWorldPg #eFirstStripeInWorldsPgWrapper>.visual{
     position:relative;
-    width:524px;
-    height:546px;
+    height:600px;
 }
 #eWorkWorldPg #eFirstStripeInWorldsPgWrapper>.visual>img{
     position:absolute;
-    width:546px;
-    height:626px;
-    left:37px;
+    height:645px;
+    left:-40px;
 }
 #eWorkWorldPg #eFirstStripeInWorldsPgWrapper>.visual_old{
     background-image:url(../images/toolbox.png);
@@ -389,21 +397,32 @@ ul,ol{
 /*    background-size:524px 546px;*/
     display:flex;
 }
-#eMonetaryWorldPg #eFirstStripeInWorldsPgWrapper>.visual{
-    background-image:url(../images/financeWorldOnScreen.png);
+#eMonetaryWorldPg #eFirstStripeInWorldsPgWrapper>.visual,
+#eMonetaryWorldPg #eFirstStripeInWorldsPgWrapper>.visual>.img{
     width:654px;
     height:563px;
-    transform:translateY(40px);
+    position:relative;
+}
+#eMonetaryWorldPg #eFirstStripeInWorldsPgWrapper>.visual>.img{
+    background-image:url(../images/financeWorldOnScreen.png);
+    transform:translateY(75px);
+    position:absolute;
+    right:95px;
+}
+#eMonetaryWorldPg #eFirstStripeInWorldsPgWrapper>.content>.caption{
+    font-size:6rem;    
 }
 #eFirstStripeInWorldsPgWrapper>.content{
     color:black;
     position:relative; /* this is needed in order for the content to be displayed on top of the video */
+    padding:3rem 0;
 }
 #eFirstStripeInWorldsPgWrapper>.content>.caption{
     font-family:newFontBold;
     font-size:5rem;
     line-height:100%;
     margin:0 0 1rem 0;
+    white-space:nowrap;
 }
 #eFirstStripeInWorldsPgWrapper>.content>.content{
     font-size:2.1rem;
@@ -416,10 +435,19 @@ ul,ol{
 #eFinancialManagementStripeInWorldsWrapper,
 #eFormsInterfaceStripeInWorldsWrapper,
 #eCloudStripeInWorldsWrapper{
-    margin:3rem auto;
+    margin:4rem auto;
 }
-#eJournalStripeInWorldsWrapper{
-    margin:3rem auto 6rem;
+#eWorkWorldPg #eWrongAndRightStripeInWorldsWrapper{
+    margin:5rem auto 4rem;
+}
+#eWorkWorldPg #eJournalStripeInWorldsWrapper{
+    margin:4rem auto 5rem;
+}
+#eMonetaryWorldPg #eFinancialManagementStripeInWorldsWrapper{
+    margin:5rem auto 4rem;
+}
+#eMonetaryWorldPg #eCloudStripeInWorldsWrapper{
+    margin:4rem auto 5rem;
 }
 #eWrongAndRightStripeInWorldsWrapper>.visual{
     background-image:url(../images/vi_large.png);
@@ -466,11 +494,11 @@ ul,ol{
 #eJournalStripeInWorldsWrapper>.content,
 #eFinancialManagementStripeInWorldsWrapper>.content,
 #eCloudStripeInWorldsWrapper>.content{
-    padding:0 4rem 0 0;
+    padding:0 7rem 0 0;
 }
 #eProfDeptStripeInWorldsWrapper>.content,
 #eFormsInterfaceStripeInWorldsWrapper>.content{
-    padding:0 0 0 4rem;
+    padding:0 0 0 7rem;
 }
 #eWrongAndRightStripeInWorldsWrapper>.content>.caption,
 #eProfDeptStripeInWorldsWrapper>.content>.caption,
@@ -604,7 +632,7 @@ ul,ol{
     margin-top:0.5rem;
     font-size:1.4rem;
     line-height:1.5rem;
-    color:#c0c0bf;
+    color:#aaa;
 }
 #eFreeTryRegWrapper>.formWrapper{
     flex-grow:1;
@@ -640,7 +668,7 @@ ul,ol{
 }
 
 #eFreeTryRegWrapper>.formWrapper>.itm::placeholder{
-    color:#ccc;
+    color:#aaa;
 }
 /* free try reg - end */
 
@@ -929,7 +957,7 @@ a.removeFontSpecialTraits{
 #eWorkWorldPg .stripeContent>.visual>.playVideoButton>.img:hover{
     background-image:url(../images/arrow_right_black_on_transparent.png);
 }
-#eMonetaryWorldPg .stripeContent>.visual>.playVideoButton>.img:hover,
+#eMonetaryWorldPg .stripeContent>.visual>.img>.playVideoButton>.img:hover,
 #eAboutPg .stripeContent>.visual>.playVideoButton>.img:hover{
     background-image:url(../images/arrow_right_red_on_transparent.png);
 }
@@ -1105,10 +1133,10 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
 /* desktop */
 @media screen and (min-width:980px){
     #mainNav,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeContent,#eRecommendersWrapper,#eFreeTryRegWrapper,#eContactDetailsWrapper,#eContactOptionsWrapper{
-        width:1024px;
+        width:980px;
     }
     #mainNav>ul>li:first-of-type{
-        margin-right:5rem !important;
+        margin-right:102px !important;
     }
     #mainHdr{
         position:fixed;
@@ -1225,7 +1253,7 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
         width:25px;
         height:25px;
     }
-    #eMonetaryWorldPg .stripeContent>.visual>.playVideoButton{
+    #eMonetaryWorldPg .stripeContent>.visual>.img>.playVideoButton{
         width:97px;
         height:102px;
         cursor:pointer;
@@ -1236,7 +1264,7 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
         right:25px;
         top:238px;
     }
-    #eMonetaryWorldPg .stripeContent>.visual>.playVideoButton>.img,
+    #eMonetaryWorldPg .stripeContent>.visual>.img>.playVideoButton>.img,
     #eAboutPg .stripeContent>.visual>.playVideoButton>.img
     {
         background-image:url(../images/arrow_right_white_on_transparent.png);
@@ -1299,7 +1327,6 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     #eWorkWorldPg #eSolutionsWrapper,#eMonetaryWorldPg #eSolutionsWrapper{
         display:block;
     }
-
     /* solutions wrapper - end */
 
     /* about page - start */
