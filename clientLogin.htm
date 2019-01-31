@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+    <head>
+        <title>אוטוריטה - כניסת לקוח</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+        <meta name="viewport" content="user-scalable=no,width=device-width, initial-scale=1.0, maximum-scale=1.0" />	
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="./css/style.css?v=300119_2"/>
+        <link rel="stylesheet" href="./css/normalize.css"/>
+        <script src="./js/jquery-1.10.2.min.js"></script>
+    </head>
+    <body id="eClientLoginPg" onload="onLoad()">
+        <div class="vidWrapperWrapper">
+            <div class="vidWrapper">
+                <video class="vid" autoplay="autoplay" loop="loop" muted="muted" poster="./images/officeRumble.png"></video>
+            </div>
+        </div>
+        <header id="mainHdr">
+            <nav id="mainNav">
+                <h2 class="hdr"><a class="removeFontSpecialTraits" href="./main.htm"><img src="./images/logo.png"/></a></h2>
+                <ul>
+                    <li id="eLoginItm">
+                        <div>כניסה</div>
+                        <ul id="eLoginOptionsItm">
+                            <li><a class="removeFontSpecialTraits" href="./guestLogin.htm">כניסת אורח</a></li>
+                            <li><a class="removeFontSpecialTraits" href="./clientLogin.htm">כניסת לקוחות</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="removeFontSpecialTraits" href="./about.htm">אודות</a></li>
+                    <li id="eProductsItm">
+                        <div>שירותים מקצועיים</div>
+                        <ul id="eProductsOptionsItm">
+                            <li><a class="removeFontSpecialTraits" href="./workWorld.htm">עולם העבודה</a></li>
+                            <li><a class="removeFontSpecialTraits" href="./monetaryWorld.htm">עולם הכספים</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="removeFontSpecialTraits" href="https://otorita.net/academy/%D7%90%D7%95%D7%98%D7%95%D7%A8%D7%99%D7%98%D7%94-%D7%94%D7%90%D7%A7%D7%93%D7%9E%D7%99%D7%94.asp" target="academyWnd">האקדמיה</a></li>
+                    <li><a class="removeFontSpecialTraits" href="http://otorita-journal.net/" target="journalWnd">כתב - עת</a></li>
+                    <li><a class="removeFontSpecialTraits" href="contactUs.htm">צור קשר</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div id="eMainHdrSpacer"></div>
+            <div class="loginAndBannerWrapper">
+                <div class="banner"></div>
+                <div id="eClientLoginBox">
+                    <div class="tabsMenu"><div class="boxTab on">עולם העבודה</div><div class="boxTab">עולם הכספים</div></div>
+                    <div class="inputArea">
+                        <input type="text" class="boxInput first" placeholder="שם משתמש"/>
+                        <input type="password" class="boxInput" placeholder="סיסמא"/>
+                        <div id="eClientLoginConnectLine">
+                            <div id="eClientLoginRememberMeClause"><input id="eClientLoginRememberMeInput" type="checkbox"><label for="eClientLoginRememberMeInput">זכור אותי</label></div>
+                            <button class="submitBtn">התחברות</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <iframe id="frm" name="frm" class="hideMe"></iframe>
+        <script src="./js/helper.js?v=121118_2"></script>
+        <script>
+            function onLoad(){
+                setVideoElm(document.querySelector("#eClientLoginPg .vid"),"./images/officeRumble.mp4");
+                $(".boxTab").click(function(e){
+                    $(".boxTab").removeClass("on");
+                    $(this).addClass("on");
+                })
+            }
+        </script>
+    </body>
+</html>

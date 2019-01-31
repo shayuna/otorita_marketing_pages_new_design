@@ -975,16 +975,109 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     margin:auto;
 }
 
+/* client login pg - start */
+#eClientLoginPg{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    overflow:hidden;
+}
+#eClientLoginPg main{
+    display:flex;
+    flex-grow:1;
+    align-items: center;
+    justify-content:center;
+}
+#eClientLoginPg main>.loginAndBannerWrapper{
+    display:flex;
+    justify-content:center;
+    align-items:stretch;
+    margin-top:calc(61px + 0.8rem);/*#eMainHdrSpacer height+padding top and bottom*/
+    z-index:1;
+}
+#eClientLoginBox{
+    background-color:#eee;
+    font-size:1.3rem;
+}
+#eClientLoginBox{
+    display:flex;
+    flex-direction:column;
+    margin-right:2rem;
+}
+#eClientLoginBox>.inputArea{
+    flex-grow:1;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+}
+#eClientLoginBox .boxInput,#eClientLoginConnectLine{
+    display:block;
+    width:80%;
+    margin: 1.2rem auto;
+}
+#eClientLoginBox .boxInput{
+    padding:0.5rem;
+}
+#eClientLoginBox .boxTab{
+    display:inline-block;
+    width:150px;
+    text-align:center;
+    box-sizing:border-box;
+    padding:0.5rem;
+    margin:0;
+}
+#eClientLoginBox .boxTab,
+#eClientLoginBox .submitBtn{
+    background-color:black;
+    color:white;
+    cursor:pointer;
+    padding:0.5rem;
+}
+#eClientLoginBox .submitBtn{
+    border:1px solid black;;
+}
+#eClientLoginBox .boxTab.on,
+#eClientLoginBox .submitBtn:hover{
+    background-color:inherit;
+    color:black;
+}
+#eClientLoginConnectLine{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+}
+#eClientLoginRememberMeInput{
+    margin-left:0.5rem;
+}
+#eClientLoginRememberMeClause{
+    font-size:0.8em;
+    display:flex;
+    align-items:center;
+}
+#eClientLoginPg .banner{
+    background-image:url(../images/banner3.jpg);
+    width:593px;
+    height:403px;
+    border:1px solid black;
+    cursor:pointer;
+}
+/* client login pg - end */
+
 /* guests login - start*/
 
 #eGuestsLoginPg{
-    background-color:#ddd;
     display:flex;
     width:100vw;
     height:100vh;
     justify-content:center;
     align-items:center;
     overflow:hidden;
+}
+#eGuestsLoginPg{
+    background-color:#ddd;
+}
+#eClientLoginPg main{
+    background-color:#fff;
 }
 #eGuestsLoginPg>.vidWrapper{
     z-index:-1;
