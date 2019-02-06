@@ -33,6 +33,16 @@
         url("../resources/fonts/newFont/newFontBold.woff2") format("woff2"),
         url("../resources/fonts/newFont/newFontBold.ttf") format("ttf");
 }	  
+@font-face {
+    font-family: OpenSansHebrewRegular;
+    src: 
+        url("../resources/fonts/OpenSans/OpenSansHebrew-Regular.ttf") format("ttf");
+}	  
+@font-face {
+    font-family: OpenSansHebrewBold;
+    src: 
+        url("../resources/fonts/OpenSans/OpenSansHebrew-Bold.ttf") format("ttf");
+}	  
 body,html{
     direction:rtl;
       font-family:newFontRegular, sans-serif;
@@ -197,6 +207,7 @@ ul,ol{
     font-family:newFontRegular;
     font-weight:normal;
     font-size:1.23rem;
+    margin-top:1.2rem;
 }
 
 .solution .visual.pileOfBooksLightGreen{
@@ -243,6 +254,7 @@ ul,ol{
     font-family:newFontRegular;
     font-weight:normal;
     font-size:1.23rem;
+    margin-top:1.2rem;
 }
 
 .solution .visual.building{
@@ -348,6 +360,8 @@ ul,ol{
     background-image:url(../images/whiteStripes_small.png);
     width:353px;
     height:307px;
+    position:relative;
+    bottom:1px;
 }
 #eSecondStripeInAboutPgWrapper.stripeContent>.content{
     padding:0 4rem 0 0;
@@ -416,6 +430,7 @@ ul,ol{
     color:black;
     position:relative; /* this is needed in order for the content to be displayed on top of the video */
     padding:3rem 0;
+    bottom:3px;
 }
 #eFirstStripeInWorldsPgWrapper>.content>.caption{
     font-family:newFontBold;
@@ -699,12 +714,16 @@ ul,ol{
 #eContactDetailsWrapper>.formWrapper>.submitBtn{
     width:auto;
     align-self: flex-end;
-    color:white;
+    color:black;
     padding:0.4rem;
     border:0;
-    background-color:black;
+    background-color:white;
+    border:1px solid black;
 }
-
+#eContactDetailsWrapper>.formWrapper>.submitBtn:hover{
+    background-color:black;
+    color:white;
+}
 #eContactDetailsWrapper>.formWrapper>.itm{
     margin:0.2rem 0;
     padding:0.5rem 0.2rem;
@@ -754,6 +773,9 @@ ul,ol{
 .contactOption>.content>.content{
     font-weight:normal;
     font-size:1.23rem;
+}
+.contactOption>.content>.content.email{
+    font-family:"Open Sans",sans-serif;
 }
 .contactOption>.visual.tel{
     background-color:white;
@@ -828,6 +850,10 @@ ul,ol{
 }
 #eMainNavInFtr .itmWrapper{
     list-style:none;
+}
+
+#eMainPg #eMainNavInFtr .itm:hover{
+    text-decoration:underline;
 }
 
 /*
@@ -931,6 +957,9 @@ a.removeFontSpecialTraits{
 .cursorDefault{
     cursor:default;
 }
+.nowrap{
+    white-space:nowrap;
+}
 /* helper classes - end */
 
 /* hover effects - start - here the thumb rule is making things darker on hover, so depending on the background, sometimes we need to increase opacity on hover, */
@@ -1000,12 +1029,25 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     font-size:1.3rem;
 }
 #eClientLoginBox{
+/*
     display:flex;
     flex-direction:column;
+*/
+
+    position:relative;
+
     margin-right:2rem;
+    opacity:0.7;
 }
 #eClientLoginBox>.inputArea{
-    flex-grow:1;
+/*    flex-grow:1;*/
+
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    width:100%;
+
+
     display:flex;
     flex-direction:column;
     justify-content: center;
@@ -1013,10 +1055,13 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
 #eClientLoginBox .boxInput,#eClientLoginConnectLine{
     display:block;
     width:80%;
-    margin: 1.2rem auto;
+    margin: 0.6rem auto;
 }
 #eClientLoginBox .boxInput{
     padding:0.5rem;
+}
+#eClientLoginBox .boxInput::placeholder{
+    color:#ccc;
 }
 #eClientLoginBox .boxTab{
     display:inline-block;
@@ -1033,24 +1078,37 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     cursor:pointer;
     padding:0.5rem;
 }
+
 #eClientLoginBox .submitBtn{
     border:1px solid black;;
 }
 #eClientLoginBox .boxTab.on,
 #eClientLoginBox .submitBtn:hover{
-    background-color:inherit;
     color:black;
+
+}
+#eClientLoginBox .boxTab.on{
+    background-color:inherit;
+    text-decoration:underline;
+}
+#eClientLoginBox .submitBtn:hover{
+    background-color:green;
 }
 #eClientLoginConnectLine{
     display:flex;
     justify-content:space-between;
     align-items: center;
 }
+#eClientLoginBox,
+#eClientLoginBox .boxInput,
+#eClientLoginBox .submitBtn{
+    box-shadow: 0 0 10px #888;
+}
 #eClientLoginRememberMeInput{
     margin-left:0.5rem;
 }
 #eClientLoginRememberMeClause{
-    font-size:0.8em;
+    font-size:0.6em;
     display:flex;
     align-items:center;
 }
@@ -1058,7 +1116,6 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     background-image:url(../images/banner3.jpg);
     width:593px;
     height:403px;
-    border:1px solid black;
     cursor:pointer;
 }
 /* client login pg - end */
@@ -1247,7 +1304,7 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     }
     #eMainPg #eSolutionsWrapper{
         margin-top:40px;
-        margin-bottom:40px;
+        margin-bottom:33px;
     }
     #eRecommendersWrapper{
         margin:5rem auto;
