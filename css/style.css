@@ -717,8 +717,8 @@ ul,ol{
     color:black;
     padding:0.4rem;
     border:0;
-    background-color:white;
-    border:1px solid black;
+    background-color:inherit;
+    border:3px solid black;
 }
 #eContactDetailsWrapper>.formWrapper>.submitBtn:hover{
     background-color:black;
@@ -852,7 +852,7 @@ ul,ol{
     list-style:none;
 }
 
-#eMainPg #eMainNavInFtr .itm:hover{
+#eMainNavInFtr .itm:hover{
     text-decoration:underline;
 }
 
@@ -1025,20 +1025,25 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     z-index:1;
 }
 #eClientLoginBox{
-    background-color:#eee;
-    font-size:1.3rem;
-}
-#eClientLoginBox{
 /*
     display:flex;
     flex-direction:column;
 */
-
+    font-size:1.3rem;
     position:relative;
-
     margin-right:2rem;
-    opacity:0.7;
 }
+#eClientLoginBoxScreen{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-color:#eee;
+    opacity:0.4;
+}
+#eClientLoginBox>.tabsMenu{
+    position:relative;
+}
+
 #eClientLoginBox>.inputArea{
 /*    flex-grow:1;*/
 
@@ -1058,7 +1063,8 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     margin: 0.6rem auto;
 }
 #eClientLoginBox .boxInput{
-    padding:0.5rem;
+    padding:0.3rem;
+    box-sizing:border-box;
 }
 #eClientLoginBox .boxInput::placeholder{
     color:#ccc;
@@ -1082,10 +1088,9 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
 #eClientLoginBox .submitBtn{
     border:1px solid black;;
 }
-#eClientLoginBox .boxTab.on,
-#eClientLoginBox .submitBtn:hover{
+#eClientLoginBox .boxTab.on
+{
     color:black;
-
 }
 #eClientLoginBox .boxTab.on{
     background-color:inherit;
@@ -1093,24 +1098,26 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
 }
 #eClientLoginBox .submitBtn:hover{
     background-color:green;
+    border:1px solid green;
 }
 #eClientLoginConnectLine{
     display:flex;
     justify-content:space-between;
     align-items: center;
 }
+/*
 #eClientLoginBox,
 #eClientLoginBox .boxInput,
 #eClientLoginBox .submitBtn{
     box-shadow: 0 0 10px #888;
 }
+*/
 #eClientLoginRememberMeInput{
     margin-left:0.5rem;
 }
 #eClientLoginRememberMeClause{
-    font-size:0.6em;
+    font-size:0.8rem;
     display:flex;
-    align-items:center;
 }
 #eClientLoginPg .banner{
     background-image:url(../images/banner3.jpg);
@@ -1444,17 +1451,50 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
 }
 /* tablet + mobile - anything that's not a desktop */
 @media screen and (max-width:979px){
-    #mainNav,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeContent,#eRecommendersWrapper,#eFreeTryRegWrapper,#eContactDetailsWrapper,#eContactOptionsWrapper{
-        width:98%;
-    }
-    #mainNav, #mainNav ul{
+
+    #eMainPg>main{
+        display:flex;
         flex-direction:column;
+    }
+
+    #mainNav,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeContent,#eRecommendersWrapper,#eFreeTryRegWrapper,#eContactDetailsWrapper,#eContactOptionsWrapper{
+        width:90%;
+    }
+    #mainNav{
+        justify-content:center;
+    }
+    #mainNav ul{
+        display:none;
+    }
+    #mainHdr{
+        border-bottom:0;
+        margin:0.5rem auto;
+    }
+    #eMainHdrSpacer{
+        display:none;
     }
     #eMainNavInFtr{
         flex-direction:column;
     }
-    .stripeContent>.visual{
+    #eProfGuidesAreaInFtr,#eMostPopAreaInFtr{
         display:none;
+    }
+    #eNewsLetterRegAreaInFtr{
+        padding-top:0 !important;
+    }
+    #eEmailInputInNewsletterReg,#eSendBtnInNewsletterReg{
+        width:100%;
+        box-sizing:border-box;
+    }
+    #eSendBtnInNewsletterReg{
+        margin-bottom:0 !important;
+    }
+    #eSocialNetworksControlPanel{
+        margin:2rem auto !important;
+        text-align:center;
+    }
+    .stripeContent>.visual{
+    /*    display:none;*/
     }
     .stripeContent>.content{
         padding:1rem !important;
@@ -1463,7 +1503,9 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     #eSolutionsWrapper{
         display:flex;
         justify-content:space-between;
+        width:100%;
     }
+
     .recommendersRow{
         display:block;
         text-align: center;
@@ -1474,10 +1516,18 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     .recommendersRow:not(.firstRow)>.recommender:first-child{
         margin-top:0 !important;
     }
+    .recommender:not(.galg){
+        display:none;
+    }
+    #eRecommendersWrapper .recommender>.content,
+    #eRecommendersWrapper .recommender>.caption>.content{
+        width:auto;
+    }
     #eWorkWorldPg #eSolutionsWrapper,#eMonetaryWorldPg #eSolutionsWrapper{
         display:block;
     }
     /* solutions wrapper - end */
+
 
     /* about page - start */
 
@@ -1495,6 +1545,20 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     }
     /*about page - end */
 
+    #eFirstStripeInHomePgWrapper>.visual,
+    #eSecondStripeInHomePgWrapper>.visual{
+        display:none;
+    }
+
+    #eFirstStripeInHomePgWrapper>.content>.caption,
+    #eFirstStripeInWorldsPgWrapper>.content>.caption{
+        font-size:4rem !important;
+    }
+    #eFirstStripeInHomePgWrapper>.content>.content,
+    #eFirstStripeInWorldsPgWrapper>.content>.content{
+        font-size:1.6rem !important;
+    }
+
     /* worlds pages - general - start */
     #eWrongAndRightStripeInWorldsWrapper>.content>.caption,
     #eProfDeptStripeInWorldsWrapper>.content>.caption,
@@ -1511,7 +1575,102 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     #eFirstStripeInWorldsPgWrapperWrapper{
         margin-bottom:20px !important;
     }
+    #eWrongAndRightStripeInWorldsWrapper>.content>.caption,
+    #eProfDeptStripeInWorldsWrapper>.content>.caption,
+    #eJournalStripeInWorldsWrapper>.content>.caption,
+    #eFinancialManagementStripeInWorldsWrapper>.content>.caption,
+    #eFormsInterfaceStripeInWorldsWrapper>.content>.caption,
+    #eCloudStripeInWorldsWrapper>.content>.caption{
+        font-size:1.6rem;
+    }
+
+    #eWrongAndRightStripeInWorldsWrapper,
+    #eProfDeptStripeInWorldsWrapper,
+    #eJournalStripeInWorldsWrapper,
+    #eFinancialManagementStripeInWorldsWrapper,
+    #eFormsInterfaceStripeInWorldsWrapper,
+    #eCloudStripeInWorldsWrapper{
+        display:flex;
+        flex-direction:column;
+        text-align:center;
+        margin:0.5rem auto !important;
+    }
+    #eWrongAndRightStripeInWorldsWrapper>.visual,
+    #eProfDeptStripeInWorldsWrapper>.visual,
+    #eJournalStripeInWorldsWrapper>.visual,
+    #eFinancialManagementStripeInWorldsWrapper>.visual,
+    #eFormsInterfaceStripeInWorldsWrapper>.visual,
+    #eCloudStripeInWorldsWrapper>.visual{
+        margin:auto;
+        width:130px;
+        height:130px;
+        background-size:70% 70%;
+    }
+    #eCloudStripeInWorldsWrapper>.visual{
+        background-size:70% 48%;
+    }
+
+
+
     /* worlds pages - general - end */
+
+    /* monetary world pg - start */
+        #eMonetaryWorldPg main{
+            display:flex;
+            flex-direction:column;
+        }
+        #eMonetaryWorldPg #eFirstStripeInWorldsPgWrapperWrapper{
+            order:1;
+        }
+        #eMonetaryWorldPg #eFreeTryRegWrapper{
+            order:2;
+            text-align:center;
+        }
+        #eMonetaryWorldPg #eSolutionsWrapperWrapper{
+            order:3;
+        }
+        #eMonetaryWorldPg #eFinancialManagementStripeInWorldsWrapperWrapper{
+            order:4;
+        }
+        #eMonetaryWorldPg #eFormsInterfaceStripeInWorldsWrapperWrapper{
+            order:5;
+        }
+        #eMonetaryWorldPg #eCloudStripeInWorldsWrapperWrapper{
+            order:6;
+        }
+        #eMonetaryWorldPg #mainFtr{
+            display:none;
+        }
+        #eMonetaryWorldPg #eFreeTryRegWrapper>.textWrapper{
+            width:100%;
+        }
+        #eMonetaryWorldPg #eFreeTryRegWrapper>.textWrapper>.caption{
+            font-size:1.6rem;
+        }
+        #eMonetaryWorldPg #eFreeTryRegWrapper>.textWrapper>.content{
+            font-size:1.23rem;
+            margin:0 auto 0.5rem;
+        }
+
+        #eMonetaryWorldPg .solution:not(#eRecuperationSolution){
+            display:none;
+        }
+
+        #eMonetaryWorldPg #eFormsInterfaceStripeInWorldsWrapper>.content{
+            order:2;
+        }
+        #eMonetaryWorldPg #eFormsInterfaceStripeInWorldsWrapper>.visual{
+            order:1;
+        }
+        #eMonetaryWorldPg #eFinancialManagementStripeInWorldsWrapper{
+            margin-top:2rem !important;
+        }
+        #eMonetaryWorldPg #eCloudStripeInWorldsWrapper{
+            margin-bottom:2rem !important;
+        }
+        
+    /* monetary world pg - end */
+
 
     /* contact us page adaptation to mobile - start */
         #eContactDetailsWrapper>.textWrapper{
@@ -1561,7 +1720,19 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     .vidWrapper{
         display:none;
     }
-    /* what are we going to do with the videos in the mobile world? hide them for starters- start */
+    .vidPoster{
+        position:relative;
+        width:100%;
+        height:100%;
+        background-image:url(../images/officePoster.jpg);
+        background-position:center;
+    }
+    /* free try reg - start */
+    #eFreeTryRegWrapper{
+        display:block;
+        padding:2rem 0;
+    }
+    /* free try reg - end */
 
     /* footer - start */
         #eMainNavInFtrWrapper{
@@ -1574,32 +1745,41 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
             background-color:#ef7700;
         }
         /* footer - end */
+
+
 }
 /* mobile*/
 @media screen and (max-width:500px){
     #mainNav,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,#eFirstStripeInHomePgWrapper,#eRecommendersWrapper,#eFreeTryRegWrapper,#eContactDetailsWrapper,#eContactOptionsWrapper{
-        width:98%;
+        width:90%;
     }
-    #mainNav, #mainNav ul{
-        flex-direction:column;
-    }
-    .stripeContent>.visual{
-        display:none;
-    }
-    .stripeContent>.content{
-        padding:1rem !important;
-    }   
     #eMainNavInFtr{
         flex-direction:column;
-    }
-    #eSolutionsWrapper{
-        display:block;
     }
     #eSolutionsWrapper>.solution{
         display:block;
         width:95%;
         margin:2rem auto;
     }
+
+    /* reordering solutions in home pg - start*/
+    #eMainPg #eSolutionsWrapper{
+        flex-direction:column;
+    }
+    #eMainPg #eSolutionsWrapper .monetaryWorldSolution{
+        order:1;
+    }
+    #eMainPg #eSolutionsWrapper .workWorldSolution{
+        order:2;
+    }
+    #eMainPg #eSolutionsWrapper .academySolution{
+        order:3;
+    }
+    #eMainPg #eSolutionsWrapper .lawSolution{
+        order:4;
+    }
+    /* reordering solutions in home pg - end*/
+
     /* about page - start */
 
     .solution>.visual{
@@ -1614,13 +1794,6 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     }
     
     /*about page - end */
-
-    /* free try reg - start */
-    #eFreeTryRegWrapper{
-        display:block;
-        padding:2rem 0;
-    }
-    /* free try reg - end */
 
     /* contact us page adaptation to mobile - start */ 
         #eContactDetailsWrapper,#eContactOptionsWrapper{
