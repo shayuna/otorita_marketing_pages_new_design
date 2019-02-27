@@ -1309,6 +1309,13 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
         padding-top:3rem;
         padding-bottom:3rem;
     }
+    #eSolutionsWrapperWrapper>#eNext,
+    #eSolutionsWrapperWrapper>#ePrevious,
+    #eRecommendersWrapperWrapper>#eNext,
+    #eRecommendersWrapperWrapper>#ePrevious{
+        display:none;
+    }
+
     #eMainPg #eSolutionsWrapper{
         margin-top:40px;
         margin-bottom:33px;
@@ -1513,12 +1520,6 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     .recommender{
         margin:3rem auto !important;
     }
-    .recommendersRow:not(.firstRow)>.recommender:first-child{
-        margin-top:0 !important;
-    }
-    .recommender:not(.galg){
-        display:none;
-    }
     #eRecommendersWrapper .recommender>.content,
     #eRecommendersWrapper .recommender>.caption>.content{
         width:auto;
@@ -1533,6 +1534,7 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
 
     #eFirstStripeInAboutPgWrapperWrapper>.stripeContent>.content>.itm{
         margin:auto;
+        width:100%;
     }
     #eClientsStripeInAboutPgWrapper{
         margin:2rem auto;
@@ -1559,6 +1561,36 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
         font-size:1.6rem !important;
     }
 
+    #eMonetaryWorldPg #eSolutionsWrapperWrapper>#eNext,
+    #eWorkWorldPg #eSolutionsWrapperWrapper>#eNext,
+    #eMonetaryWorldPg #eSolutionsWrapperWrapper>#ePrevious,
+    #eWorkWorldPg #eSolutionsWrapperWrapper>#ePrevious,
+    #eMainPg #eRecommendersWrapperWrapper>#ePrevious,
+    #eMainPg #eRecommendersWrapperWrapper>#eNext{
+        width:64px;
+        height:64px;
+        background-size:100%;
+    }
+
+    #eMonetaryWorldPg #eSolutionsWrapperWrapper>#eNext,
+    #eWorkWorldPg #eSolutionsWrapperWrapper>#eNext,
+    #eMainPg #eRecommendersWrapperWrapper>#eNext{
+        background-image:url(../images/next.png);
+    }
+    #eMonetaryWorldPg #eSolutionsWrapperWrapper>#ePrevious,
+    #eWorkWorldPg #eSolutionsWrapperWrapper>#ePrevious,
+    #eMainPg #eRecommendersWrapperWrapper>#ePrevious{
+        background-image:url(../images/previous.png);
+    }
+    #eMonetaryWorldPg #eSolutionsWrapperWrapper,
+    #eWorkWorldPg #eSolutionsWrapperWrapper,
+    #eMainPg #eRecommendersWrapperWrapper{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+        align-items:center;
+    }
+
     /* worlds pages - general - start */
     #eWrongAndRightStripeInWorldsWrapper>.content>.caption,
     #eProfDeptStripeInWorldsWrapper>.content>.caption,
@@ -1569,12 +1601,16 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
         margin-bottom:1rem;
     }
 
-    #eFirstStripeInWorldsPgWrapper>.visual{
-        display:none !important;
-    }
     #eFirstStripeInWorldsPgWrapperWrapper{
         margin-bottom:20px !important;
     }
+    #eFirstStripeInWorldsPgWrapper>.content>.caption{
+        white-space:normal;
+    }
+    #eFirstStripeInWorldsPgWrapper>.visual{
+        display:none !important;
+    }
+
     #eWrongAndRightStripeInWorldsWrapper>.content>.caption,
     #eProfDeptStripeInWorldsWrapper>.content>.caption,
     #eJournalStripeInWorldsWrapper>.content>.caption,
@@ -1606,29 +1642,49 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
         height:130px;
         background-size:70% 70%;
     }
-    #eCloudStripeInWorldsWrapper>.visual{
+    #eCloudStripeInWorldsWrapper>.visual,
+    #eProfDeptStripeInWorldsWrapper>.visual{
         background-size:70% 48%;
     }
 
-
+    #eMonetaryWorldPg main,
+    #eWorkWorldPg main{
+        display:flex;
+        flex-direction:column;
+    }
+    #eFirstStripeInWorldsPgWrapperWrapper{
+        order:1;
+    }
+    #eMonetaryWorldPg #eFreeTryRegWrapper,
+    #eWorkWorldPg #eFreeTryRegWrapper{
+        order:2;
+        text-align:center;
+    }
+    #eMonetaryWorldPg #eSolutionsWrapperWrapper,
+    #eWorkWorldPg #eSolutionsWrapperWrapper{
+        order:3;
+    }
+    #eMonetaryWorldPg #mainFtr,
+    #eWorkWorldPg #mainFtr{
+        display:none;
+    }
+    #eMonetaryWorldPg #eFreeTryRegWrapper>.textWrapper,
+    #eWorkWorldPg #eFreeTryRegWrapper>.textWrapper{
+        width:100%;
+    }
+    #eMonetaryWorldPg #eFreeTryRegWrapper>.textWrapper>.caption,
+    #eWorkWorldPg #eFreeTryRegWrapper>.textWrapper>.caption{
+        font-size:1.6rem;
+    }
+    #eMonetaryWorldPg #eFreeTryRegWrapper>.textWrapper>.content,
+    #eWorkWorldPg #eFreeTryRegWrapper>.textWrapper>.content{
+        font-size:1.23rem;
+        margin:0 auto 0.5rem;
+    }
 
     /* worlds pages - general - end */
 
     /* monetary world pg - start */
-        #eMonetaryWorldPg main{
-            display:flex;
-            flex-direction:column;
-        }
-        #eMonetaryWorldPg #eFirstStripeInWorldsPgWrapperWrapper{
-            order:1;
-        }
-        #eMonetaryWorldPg #eFreeTryRegWrapper{
-            order:2;
-            text-align:center;
-        }
-        #eMonetaryWorldPg #eSolutionsWrapperWrapper{
-            order:3;
-        }
         #eMonetaryWorldPg #eFinancialManagementStripeInWorldsWrapperWrapper{
             order:4;
         }
@@ -1638,24 +1694,6 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
         #eMonetaryWorldPg #eCloudStripeInWorldsWrapperWrapper{
             order:6;
         }
-        #eMonetaryWorldPg #mainFtr{
-            display:none;
-        }
-        #eMonetaryWorldPg #eFreeTryRegWrapper>.textWrapper{
-            width:100%;
-        }
-        #eMonetaryWorldPg #eFreeTryRegWrapper>.textWrapper>.caption{
-            font-size:1.6rem;
-        }
-        #eMonetaryWorldPg #eFreeTryRegWrapper>.textWrapper>.content{
-            font-size:1.23rem;
-            margin:0 auto 0.5rem;
-        }
-
-        #eMonetaryWorldPg .solution:not(#eRecuperationSolution){
-            display:none;
-        }
-
         #eMonetaryWorldPg #eFormsInterfaceStripeInWorldsWrapper>.content{
             order:2;
         }
@@ -1671,6 +1709,31 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
         
     /* monetary world pg - end */
 
+    
+    /* work world pg - start */
+        #eWorkWorldPg #eWrongAndRightStripeInWorldsWrapperWrapper{
+            order:4;
+        }
+        #eWorkWorldPg #eProfDeptStripeInWorldsWrapperWrapper{
+            order:5;
+        }
+        #eWorkWorldPg #eJournalStripeInWorldsWrapperWrapper{
+            order:6;
+        }
+
+        #eWorkWorldPg #eProfDeptStripeInWorldsWrapper>.content{
+            order:2;
+        }
+        #eWorkWorldPg #eProfDeptStripeInWorldsWrapper>.visual{
+            order:1;
+        }
+        #eWorkWorldPg #eWrongAndRightStripeInWorldsWrapper{
+            margin-top:2rem !important;
+        }
+        #eWorkWorldPg #eJournalStripeInWorldsWrapper{
+            margin-bottom:2rem !important;
+        }
+    /* work world pg - end */
 
     /* contact us page adaptation to mobile - start */
         #eContactDetailsWrapper>.textWrapper{
@@ -1746,6 +1809,9 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
         }
         /* footer - end */
 
+        #eDetectMobile{
+            display:none;
+        }
 
 }
 /* mobile*/
@@ -1781,16 +1847,23 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     /* reordering solutions in home pg - end*/
 
     /* about page - start */
-
-    .solution>.visual{
-        width:auto;
-    }
-
     #eFirstStripeInAboutPgWrapperWrapper>.stripeContent>.content>.itm{
         margin:auto;
     }
+    #eSecondStripeInAboutPgWrapper>.visual{
+        display:none;
+    }
+    #eAboutPg #eSolutionsWrapper{
+        flex-direction:column;
+    }
     #eAboutPg #eSolutionsWrapper .solution>.visual{
         border-radius:0;
+    }
+    .solution>.visual{
+        width:auto;
+    }
+    #eClientsStripeInAboutPgWrapper{
+        width:100%;
     }
     
     /*about page - end */

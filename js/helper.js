@@ -110,4 +110,40 @@ function setVideoElm(eVid,sVidRelativeAddress){
   }
   req.send();
 }
+function isMobile(){
+  return document.getElementById("eDetectMobile") && getComputedStyle(document.getElementById("eDetectMobile")).getPropertyValue("display")==="none";
+}
 
+elementsCarousell = function(sElementWrapperId,sElementClass,iCurrent){
+  this.sElementWrapperId=sElementWrapperId;
+  this.sElementClass=sElementClass;
+  this.iCurrent=iCurrent;
+  var hInterval=null;
+  this.showElement = function(iCurrent){
+    /* doing the same old thing in a different way. just don't get bored.*/
+    document.querySelectorAll("#"+this.sElementWrapperId+" ."+this.sElementClass).forEach(function(elm,ii){
+      elm.classList.add("hideMe");
+    });
+    $("#"+this.sElementWrapperId).find("."+this.sElementClass).eq(iCurrent).removeClass("hideMe");
+  };
+  this.showNext = function(){
+    resetInterval();
+    this.iCurrent = this.iCurrent===$("#"+this.sElementWrapperId).find("."+this.sElementClass).length-1 ? 0 : this.iCurrent+1;
+    this.showElement(this.iCurrent);
+  };
+  this.showPrevious = function(){
+    resetInterval();
+    this.iCurrent = this.iCurrent===0 ? $("#"+this.sElementWrapperId).find("."+this.sElementClass).length-1 : this.iCurrent-1;
+    this.showElement(this.iCurrent);
+  };
+  var resetInterval = function(){
+      clearInterval(hInterval);
+      hInterval=setInterval(showElementAndAdvance,3000);
+    };
+  var showElementAndAdvance = function(){
+    this.iCurrent = this.iCurrent===$("#"+this.sElementWrapperId).find("."+this.sElementClass).length-1 ? 0 : this.iCurrent+1;
+    this.showElement(this.iCurrent);
+  };
+  showElementAndAdvance=showElementAndAdvance.bind(this);
+  resetInterval();
+}
