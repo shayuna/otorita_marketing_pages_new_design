@@ -6,10 +6,10 @@
         <meta name="viewport" content="user-scalable=no,width=device-width, initial-scale=1.0, maximum-scale=1.0" />	
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta charset="utf-8"/>
-        <link rel="stylesheet" href="./css/style.css?v=250219_1"/>
+        <link rel="stylesheet" href="./css/style.css?v=060319_2"/>
         <link rel="stylesheet" href="./css/normalize.css"/>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">     </head>
-    <body id="eContactUsPg">
+    <body id="eContactUsPg" onload="onLoad()">
         <header id="mainHdr">
             <nav id="mainNav">
                 <h2 class="hdr"><a class="removeFontSpecialTraits" href="./main.htm"><img src="./images/logo.png"/></a></h2>
@@ -42,7 +42,7 @@
                     <div class="textWrapper">
                         <div class="content">
                             <div class="itm top">נשמח לעמוד לרשותך בכל שאלה ועניין. אנא מלא /י את הטופס במלואו. מבטיחים לחזור אליך בהקדם האפשרי​</div>
-                            <div class="itm">
+                            <div class="itm bottom">
                                 <div class="caption">שעות פעילות</div>
                                 <div class="content">ימים א-ה בין השעות 08:30-16:30</div>
                             </div>
@@ -58,35 +58,39 @@
                     </div>
                 </div>
             </div>
-            <div id="eContactOptionsWrapper">
-                <a class="contactOption removeFontSpecialTraits cursorDefault" href="#">
-                    <div class="visual tel"></div>
-                    <div class="content">
-                        <h3 class="caption">טלפון</h3>
-                        <div class="content">03-5383233</div>
-                    </div>
-                </a>
-                <a class="contactOption removeFontSpecialTraits cursorDefault" href="#">
-                        <div class="visual fax"></div>
+            <div id="eContactOptionsWrapperWrapper">
+                <div id="ePrevious" onclick="oElementsCarousell.showPrevious()"></div>
+                <div id="eContactOptionsWrapper">
+                    <a class="contactOption removeFontSpecialTraits cursorDefault" href="#">
+                        <div class="visual tel"></div>
                         <div class="content">
-                            <h3 class="caption">פקס</h3>
-                            <div class="content">03-5383222</div>
+                            <h3 class="caption">טלפון</h3>
+                            <div class="content">03-5383233</div>
                         </div>
-                </a>
-                <a class="contactOption removeFontSpecialTraits cursorDefault" href="#">
-                    <div class="visual address"></div>
-                    <div class="content">
-                        <h3 class="caption">כתובת</h3>
-                        <div class="content">רח' המפעל 10 אור-יהודה</div>
-                    </div>
-                </a>
-                <a class="contactOption removeFontSpecialTraits changeOnHover" href="mailto:info@OTORITA.net">
-                    <div class="visual email"></div>
-                    <div class="content">
-                        <h3 class="caption">דוא"ל</h3>
-                        <div class="content email">info@otorita.net</div>
-                    </div>
-                </a>
+                    </a>
+                    <a class="contactOption removeFontSpecialTraits cursorDefault" href="#">
+                            <div class="visual fax"></div>
+                            <div class="content">
+                                <h3 class="caption">פקס</h3>
+                                <div class="content">03-5383222</div>
+                            </div>
+                    </a>
+                    <a class="contactOption removeFontSpecialTraits cursorDefault" href="#">
+                        <div class="visual address"></div>
+                        <div class="content">
+                            <h3 class="caption">כתובת</h3>
+                            <div class="content">רח' המפעל 10 אור-יהודה</div>
+                        </div>
+                    </a>
+                    <a class="contactOption removeFontSpecialTraits changeOnHover" href="mailto:info@OTORITA.net">
+                        <div class="visual email"></div>
+                        <div class="content">
+                            <h3 class="caption">דוא"ל</h3>
+                            <div class="content email">info@otorita.net</div>
+                        </div>
+                    </a>
+                </div>
+                <div id="eNext" onclick="oElementsCarousell.showNext()"></div>
             </div>
         </main>
         <footer id="mainFtr">
@@ -128,7 +132,19 @@
                 <a class="removeFontSpecialTraits itm" href="https://www.youtube.com/channel/UCqd4O0mgDS6LarcUVrkIhFg" target="youtubeWnd"><img src="./images/youtube.png"/></a>
                 <a class="removeFontSpecialTraits itm" href="https://www.linkedin.com/company/otorita?trk=nmp_rec_act_company_photo" target="linkedinWnd"><img src="./images/linkedin.png"/></a>
             </div>
-    </footer>
-    <iframe id="frm" name="frm" class="hideMe"></iframe>
+        </footer>
+        <iframe id="frm" name="frm" class="hideMe"></iframe>
+        <span id="eDetectMobile"></span>
+        <script src="./js/jquery-1.10.2.min.js"></script>
+        <script src="./js/helper.js?v=270219_1"></script>
+        <script>
+            var oElementsCarousell;
+            function onLoad(){
+                if (isMobile()){
+                    $("#eContactOptionsWrapper>.contactOption:not(:first-child").addClass("hideMe");
+       //             oElementsCarousell = new elementsCarousell("eContactOptionsWrapper","contactOption",1);
+                }
+            }
+        </script>
     </body>
 </html>

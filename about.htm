@@ -6,7 +6,7 @@
         <meta name="viewport" content="user-scalable=no,width=device-width, initial-scale=1.0, maximum-scale=1.0" />	
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta charset="utf-8"/>
-        <link rel="stylesheet" href="./css/style.css?v=260219_4"/>
+        <link rel="stylesheet" href="./css/style.css?v=060319_2"/>
         <link rel="stylesheet" href="./css/normalize.css"/>
     </head>
     <body id="eAboutPg" onload="onLoad()">
@@ -51,28 +51,31 @@
                     </div>
                 </div>
             </div>
-
-            <div id="eSolutionsWrapper">
-                <a class="solution removeFontSpecialTraits changeOnHover" href="http://otorita-journal.net/" target="journalWnd">
-                    <div class="visual journal"></div>
-                    <h3 class="caption">כתב - העת אוטוריטה</h3>
-                    <div class="content">מגזין מקצועי למנהלים בתחום יחסי עבודה, שכר וכספים</div>
-                </a>
-                <a class="solution removeFontSpecialTraits changeOnHover" href="./workWorld.htm">
-                    <div class="visual workWorld"></div>
-                    <h3 class="caption">המחלקה המקצועית</h3>
-                    <div class="content">מענה אנושי לאתגרים המקצועיים העולים בארגונך, בתחום יחסי עבודה ושכר</div>
-                </a>
-                <a class="solution removeFontSpecialTraits changeOnHover" href="https://otorita.net/academy/%D7%90%D7%95%D7%98%D7%95%D7%A8%D7%99%D7%98%D7%94-%D7%94%D7%90%D7%A7%D7%93%D7%9E%D7%99%D7%94.asp" target="academyWnd">
-                    <div class="visual academy"></div>
-                    <h3 class="caption">האקדמיה</h3>
-                    <div class="content">כנסים, השתלמויות, קורסים וסדנאות בתחום יחסי עבודה, שכר, פנסיה, ביטוח לאומי ומיסוי</div>
-                </a>
-                <a class="solution removeFontSpecialTraits changeOnHover" href="./monetaryWorld.htm">
-                    <div class="visual monetaryWorld"></div>
-                    <h3 class="caption">המחלקה הכלכלית</h3>
-                    <div class="content">תמיכה מקצועית בעולם הכספים באמצעות מענה אנושי של מומחי אוטוריטה</div>
-                </a>
+            <div id="eSolutionsWrapperWrapper">
+                <div id="ePrevious" onclick="oElementsCarousell.showPrevious()"></div>
+                <div id="eSolutionsWrapper">
+                    <a class="solution removeFontSpecialTraits changeOnHover" href="http://otorita-journal.net/" target="journalWnd">
+                        <div class="visual journal"></div>
+                        <h3 class="caption">כתב - העת אוטוריטה</h3>
+                        <div class="content">מגזין מקצועי למנהלים בתחום יחסי עבודה, שכר וכספים</div>
+                    </a>
+                    <a class="solution removeFontSpecialTraits changeOnHover" href="./workWorld.htm">
+                        <div class="visual workWorld"></div>
+                        <h3 class="caption">המחלקה המקצועית</h3>
+                        <div class="content">מענה אנושי לאתגרים המקצועיים העולים בארגונך, בתחום יחסי עבודה ושכר</div>
+                    </a>
+                    <a class="solution removeFontSpecialTraits changeOnHover" href="https://otorita.net/academy/%D7%90%D7%95%D7%98%D7%95%D7%A8%D7%99%D7%98%D7%94-%D7%94%D7%90%D7%A7%D7%93%D7%9E%D7%99%D7%94.asp" target="academyWnd">
+                        <div class="visual academy"></div>
+                        <h3 class="caption">האקדמיה</h3>
+                        <div class="content">כנסים, השתלמויות, קורסים וסדנאות בתחום יחסי עבודה, שכר, פנסיה, ביטוח לאומי ומיסוי</div>
+                    </a>
+                    <a class="solution removeFontSpecialTraits changeOnHover" href="./monetaryWorld.htm">
+                        <div class="visual monetaryWorld"></div>
+                        <h3 class="caption">המחלקה הכלכלית</h3>
+                        <div class="content">תמיכה מקצועית בעולם הכספים באמצעות מענה אנושי של מומחי אוטוריטה</div>
+                    </a>
+                </div>
+                <div id="eNext" onclick="oElementsCarousell.showNext()"></div>
             </div>
             <div id="eSecondStripeInAboutPgWrapperWrapper">
                 <div id="eSecondStripeInAboutPgWrapper" class="stripeContent">
@@ -80,6 +83,9 @@
                     <div class="content">
                         <div class="itm">הכלים החכמים של אוטוריטה מסייעים היום לקבל במהירות מידע עדכני ואמין, לבצע בקלות חישובים מורכבים וליהנות משקט נפשי מוחלט בקבלת ההחלטות.</div>
                         <div class="itm">גם 30 שנה מאוחר יותר, היינו רוצים לחשוב שהכל אצלנו נשאר בדיוק כפי שהיה בהתחלה; חדשני, מקצועי ופשוט.</div>
+                    </div>
+                    <div id="eClientsStripeInAboutPgWrapper" class="stripeContent">
+                        <div class="visual"></div>
                     </div>
                 </div>
             </div>
@@ -89,7 +95,7 @@
                 </div>
             </div>
         </main>
-        <footer id="mainFtr">
+        <footer id="mainFtr" class="hideMeInMobile">
             <div id="eMainNavInFtrWrapper">
                 <div id="eMainNavInFtr">
                     <div id="eProfGuidesAreaInFtr" class="section">
@@ -132,13 +138,16 @@
         <iframe id="frm" name="frm" class="hideMe"></iframe>
         <div id="player"></div>
         <div id="curtain" class="hideMe"></div>
-
-<!--        <div class="screen hideMe"></div> -->
-<!--        <div class="otoritaVideoWrapper"><video class="otoritaVideo hideMe" controls tabindex="-1" controlslist="nodownload" src="blob:https://youtu.be/drYwSOndEVM"></video></div> -->
+        <span id="eDetectMobile"></span>
         <script src="./js/jquery-1.10.2.min.js"></script>
-        <script src="./js/helper.js?v=201118_2"></script>
+        <script src="./js/helper.js?v=060319_1"></script>
         <script>
+            var oElementsCarousell;
             function onLoad(){
+                if (isMobile()){
+                    $("#eSolutionsWrapper>.solution:not(:first-child").addClass("hideMe");
+//                    oElementsCarousell = new elementsCarousell("eSolutionsWrapper","solution",1);
+                }
                 document.querySelector(".playVideoButton").addEventListener("click",function(e){
                     showPlayer();
                 });

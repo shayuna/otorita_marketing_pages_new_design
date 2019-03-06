@@ -370,11 +370,6 @@ ul,ol{
     padding:0.7rem;
     font-size:1.23rem;
 }
-#eClientsStripeInAboutPgWrapper>.visual{
-    background-image:url(../images/clients.png);
-    width:975px;
-    height:506px;
-}
 /* content stripes in about page - end */
 
 /* content stripes in worlds pages - start */
@@ -667,13 +662,6 @@ ul,ol{
 }
 #eMonetaryWorldPg #eFreeTryRegWrapper>.formWrapper>.submitBtn{
     background-color:#68b04d;
-}
-
-#eFreeTryRegWrapper>.formWrapper>.itm{
-    margin:0.2rem 0;
-    padding:0.5rem 0.2rem;
-    font-size:1rem;
-    color:#4ea4eb;
 }
 #eWorkWorldPg #eFreeTryRegWrapper>.formWrapper>.itm{
     border:3px solid #77acc4;
@@ -1037,8 +1025,8 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     position:absolute;
     width:100%;
     height:100%;
-    background-color:#eee;
-    opacity:0.4;
+    background-color:#fff;
+    opacity:0.8;
 }
 #eClientLoginBox>.tabsMenu{
     position:relative;
@@ -1062,8 +1050,11 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     width:80%;
     margin: 0.6rem auto;
 }
-#eClientLoginBox .boxInput{
-    padding:0.3rem;
+#eClientLoginBox .boxInput,
+#eClientLoginBox .boxTab,
+#eClientLoginBox .submitBtn{
+    box-sizing:border-box;
+    padding:0.5rem;
     box-sizing:border-box;
 }
 #eClientLoginBox .boxInput::placeholder{
@@ -1073,8 +1064,6 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     display:inline-block;
     width:150px;
     text-align:center;
-    box-sizing:border-box;
-    padding:0.5rem;
     margin:0;
 }
 #eClientLoginBox .boxTab,
@@ -1082,7 +1071,6 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     background-color:black;
     color:white;
     cursor:pointer;
-    padding:0.5rem;
 }
 
 #eClientLoginBox .submitBtn{
@@ -1312,7 +1300,9 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     #eSolutionsWrapperWrapper>#eNext,
     #eSolutionsWrapperWrapper>#ePrevious,
     #eRecommendersWrapperWrapper>#eNext,
-    #eRecommendersWrapperWrapper>#ePrevious{
+    #eRecommendersWrapperWrapper>#ePrevious,
+    #eContactOptionsWrapperWrapper>#eNext,
+    #eContactOptionsWrapperWrapper>#ePrevious{
         display:none;
     }
 
@@ -1340,6 +1330,13 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     #eSecondStripeInHomePgWrapper>.visual{
         position:relative;
         bottom:1px;/* an essential hack because of a bug in chrome which is responsible for a thin gray line displayed at the top of the element */
+    }
+
+    #eFreeTryRegWrapper>.formWrapper>.itm{
+        margin:0.2rem 0;
+        padding:0.5rem 0.2rem;
+        font-size:1rem;
+        color:#4ea4eb;
     }
     
     /* about page - start */
@@ -1382,6 +1379,14 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     }
     #eClientsStripeInAboutPgWrapper{
         margin:6rem auto;
+    }
+    #eClientsStripeInAboutPgWrapper>.visual{
+        background-image:url(../images/clients.png);
+        width:975px;
+        height:506px;
+    }
+    #eSecondStripeInAboutPgWrapper>#eClientsStripeInAboutPgWrapper{
+        display:none;
     }
     /* about page - end */
 
@@ -1463,9 +1468,8 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
         display:flex;
         flex-direction:column;
     }
-
-    #mainNav,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeContent,#eRecommendersWrapper,#eFreeTryRegWrapper,#eContactDetailsWrapper,#eContactOptionsWrapper{
-        width:90%;
+    #mainNav,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeContent,#eRecommendersWrapper,#eFreeTryRegWrapper,#eFirstStripeInHomePgWrapper,#eContactDetailsWrapper,#eContactOptionsWrapper{
+        width:82%;
     }
     #mainNav{
         justify-content:center;
@@ -1476,6 +1480,7 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     #mainHdr{
         border-bottom:0;
         margin:0.5rem auto;
+        padding:0;
     }
     #eMainHdrSpacer{
         display:none;
@@ -1488,6 +1493,8 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     }
     #eNewsLetterRegAreaInFtr{
         padding-top:0 !important;
+        font-size:1.5rem;
+        line-height:1.9rem !important;
     }
     #eEmailInputInNewsletterReg,#eSendBtnInNewsletterReg{
         width:100%;
@@ -1497,28 +1504,73 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
         margin-bottom:0 !important;
     }
     #eSocialNetworksControlPanel{
-        margin:2rem auto !important;
+        margin:3rem auto !important;
         text-align:center;
     }
     .stripeContent>.visual{
     /*    display:none;*/
     }
     .stripeContent>.content{
-        padding:1rem !important;
+/*        padding:1rem 0 !important;*//* this rule make the upper/lower margin in the first stripe in home page not in sync with the wix original*/
+        padding:0 !important;/* the first stripe in worlds page will have margins in abundance without this rule */
     }   
     /* solutions wrapper - start*/
     #eSolutionsWrapper{
         display:flex;
-        justify-content:space-between;
+    }
+    #eSolutionsWrapper>.solution{
+        display:block;
+        margin:1rem auto;
         width:100%;
     }
+    .solution>.visual{
+        margin:auto;
+    }
+    #eMainPg #eSolutionsWrapper>.solution>.caption{
+        font-size:1.6rem !important;
+    }
+    #eMonetaryWorldPg #eSolutionsWrapper>.solution>.caption,
+    #eWorkWorldPg #eSolutionsWrapper>.solution>.caption{
+        font-size:1.4rem !important;
+    }
+    #eMonetaryWorldPg #eSolutionsWrapperWrapper,
+    #eWorkWorldPg #eSolutionsWrapperWrapper{
+        padding:1rem 0;
+    }
+    #eFreeTryRegWrapper>.formWrapper>.itm{
+        margin:0.2rem 0;
+        padding:0.5rem 0.2rem;
+        font-size:1.2rem;
+        font-weight:bold;
+        color:#4ea4eb;
+    }
+    /* reordering solutions in home pg - start*/
+    #eMainPg #eSolutionsWrapper{
+        flex-direction:column;
+    }
+    #eMainPg #eSolutionsWrapper .monetaryWorldSolution{
+        order:1;
+        margin-top:2.5rem;
+    }
+    #eMainPg #eSolutionsWrapper .workWorldSolution{
+        order:2;
+    }
+    #eMainPg #eSolutionsWrapper .academySolution{
+        order:3;
+    }
+    #eMainPg #eSolutionsWrapper .lawSolution{
+        order:4;
+        margin-bottom:2.5rem;
+    }
+    /* reordering solutions in home pg - end*/
+
 
     .recommendersRow{
         display:block;
         text-align: center;
     }
     .recommender{
-        margin:3rem auto !important;
+        margin:2rem auto !important;
     }
     #eRecommendersWrapper .recommender>.content,
     #eRecommendersWrapper .recommender>.caption>.content{
@@ -1527,23 +1579,70 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     #eWorkWorldPg #eSolutionsWrapper,#eMonetaryWorldPg #eSolutionsWrapper{
         display:block;
     }
+    #eRecommendersWrapper .recommender>.visual{
+        width:187px;
+        height:187px;
+        background-size:100%;
+    }
+    
     /* solutions wrapper - end */
 
 
     /* about page - start */
 
+    #eFirstStripeInAboutPgWrapperWrapper,
+    #eSecondStripeInAboutPgWrapperWrapper{
+        padding:2rem 0;
+    }
+
     #eFirstStripeInAboutPgWrapperWrapper>.stripeContent>.content>.itm{
         margin:auto;
         width:100%;
+        padding:0.7rem 0;
+    }
+    #eSecondStripeInAboutPgWrapperWrapper>.stripeContent>.content>.itm{
+        padding:0.7rem 0;
+    }
+    #eSecondStripeInAboutPgWrapper{
+        display:block;
+    }
+    #eSecondStripeInAboutPgWrapper>.visual{
+        display:none;
     }
     #eClientsStripeInAboutPgWrapper{
-        margin:2rem auto;
+        margin:1rem auto 1rem auto !important;
+        width:100%;
+        height:200px;
     }
-    #eAboutPg .solution{
-        margin-bottom:2rem;
+    #eClientsStripeInAboutPgWrapper>.visual{
+        background-image:url(../images/clients.png);
+        width:100%;
+        height:100%;
+        background-size:100% 100%;
     }
-    #eAboutPg #eSolutionsWrapper .solution>.visual{
+    #eClientsStripeInAboutPgWrapperWrapper{
+        display:none;
+    }
+    #eAboutPg #eSolutionsWrapper>.solution{
+        margin:0;
+    }
+    #eAboutPg #eSolutionsWrapper{
+        margin:3rem auto;
+        flex-direction:column;
+    }
+    #eAboutPg #eSolutionsWrapper>.solution>.caption{
+        font-size:1.6rem;
+    }
+    #eAboutPg #eSolutionsWrapper>.solution>.content{
+        font-size:1.2rem;
+    }
+    #eAboutPg #eSolutionsWrapper>.solution>.visual{
         border-radius:50%;
+        width:187px;
+        height:187px;
+    }
+    #eClientsStripeInAboutPgWrapper{
+        width:100%;
     }
     /*about page - end */
 
@@ -1551,22 +1650,51 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     #eSecondStripeInHomePgWrapper>.visual{
         display:none;
     }
-
-    #eFirstStripeInHomePgWrapper>.content>.caption,
-    #eFirstStripeInWorldsPgWrapper>.content>.caption{
-        font-size:4rem !important;
+    #eSecondStripeInHomePgWrapper>.content{
+        padding:2rem 0 !important;
     }
-    #eFirstStripeInHomePgWrapper>.content>.content,
+    #eSecondStripeInHomePgWrapper>.content>.caption{
+        font-size:1.75rem;
+        line-height:2rem;
+        margin:0;
+    }
+    #eSecondStripeInHomePgWrapper>.content>.content{
+        font-size:1.2rem;
+        line-height:1.7rem;    
+    }
+    
+    #eFirstStripeInHomePgWrapper>.content>.caption{
+        font-size:60px !important;
+        margin:1.9rem 0 0 0;
+    }
+    #eFirstStripeInWorldsPgWrapper>.content>.caption{
+        font-size:65px !important;
+        margin:1.9rem 0 0 0;
+    }
+    #eFirstStripeInHomePgWrapper>.content>.content{
+        font-size:1.6rem !important;
+        margin:0 0 2.1rem 0;
+    }
     #eFirstStripeInWorldsPgWrapper>.content>.content{
+        margin:0.3rem 0 2.1rem 0;
+    }
+    #eMonetaryWorldPg #eFirstStripeInWorldsPgWrapper>.content>.content{
+        font-size:1.8rem !important;
+    }
+    #eWorkWorldPg #eFirstStripeInWorldsPgWrapper>.content>.content{
         font-size:1.6rem !important;
     }
 
+    #eMainPg #eRecommendersWrapperWrapper>#eNext,
+    #eAboutPg #eSolutionsWrapperWrapper>#eNext,
     #eMonetaryWorldPg #eSolutionsWrapperWrapper>#eNext,
     #eWorkWorldPg #eSolutionsWrapperWrapper>#eNext,
+    #eContactUsPg #eContactOptionsWrapperWrapper>#eNext,
     #eMonetaryWorldPg #eSolutionsWrapperWrapper>#ePrevious,
     #eWorkWorldPg #eSolutionsWrapperWrapper>#ePrevious,
     #eMainPg #eRecommendersWrapperWrapper>#ePrevious,
-    #eMainPg #eRecommendersWrapperWrapper>#eNext{
+    #eAboutPg #eSolutionsWrapperWrapper>#ePrevious,
+    #eContactUsPg #eContactOptionsWrapperWrapper>#ePrevious{
         width:64px;
         height:64px;
         background-size:auto;
@@ -1574,18 +1702,24 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
         background-position:center;
     }
 
+    #eAboutPg #eSolutionsWrapperWrapper>#eNext,
     #eMonetaryWorldPg #eSolutionsWrapperWrapper>#eNext,
     #eWorkWorldPg #eSolutionsWrapperWrapper>#eNext,
+    #eContactUsPg #eContactOptionsWrapperWrapper>#eNext,
     #eMainPg #eRecommendersWrapperWrapper>#eNext{
         background-image:url(../images/next.png);
     }
+    #eAboutPg #eSolutionsWrapperWrapper>#ePrevious,
     #eMonetaryWorldPg #eSolutionsWrapperWrapper>#ePrevious,
     #eWorkWorldPg #eSolutionsWrapperWrapper>#ePrevious,
+    #eContactUsPg #eContactOptionsWrapperWrapper>#ePrevious,
     #eMainPg #eRecommendersWrapperWrapper>#ePrevious{
         background-image:url(../images/previous.png);
     }
+    #eAboutPg #eSolutionsWrapperWrapper,
     #eMonetaryWorldPg #eSolutionsWrapperWrapper,
     #eWorkWorldPg #eSolutionsWrapperWrapper,
+    #eContactUsPg #eContactOptionsWrapperWrapper,
     #eMainPg #eRecommendersWrapperWrapper{
         display:flex;
         flex-direction:row;
@@ -1600,12 +1734,9 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     #eFinancialManagementStripeInWorldsWrapper>.content>.caption,
     #eFormsInterfaceStripeInWorldsWrapper>.content>.caption,
     #eCloudStripeInWorldsWrapper>.content>.caption{
-        margin-bottom:1rem;
+        margin:1rem auto 0.2rem auto;
     }
 
-    #eFirstStripeInWorldsPgWrapperWrapper{
-        margin-bottom:20px !important;
-    }
     #eFirstStripeInWorldsPgWrapper>.content>.caption{
         white-space:normal;
     }
@@ -1619,7 +1750,15 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     #eFinancialManagementStripeInWorldsWrapper>.content>.caption,
     #eFormsInterfaceStripeInWorldsWrapper>.content>.caption,
     #eCloudStripeInWorldsWrapper>.content>.caption{
-        font-size:1.6rem;
+        font-size:1.8rem;
+    }
+    #eWrongAndRightStripeInWorldsWrapper>.content>.content,
+    #eProfDeptStripeInWorldsWrapper>.content>.content,
+    #eJournalStripeInWorldsWrapper>.content>.content,
+    #eFinancialManagementStripeInWorldsWrapper>.content>.content,
+    #eFormsInterfaceStripeInWorldsWrapper>.content>.content,
+    #eCloudStripeInWorldsWrapper>.content>.content{
+        font-size:1.4rem;
     }
 
     #eWrongAndRightStripeInWorldsWrapper,
@@ -1631,7 +1770,7 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
         display:flex;
         flex-direction:column;
         text-align:center;
-        margin:0.5rem auto !important;
+        margin:1rem auto !important;
     }
     #eWrongAndRightStripeInWorldsWrapper>.visual,
     #eProfDeptStripeInWorldsWrapper>.visual,
@@ -1667,7 +1806,9 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
         order:3;
     }
     #eMonetaryWorldPg #mainFtr,
-    #eWorkWorldPg #mainFtr{
+    #eWorkWorldPg #mainFtr,
+    #eContactUsPg #mainFtr,
+    #eAboutPg #mainFtr{
         display:none;
     }
     #eMonetaryWorldPg #eFreeTryRegWrapper>.textWrapper,
@@ -1676,13 +1817,20 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     }
     #eMonetaryWorldPg #eFreeTryRegWrapper>.textWrapper>.caption,
     #eWorkWorldPg #eFreeTryRegWrapper>.textWrapper>.caption{
-        font-size:1.6rem;
+        font-size:1.7rem;
     }
     #eMonetaryWorldPg #eFreeTryRegWrapper>.textWrapper>.content,
     #eWorkWorldPg #eFreeTryRegWrapper>.textWrapper>.content{
-        font-size:1.23rem;
+        font-size:1.2rem;
         margin:0 auto 0.5rem;
     }
+
+    #eMonetaryWorldPg #eSolutionsWrapper>.solution>.visual,
+    #eWorkWorldPg #eSolutionsWrapper>.solution>.visual{
+        width:187px;
+        height:187px;
+    }
+
 
     /* worlds pages - general - end */
 
@@ -1703,10 +1851,10 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
             order:1;
         }
         #eMonetaryWorldPg #eFinancialManagementStripeInWorldsWrapper{
-            margin-top:2rem !important;
+            margin-top:3rem !important;
         }
         #eMonetaryWorldPg #eCloudStripeInWorldsWrapper{
-            margin-bottom:2rem !important;
+            margin-bottom:3rem !important;
         }
         
     /* monetary world pg - end */
@@ -1738,8 +1886,38 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     /* work world pg - end */
 
     /* contact us page adaptation to mobile - start */
+        #eContactDetailsWrapper{
+            font-size:1.2rem;
+        }
+        #eContactDetailsWrapper,#eContactOptionsWrapper{
+            display:block;
+        }
+        #eContactDetailsWrapper{
+            padding:3rem 0;
+        }
+        #eContactOptionsWrapper{
+            padding:3rem 0;
+        }
         #eContactDetailsWrapper>.textWrapper{
-            width:10rem;
+            margin-left:0;
+            width:auto;
+        }
+        #eContactDetailsWrapper>.textWrapper>.content>.itm.top{
+            margin:0 auto;
+        }
+        #eContactDetailsWrapper>.textWrapper>.content>.itm.bottom{
+            margin:3rem auto;
+        }
+        #eContactDetailsWrapper>.formWrapper>.itm{
+            padding:0.7rem 0.5rem;
+            margin:0.6rem 0;
+        }
+        #eContactOptionsWrapper>.contactOption>.visual{
+            width:187px;
+            height:187px;
+        }
+        #eContactOptionsWrapper>.contactOption>.content{
+            margin:1rem auto 0 auto;
         }
     /* contact us page adaptation to mobile - end */
 
@@ -1800,93 +1978,27 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     /* free try reg - end */
 
     /* footer - start */
-        #eMainNavInFtrWrapper{
-            padding:2rem;
-        }
-        #eMainNavInFtr>.section:nth-child(2),#eMainNavInFtr>.section:nth-child(3){
-            padding-top:2rem;
-        }
-        #eMainPg #eMainNavInFtrWrapper{
-            background-color:#ef7700;
-        }
-        /* footer - end */
+    #eMainNavInFtrWrapper{
+        padding:2.2rem 0;
+    }
+    #eMainNavInFtr>.section:nth-child(2),#eMainNavInFtr>.section:nth-child(3){
+        padding-top:2rem;
+    }
+    #eMainPg #eMainNavInFtrWrapper{
+        background-color:#ef7700;
+    }
+    /* footer - end */
 
-        #eDetectMobile{
-            display:none;
-        }
-
+    #eDetectMobile{
+        display:none;
+    }
+    /* footer - end */
 }
 /* mobile*/
 @media screen and (max-width:500px){
-    #mainNav,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,#eFirstStripeInHomePgWrapper,#eRecommendersWrapper,#eFreeTryRegWrapper,#eContactDetailsWrapper,#eContactOptionsWrapper{
-        width:90%;
-    }
     #eMainNavInFtr{
         flex-direction:column;
     }
-    #eSolutionsWrapper>.solution{
-        display:block;
-        width:95%;
-        margin:2rem auto;
-    }
-
-    /* reordering solutions in home pg - start*/
-    #eMainPg #eSolutionsWrapper{
-        flex-direction:column;
-    }
-    #eMainPg #eSolutionsWrapper .monetaryWorldSolution{
-        order:1;
-    }
-    #eMainPg #eSolutionsWrapper .workWorldSolution{
-        order:2;
-    }
-    #eMainPg #eSolutionsWrapper .academySolution{
-        order:3;
-    }
-    #eMainPg #eSolutionsWrapper .lawSolution{
-        order:4;
-    }
-    /* reordering solutions in home pg - end*/
-
-    /* about page - start */
-    #eFirstStripeInAboutPgWrapperWrapper>.stripeContent>.content>.itm{
-        margin:auto;
-    }
-    #eSecondStripeInAboutPgWrapper>.visual{
-        display:none;
-    }
-    #eAboutPg #eSolutionsWrapper{
-        flex-direction:column;
-    }
-    #eAboutPg #eSolutionsWrapper .solution>.visual{
-        border-radius:0;
-    }
-    .solution>.visual{
-        width:auto;
-    }
-    #eClientsStripeInAboutPgWrapper{
-        width:100%;
-    }
-    
-    /*about page - end */
-
-    /* contact us page adaptation to mobile - start */ 
-        #eContactDetailsWrapper,#eContactOptionsWrapper{
-            display:block;
-            padding:2rem 0;
-        }
-        #eContactDetailsWrapper>.textWrapper{
-            margin-left:0;
-            width:auto;
-        }
-        #eContactOptionsWrapper>.contactOption>.content{
-            margin:1rem auto;
-        }
-        .contactOption:not(:last-child){
-            display:block !important;
-            margin-bottom:3rem;
-        }
-    /* contact us page adaptation to mobile - end */ 
 
     /* newsletter reg in footer- start*/
     #eNewsletterRegInputFldsWrapper{
