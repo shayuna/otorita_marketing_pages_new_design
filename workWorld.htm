@@ -184,7 +184,7 @@
         <div id="curtain" class="hideMe"></div>
         <span id="eDetectMobile"></span>
         <script src="./js/jquery-1.10.2.min.js"></script>
-        <script src="./js/helper.js?v=270219_1"></script>
+        <script src="./js/helper.js?v=070319_1"></script>
         <script>
             var oElementsCarousell;
             function onLoad(){
@@ -194,7 +194,12 @@
                     $("#eWrongAndRightStripeInWorldsWrapper>.content>.caption,#eProfDeptStripeInWorldsWrapper>.content>.caption,#eJournalStripeInWorldsWrapper>.content>.caption").on("click",function(e){
                         $(e.target).siblings(".content").toggleClass("hideMe");
                     });
+                    $("#eWrongAndRightStripeInWorldsWrapper>.visual,#eProfDeptStripeInWorldsWrapper>.visual,#eJournalStripeInWorldsWrapper>.visual").on("click",function(e){
+                        $(e.target).siblings(".content").find(".content").toggleClass("hideMe");
+                    });
                     oElementsCarousell = new elementsCarousell("eSolutionsWrapper","solution",1);
+                    document.addEventListener('touchstart',handleTouchStart, false);        
+                    document.addEventListener('touchmove', handleTouchMove, false);
                 }
                 setVideoElm(document.querySelector("#eFirstStripeInWorldsPgWrapperWrapper .vid"),"./images/people.mp4");
                 setVideoElm(document.querySelector("#eMainNavInFtrWrapper .vid"),"./images/people.mp4");

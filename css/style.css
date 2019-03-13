@@ -356,6 +356,12 @@ ul,ol{
     line-height:1.5rem;
     width:60%;
 }
+#eFirstStripeInAboutPgWrapperWrapper>.stripeContent>.content>.itm:first-child{
+    padding-top:0;
+}
+#eFirstStripeInAboutPgWrapperWrapper>.stripeContent>.content>.itm:last-child{
+    padding-bottom:0;
+}
 #eSecondStripeInAboutPgWrapper>.visual{
     background-image:url(../images/whiteStripes_small.png);
     width:353px;
@@ -670,7 +676,7 @@ ul,ol{
     border:3px solid #68b04d;
 }
 
-#eFreeTryRegWrapper>.formWrapper>.itm::placeholder{
+#eFreeTryRegWrapper>.formWrapper>.itm::placeholder,#eManagementArea{
     color:#aaa;
 }
 /* free try reg - end */
@@ -922,33 +928,6 @@ ul,ol{
     cursor:pointer;
 }
 /* general - end */
-
-
-/* helper classes - start */
-.flex-column{
-    display:flex;
-    flex-direction:column;
-}
-.bgcolor1{
-    background-color:#ddd;
-}
-.hideMe{
-    display:none !important;
-}
-.boldMe{
-    font-weight:bold;
-}
-a.removeFontSpecialTraits{
-    color:inherit;
-    text-decoration: none;
-}
-.cursorDefault{
-    cursor:default;
-}
-.nowrap{
-    white-space:nowrap;
-}
-/* helper classes - end */
 
 /* hover effects - start - here the thumb rule is making things darker on hover, so depending on the background, sometimes we need to increase opacity on hover, */
 /* and sometimes we need to decrease it on hover */
@@ -1272,8 +1251,33 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
 */
     z-index:200;
 }
-
 /* otorita video - end */
+
+/* helper classes - start */
+.flex-column{
+    display:flex;
+    flex-direction:column;
+}
+.bgcolor1{
+    background-color:#ddd;
+}
+.hideMe{
+    display:none !important;
+}
+.boldMe{
+    font-weight:bold;
+}
+a.removeFontSpecialTraits{
+    color:inherit;
+    text-decoration: none;
+}
+.cursorDefault{
+    cursor:default;
+}
+.nowrap{
+    white-space:nowrap;
+}
+/* helper classes - end */
 
 /* desktop */
 @media screen and (min-width:980px){
@@ -1385,9 +1389,6 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
         width:975px;
         height:506px;
     }
-    #eSecondStripeInAboutPgWrapper>#eClientsStripeInAboutPgWrapper{
-        display:none;
-    }
     /* about page - end */
 
     /* worlds pages - start */
@@ -1460,6 +1461,12 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
         width:370px;
     }
     /* footer - end */
+
+    /* helper classes - start */
+    .hideInDesktop{
+        display:none !important;
+    }
+    /* helper classes - end */
 }
 /* tablet + mobile - anything that's not a desktop */
 @media screen and (max-width:979px){
@@ -1468,7 +1475,7 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
         display:flex;
         flex-direction:column;
     }
-    #mainNav,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeContent,#eRecommendersWrapper,#eFreeTryRegWrapper,#eFirstStripeInHomePgWrapper,#eContactDetailsWrapper,#eContactOptionsWrapper{
+    #mainNav,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeContent,#eRecommendersWrapper,#eFreeTryRegWrapper>.formWrapper,#eFirstStripeInHomePgWrapper,#eContactDetailsWrapper,#eContactOptionsWrapper,#eClientsStripeInAboutPgWrapperWrapper{
         width:82%;
     }
     #mainNav{
@@ -1492,8 +1499,11 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
         display:none;
     }
     #eNewsLetterRegAreaInFtr{
-        padding-top:0 !important;
-        font-size:1.5rem;
+        padding:0 0 0.4rem 0 !important;
+        font-size:1.23;
+    }
+    #eNewsLetterRegAreaInFtr>.hdr{
+        font-size:1.8rem;
         line-height:1.9rem !important;
     }
     #eEmailInputInNewsletterReg,#eSendBtnInNewsletterReg{
@@ -1541,8 +1551,6 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
         margin:0.2rem 0;
         padding:0.5rem 0.2rem;
         font-size:1.2rem;
-        font-weight:bold;
-        color:#4ea4eb;
     }
     /* reordering solutions in home pg - start*/
     #eMainPg #eSolutionsWrapper{
@@ -1550,7 +1558,7 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     }
     #eMainPg #eSolutionsWrapper .monetaryWorldSolution{
         order:1;
-        margin-top:2.5rem;
+        margin-top:2.8rem;
     }
     #eMainPg #eSolutionsWrapper .workWorldSolution{
         order:2;
@@ -1592,7 +1600,7 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
 
     #eFirstStripeInAboutPgWrapperWrapper,
     #eSecondStripeInAboutPgWrapperWrapper{
-        padding:2rem 0;
+        padding:2.7rem 0;
     }
 
     #eFirstStripeInAboutPgWrapperWrapper>.stripeContent>.content>.itm{
@@ -1603,14 +1611,23 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     #eSecondStripeInAboutPgWrapperWrapper>.stripeContent>.content>.itm{
         padding:0.7rem 0;
     }
+    #eSecondStripeInAboutPgWrapperWrapper>.stripeContent>.content>.itm:first-child{
+        padding-top:0;
+    }
+    #eSecondStripeInAboutPgWrapperWrapper>.stripeContent>.content>.itm:last-child{
+        padding-bottom:0;
+    }
     #eSecondStripeInAboutPgWrapper{
         display:block;
     }
     #eSecondStripeInAboutPgWrapper>.visual{
         display:none;
     }
+    #eClientsStripeInAboutPgWrapperWrapper{
+        margin:auto;
+    }
     #eClientsStripeInAboutPgWrapper{
-        margin:1rem auto 1rem auto !important;
+        margin:2.7rem auto !important;
         width:100%;
         height:200px;
     }
@@ -1620,9 +1637,6 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
         height:100%;
         background-size:100% 100%;
     }
-    #eClientsStripeInAboutPgWrapperWrapper{
-        display:none;
-    }
     #eAboutPg #eSolutionsWrapper>.solution{
         margin:0;
     }
@@ -1631,18 +1645,16 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
         flex-direction:column;
     }
     #eAboutPg #eSolutionsWrapper>.solution>.caption{
-        font-size:1.6rem;
+        font-size:1.75rem;
+        margin:0.8rem;
     }
     #eAboutPg #eSolutionsWrapper>.solution>.content{
-        font-size:1.2rem;
+        font-size:1.23rem;
     }
     #eAboutPg #eSolutionsWrapper>.solution>.visual{
         border-radius:50%;
         width:187px;
         height:187px;
-    }
-    #eClientsStripeInAboutPgWrapper{
-        width:100%;
     }
     /*about page - end */
 
@@ -1750,7 +1762,7 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     #eFinancialManagementStripeInWorldsWrapper>.content>.caption,
     #eFormsInterfaceStripeInWorldsWrapper>.content>.caption,
     #eCloudStripeInWorldsWrapper>.content>.caption{
-        font-size:1.8rem;
+        font-size:1.7rem;
     }
     #eWrongAndRightStripeInWorldsWrapper>.content>.content,
     #eProfDeptStripeInWorldsWrapper>.content>.content,
@@ -1758,7 +1770,7 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     #eFinancialManagementStripeInWorldsWrapper>.content>.content,
     #eFormsInterfaceStripeInWorldsWrapper>.content>.content,
     #eCloudStripeInWorldsWrapper>.content>.content{
-        font-size:1.4rem;
+        font-size:1.2rem;
     }
 
     #eWrongAndRightStripeInWorldsWrapper,
@@ -1800,6 +1812,7 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     #eWorkWorldPg #eFreeTryRegWrapper{
         order:2;
         text-align:center;
+
     }
     #eMonetaryWorldPg #eSolutionsWrapperWrapper,
     #eWorkWorldPg #eSolutionsWrapperWrapper{
@@ -1807,8 +1820,7 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     }
     #eMonetaryWorldPg #mainFtr,
     #eWorkWorldPg #mainFtr,
-    #eContactUsPg #mainFtr,
-    #eAboutPg #mainFtr{
+    #eContactUsPg #mainFtr{
         display:none;
     }
     #eMonetaryWorldPg #eFreeTryRegWrapper>.textWrapper,
@@ -1824,7 +1836,10 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
         font-size:1.2rem;
         margin:0 auto 0.5rem;
     }
-
+    #eMonetaryWorldPg #eFreeTryRegWrapper>.formWrapper,
+    #eWorkWorldPg #eFreeTryRegWrapper>.formWrapper{
+        margin:auto;
+    }
     #eMonetaryWorldPg #eSolutionsWrapper>.solution>.visual,
     #eWorkWorldPg #eSolutionsWrapper>.solution>.visual{
         width:187px;
@@ -1893,7 +1908,7 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
             display:block;
         }
         #eContactDetailsWrapper{
-            padding:3rem 0;
+            padding:2.7rem 0 3rem 0;
         }
         #eContactOptionsWrapper{
             padding:3rem 0;
@@ -1906,7 +1921,7 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
             margin:0 auto;
         }
         #eContactDetailsWrapper>.textWrapper>.content>.itm.bottom{
-            margin:3rem auto;
+            margin:2.4rem auto;
         }
         #eContactDetailsWrapper>.formWrapper>.itm{
             padding:0.7rem 0.5rem;
@@ -1973,7 +1988,7 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     /* free try reg - start */
     #eFreeTryRegWrapper{
         display:block;
-        padding:2rem 0;
+        padding:2rem 0 2.2rem 0;
     }
     /* free try reg - end */
 
@@ -1993,6 +2008,34 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
         display:none;
     }
     /* footer - end */
+
+    /* swipe animation - start */
+    @keyframes swipeInAbstract {
+        from{
+            position:relative;
+            right:-300px;
+        }
+        to{
+            position:relative;
+            right:0;
+        }
+    }
+    .swipeIn{
+        animation:swipeInAbstract 3s; 
+    }
+    .hideMeInSlideShow{
+        position:absolute;
+        z-index:0;
+    }
+    /* swipe animation - end */
+
+
+
+    /* helper classes - start */
+    .hideInMobile{
+        display:none !important;
+    }
+    /* helper classes - end */
 }
 /* mobile*/
 @media screen and (max-width:500px){
@@ -2011,3 +2054,4 @@ header,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeCon
     }
     /* newsletter reg in footer- end*/
 }
+#efreetryregwrapper

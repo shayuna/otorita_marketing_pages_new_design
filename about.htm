@@ -6,7 +6,7 @@
         <meta name="viewport" content="user-scalable=no,width=device-width, initial-scale=1.0, maximum-scale=1.0" />	
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta charset="utf-8"/>
-        <link rel="stylesheet" href="./css/style.css?v=060319_2"/>
+        <link rel="stylesheet" href="./css/style.css?v=070319_1"/>
         <link rel="stylesheet" href="./css/normalize.css"/>
     </head>
     <body id="eAboutPg" onload="onLoad()">
@@ -84,9 +84,6 @@
                         <div class="itm">הכלים החכמים של אוטוריטה מסייעים היום לקבל במהירות מידע עדכני ואמין, לבצע בקלות חישובים מורכבים וליהנות משקט נפשי מוחלט בקבלת ההחלטות.</div>
                         <div class="itm">גם 30 שנה מאוחר יותר, היינו רוצים לחשוב שהכל אצלנו נשאר בדיוק כפי שהיה בהתחלה; חדשני, מקצועי ופשוט.</div>
                     </div>
-                    <div id="eClientsStripeInAboutPgWrapper" class="stripeContent">
-                        <div class="visual"></div>
-                    </div>
                 </div>
             </div>
             <div id="eClientsStripeInAboutPgWrapperWrapper">
@@ -140,13 +137,15 @@
         <div id="curtain" class="hideMe"></div>
         <span id="eDetectMobile"></span>
         <script src="./js/jquery-1.10.2.min.js"></script>
-        <script src="./js/helper.js?v=060319_1"></script>
+        <script src="./js/helper.js?v=070319_1"></script>
         <script>
             var oElementsCarousell;
             function onLoad(){
                 if (isMobile()){
                     $("#eSolutionsWrapper>.solution:not(:first-child").addClass("hideMe");
-//                    oElementsCarousell = new elementsCarousell("eSolutionsWrapper","solution",1);
+                    oElementsCarousell = new elementsCarousell("eSolutionsWrapper","solution",1);
+                    document.addEventListener('touchstart',handleTouchStart, false);        
+                    document.addEventListener('touchmove', handleTouchMove, false);
                 }
                 document.querySelector(".playVideoButton").addEventListener("click",function(e){
                     showPlayer();
@@ -155,19 +154,6 @@
                     hidePlayer();
                 });
                 createPlayer();
-
-/*
-                document.querySelector(".playVideoButton").addEventListener("click",function(e){
-                    document.querySelector(".otoritaVideo").classList.remove("hideMe");
-                    document.querySelector(".screen").classList.remove("hideMe");
-                    document.querySelector(".playVideoButton").classList.remove("standout");
-                })
-                document.querySelector(".screen").addEventListener("click",function(e){
-                    document.querySelector(".otoritaVideo").classList.add("hideMe");
-                    document.querySelector(".screen").classList.add("hideMe");
-                    document.querySelector(".playVideoButton").classList.add("standout");
-                })
-  */
             }
         </script>
     </body>

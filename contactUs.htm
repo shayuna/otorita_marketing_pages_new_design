@@ -136,13 +136,15 @@
         <iframe id="frm" name="frm" class="hideMe"></iframe>
         <span id="eDetectMobile"></span>
         <script src="./js/jquery-1.10.2.min.js"></script>
-        <script src="./js/helper.js?v=270219_1"></script>
+        <script src="./js/helper.js?v=070319_1"></script>
         <script>
             var oElementsCarousell;
             function onLoad(){
                 if (isMobile()){
                     $("#eContactOptionsWrapper>.contactOption:not(:first-child").addClass("hideMe");
-       //             oElementsCarousell = new elementsCarousell("eContactOptionsWrapper","contactOption",1);
+                    oElementsCarousell = new elementsCarousell("eContactOptionsWrapper","contactOption",1);
+                    document.addEventListener('touchstart',handleTouchStart, false);        
+                    document.addEventListener('touchmove', handleTouchMove, false);
                 }
             }
         </script>
