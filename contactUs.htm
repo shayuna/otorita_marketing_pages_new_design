@@ -6,8 +6,12 @@
         <meta name="viewport" content="user-scalable=no,width=device-width, initial-scale=1.0, maximum-scale=1.0" />	
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta charset="utf-8"/>
-        <link rel="stylesheet" href="./css/style.css?v=060319_2"/>
+        <link rel="stylesheet" href="./css/style.css?v=130319_1"/>
         <link rel="stylesheet" href="./css/normalize.css"/>
+        <!-- Add the slick-theme.css if you want default styling --><!-- carousell plugin css-->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
+        <!-- Add the slick-theme.css if you want default styling --><!-- carousell plugin css-->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">     </head>
     <body id="eContactUsPg" onload="onLoad()">
         <header id="mainHdr">
@@ -59,7 +63,6 @@
                 </div>
             </div>
             <div id="eContactOptionsWrapperWrapper">
-                <div id="ePrevious" onclick="oElementsCarousell.showPrevious()"></div>
                 <div id="eContactOptionsWrapper">
                     <a class="contactOption removeFontSpecialTraits cursorDefault" href="#">
                         <div class="visual tel"></div>
@@ -90,7 +93,6 @@
                         </div>
                     </a>
                 </div>
-                <div id="eNext" onclick="oElementsCarousell.showNext()"></div>
             </div>
         </main>
         <footer id="mainFtr">
@@ -137,14 +139,16 @@
         <span id="eDetectMobile"></span>
         <script src="./js/jquery-1.10.2.min.js"></script>
         <script src="./js/helper.js?v=070319_1"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script><!-- carousell plugin js-->
         <script>
             var oElementsCarousell;
             function onLoad(){
                 if (isMobile()){
-                    $("#eContactOptionsWrapper>.contactOption:not(:first-child").addClass("hideMe");
-                    oElementsCarousell = new elementsCarousell("eContactOptionsWrapper","contactOption",1);
-                    document.addEventListener('touchstart',handleTouchStart, false);        
-                    document.addEventListener('touchmove', handleTouchMove, false);
+                    $("#eContactOptionsWrapper").slick({
+                        rtl:true,
+                        autoplay:true,
+                        arrows:false,
+                    });
                 }
             }
         </script>

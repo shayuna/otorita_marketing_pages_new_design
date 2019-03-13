@@ -6,8 +6,12 @@
         <meta name="viewport" content="user-scalable=no,width=device-width, initial-scale=1.0, maximum-scale=1.0" />	
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta charset="utf-8"/>
-        <link rel="stylesheet" href="./css/style.css?v=070319_1"/>
+        <link rel="stylesheet" href="./css/style.css?v=130319_1"/>
         <link rel="stylesheet" href="./css/normalize.css"/>
+        <!-- Add the slick-theme.css if you want default styling --><!-- carousell plugin css-->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
+        <!-- Add the slick-theme.css if you want default styling --><!-- carousell plugin css-->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/>
     </head>
     <body id="eAboutPg" onload="onLoad()">
         <header id="mainHdr">
@@ -52,7 +56,6 @@
                 </div>
             </div>
             <div id="eSolutionsWrapperWrapper">
-                <div id="ePrevious" onclick="oElementsCarousell.showPrevious()"></div>
                 <div id="eSolutionsWrapper">
                     <a class="solution removeFontSpecialTraits changeOnHover" href="http://otorita-journal.net/" target="journalWnd">
                         <div class="visual journal"></div>
@@ -75,7 +78,6 @@
                         <div class="content">תמיכה מקצועית בעולם הכספים באמצעות מענה אנושי של מומחי אוטוריטה</div>
                     </a>
                 </div>
-                <div id="eNext" onclick="oElementsCarousell.showNext()"></div>
             </div>
             <div id="eSecondStripeInAboutPgWrapperWrapper">
                 <div id="eSecondStripeInAboutPgWrapper" class="stripeContent">
@@ -138,14 +140,15 @@
         <span id="eDetectMobile"></span>
         <script src="./js/jquery-1.10.2.min.js"></script>
         <script src="./js/helper.js?v=070319_1"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script><!-- carousell plugin js-->
         <script>
-            var oElementsCarousell;
             function onLoad(){
                 if (isMobile()){
-                    $("#eSolutionsWrapper>.solution:not(:first-child").addClass("hideMe");
-                    oElementsCarousell = new elementsCarousell("eSolutionsWrapper","solution",1);
-                    document.addEventListener('touchstart',handleTouchStart, false);        
-                    document.addEventListener('touchmove', handleTouchMove, false);
+                    $("#eSolutionsWrapper").slick({
+                        rtl:true,
+                        autoplay:true,
+                        arrows:false,
+                    });
                 }
                 document.querySelector(".playVideoButton").addEventListener("click",function(e){
                     showPlayer();

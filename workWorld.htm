@@ -6,8 +6,12 @@
         <meta name="viewport" content="user-scalable=no,width=device-width, initial-scale=1.0, maximum-scale=1.0" />	
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta charset="utf-8"/>
-        <link rel="stylesheet" href="./css/style.css?v=270219_1"/>
+        <link rel="stylesheet" href="./css/style.css?v=130319_1"/>
         <link rel="stylesheet" href="./css/normalize.css"/>
+        <!-- Add the slick-theme.css if you want default styling --><!-- carousell plugin css-->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
+        <!-- Add the slick-theme.css if you want default styling --><!-- carousell plugin css-->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/>
     </head>
     <body id="eWorkWorldPg" onload="onLoad()">
         <header id="mainHdr">
@@ -91,7 +95,6 @@
                     </div>
             </div>
             <div id="eSolutionsWrapperWrapper">
-                <div id="ePrevious" onclick="oElementsCarousell.showPrevious()"></div>
                 <div id="eSolutionsWrapper">
                     <a class="solution removeFontSpecialTraits changeOnHover" href="https://otorita.net/otorita_run_work/%D7%A2%D7%95%D7%9C%D7%9D-%D7%94%D7%A2%D7%91%D7%95%D7%93%D7%94-%D7%97%D7%A9%D7%91-%D7%A9%D7%9B%D7%A8/" target="accountWnd">
                         <div class="visual pileOfBooksLightGreen"></div>
@@ -114,7 +117,6 @@
                         <h3 class="caption">אוטוריטה לעורך דין</h3>
                     </a>
                 </div>
-                <div id="eNext" onclick="oElementsCarousell.showNext()"></div>
             </div>
             <div id="eFreeTryRegWrapper">
                 <div class="textWrapper">
@@ -185,21 +187,23 @@
         <span id="eDetectMobile"></span>
         <script src="./js/jquery-1.10.2.min.js"></script>
         <script src="./js/helper.js?v=070319_1"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script><!-- carousell plugin js-->
         <script>
             var oElementsCarousell;
             function onLoad(){
                 if (isMobile()){
                     $("#eWrongAndRightStripeInWorldsWrapper>.content>.content,#eProfDeptStripeInWorldsWrapper>.content>.content,#eJournalStripeInWorldsWrapper>.content>.content").addClass("hideMe");
-                    $("#eSolutionsWrapper>.solution:not(:first-child").addClass("hideMe");
                     $("#eWrongAndRightStripeInWorldsWrapper>.content>.caption,#eProfDeptStripeInWorldsWrapper>.content>.caption,#eJournalStripeInWorldsWrapper>.content>.caption").on("click",function(e){
                         $(e.target).siblings(".content").toggleClass("hideMe");
                     });
                     $("#eWrongAndRightStripeInWorldsWrapper>.visual,#eProfDeptStripeInWorldsWrapper>.visual,#eJournalStripeInWorldsWrapper>.visual").on("click",function(e){
                         $(e.target).siblings(".content").find(".content").toggleClass("hideMe");
                     });
-                    oElementsCarousell = new elementsCarousell("eSolutionsWrapper","solution",1);
-                    document.addEventListener('touchstart',handleTouchStart, false);        
-                    document.addEventListener('touchmove', handleTouchMove, false);
+                    $("#eSolutionsWrapper").slick({
+                        rtl:true,
+                        autoplay:true,
+                        arrows:false,
+                     });
                 }
                 setVideoElm(document.querySelector("#eFirstStripeInWorldsPgWrapperWrapper .vid"),"./images/people.mp4");
                 setVideoElm(document.querySelector("#eMainNavInFtrWrapper .vid"),"./images/people.mp4");

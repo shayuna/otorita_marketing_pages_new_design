@@ -1528,10 +1528,9 @@ a.removeFontSpecialTraits{
     #eSolutionsWrapper{
         display:flex;
     }
-    #eSolutionsWrapper>.solution{
+    .solution{
         display:block;
-        margin:1rem auto;
-        width:100%;
+        margin:auto;
     }
     .solution>.visual{
         margin:auto;
@@ -1651,7 +1650,7 @@ a.removeFontSpecialTraits{
     #eAboutPg #eSolutionsWrapper>.solution>.content{
         font-size:1.23rem;
     }
-    #eAboutPg #eSolutionsWrapper>.solution>.visual{
+    #eAboutPg #eSolutionsWrapper .solution>.visual{
         border-radius:50%;
         width:187px;
         height:187px;
@@ -1927,11 +1926,11 @@ a.removeFontSpecialTraits{
             padding:0.7rem 0.5rem;
             margin:0.6rem 0;
         }
-        #eContactOptionsWrapper>.contactOption>.visual{
+        #eContactOptionsWrapper .contactOption>.visual{
             width:187px;
             height:187px;
         }
-        #eContactOptionsWrapper>.contactOption>.content{
+        #eContactOptionsWrapper .contactOption>.content{
             margin:1rem auto 0 auto;
         }
     /* contact us page adaptation to mobile - end */
@@ -2008,29 +2007,7 @@ a.removeFontSpecialTraits{
         display:none;
     }
     /* footer - end */
-
-    /* swipe animation - start */
-    @keyframes swipeInAbstract {
-        from{
-            position:relative;
-            right:-300px;
-        }
-        to{
-            position:relative;
-            right:0;
-        }
-    }
-    .swipeIn{
-        animation:swipeInAbstract 3s; 
-    }
-    .hideMeInSlideShow{
-        position:absolute;
-        z-index:0;
-    }
-    /* swipe animation - end */
-
-
-
+    
     /* helper classes - start */
     .hideInMobile{
         display:none !important;
@@ -2054,4 +2031,3 @@ a.removeFontSpecialTraits{
     }
     /* newsletter reg in footer- end*/
 }
-#efreetryregwrapper

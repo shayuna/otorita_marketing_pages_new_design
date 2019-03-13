@@ -6,7 +6,11 @@
         <meta name="viewport" content="user-scalable=no,width=device-width, initial-scale=1.0, maximum-scale=1.0" />	
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta charset="utf-8"/>
-        <link rel="stylesheet" href="./css/style.css?v=130119_1"/>
+        <!-- Add the slick-theme.css if you want default styling --><!-- carousell plugin css-->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
+        <!-- Add the slick-theme.css if you want default styling --><!-- carousell plugin css-->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"/>
+        <link rel="stylesheet" href="./css/style.css?v=130319_1"/>
         <link rel="stylesheet" href="./css/normalize.css"/>
     </head>
     <body id="eMainPg" onload="onLoad()">
@@ -103,7 +107,6 @@
                 </div>
             </div>
             <div id="eRecommendersWrapperWrapper">
-                <div id="ePrevious" onclick="oElementsCarousell.showPrevious()"></div>
                 <div id="eRecommendersWrapper">
                     <div class="recommendersRow firstRow">
                         <div class="recommender">
@@ -190,7 +193,6 @@
                         </div>
                     </div>
                 </div>
-                <div id="eNext" onclick="oElementsCarousell.showNext()"></div>
             </div>
         </main>
         <footer id="mainFtr">
@@ -243,14 +245,24 @@
         <span id="eDetectMobile"></span>
         <script src="./js/jquery-1.10.2.min.js"></script>
         <script src="./js/helper.js?v=130119_1"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script><!-- carousell plugin js-->
         <script>
             var oElementsCarousell;
             function onLoad(){
                 if (isMobile()){
-                    $("#eRecommendersWrapper .recommender:not(:eq(0))").addClass("hideMe");
-                    oElementsCarousell = new elementsCarousell("eRecommendersWrapper","recommender",1);
-                    document.addEventListener('touchstart',handleTouchStart, false);        
-                    document.addEventListener('touchmove', handleTouchMove, false);
+                    
+                    $(".recommendersRow>.recommender").each(function(ii,elm){
+                        $(elm).remove().appendTo("#eRecommendersWrapper");
+                    })
+                    $(".recommendersRow").each(function(ii,elm){
+                        $(elm).remove();
+                    });
+                    
+                    $("#eRecommendersWrapper").slick({
+                        rtl:true,
+                        autoplay:true,
+                        arrows:false,
+                    });
                 }
                 setVideoElm(document.querySelector("#eFirstStripeInHomePgWrapperWrapper .vid"),"./images/officeRumble.mp4");
                 setVideoElm(document.querySelector("#eMainNavInFtrWrapper .vid"),"./images/officeRumble.mp4");
