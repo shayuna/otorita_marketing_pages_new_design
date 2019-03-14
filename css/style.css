@@ -678,6 +678,7 @@ ul,ol{
 
 #eFreeTryRegWrapper>.formWrapper>.itm::placeholder,#eManagementArea{
     color:#aaa;
+    background-color:white;
 }
 /* free try reg - end */
 
@@ -914,9 +915,8 @@ ul,ol{
 #eSocialNetworksControlPanel{
     margin:1em auto !important;
 }
-#eSocialNetworksControlPanel .itm{
+#eSocialNetworksControlPanel .itm:not(:last-child){
     margin-left:1rem;
-
 }
 #eSocialNetworksControlPanel .itm:hover{
     cursor:pointer;
@@ -1531,6 +1531,10 @@ a.removeFontSpecialTraits{
     .solution{
         display:block;
         margin:auto;
+        margin:1rem auto;
+    }
+    .solution >.caption{
+        margin:0.4rem 0 0 0;
     }
     .solution>.visual{
         margin:auto;
@@ -1876,13 +1880,13 @@ a.removeFontSpecialTraits{
     
     /* work world pg - start */
         #eWorkWorldPg #eWrongAndRightStripeInWorldsWrapperWrapper{
-            order:4;
+            order:6;
         }
         #eWorkWorldPg #eProfDeptStripeInWorldsWrapperWrapper{
-            order:5;
+            order:4;
         }
         #eWorkWorldPg #eJournalStripeInWorldsWrapperWrapper{
-            order:6;
+            order:5;
         }
 
         #eWorkWorldPg #eProfDeptStripeInWorldsWrapper>.content{
@@ -1892,10 +1896,10 @@ a.removeFontSpecialTraits{
             order:1;
         }
         #eWorkWorldPg #eWrongAndRightStripeInWorldsWrapper{
-            margin-top:2rem !important;
-        }
-        #eWorkWorldPg #eJournalStripeInWorldsWrapper{
             margin-bottom:2rem !important;
+        }
+        #eWorkWorldPg #eProfDeptStripeInWorldsWrapperWrapper{
+            margin-top:2rem !important;
         }
     /* work world pg - end */
 
