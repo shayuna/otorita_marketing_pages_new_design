@@ -701,6 +701,9 @@ ul,ol{
     line-height:1.5rem;
     color:black;
 }
+#eContactDetailsWrapper>.textWrapper>.content>.itm.top>.itm{
+    display:inline-block;
+}
 #eContactDetailsWrapper>.formWrapper{
     flex-grow:1;
     display:flex;
@@ -1486,11 +1489,12 @@ a.removeFontSpecialTraits{
     }
     #mainHdr{
         border-bottom:0;
-        margin:0.5rem auto;
-        padding:0;
+        position:fixed;
+        padding:0.5rem 0;
     }
     #eMainHdrSpacer{
-        display:none;
+        height:45px;
+        padding:1rem 0; /* .hdr - padding (top/bottom) 0.5rem + #mainHdr - padding (top/bottom) - 0.5rem #*/
     }
     #eMainNavInFtr{
         flex-direction:column;
@@ -1532,6 +1536,7 @@ a.removeFontSpecialTraits{
         display:block;
         margin:auto;
         margin:1rem auto;
+        outline:0;
     }
     .solution >.caption{
         margin:0.4rem 0 0 0;
@@ -1683,9 +1688,15 @@ a.removeFontSpecialTraits{
         margin:1.9rem 0 0 0;
     }
     #eFirstStripeInWorldsPgWrapper>.content>.caption{
-        font-size:65px !important;
         margin:1.9rem 0 0 0;
     }
+    #eMonetaryWorldPg #eFirstStripeInWorldsPgWrapper>.content>.caption{
+        font-size:4rem !important;
+    }
+    #eWorkWorldPg #eFirstStripeInWorldsPgWrapper>.content>.caption{
+        font-size:3.5rem !important;
+    }
+    
     #eFirstStripeInHomePgWrapper>.content>.content{
         font-size:1.6rem !important;
         margin:0 0 2.1rem 0;
@@ -1821,11 +1832,6 @@ a.removeFontSpecialTraits{
     #eWorkWorldPg #eSolutionsWrapperWrapper{
         order:3;
     }
-    #eMonetaryWorldPg #mainFtr,
-    #eWorkWorldPg #mainFtr,
-    #eContactUsPg #mainFtr{
-        display:none;
-    }
     #eMonetaryWorldPg #eFreeTryRegWrapper>.textWrapper,
     #eWorkWorldPg #eFreeTryRegWrapper>.textWrapper{
         width:100%;
@@ -1930,6 +1936,10 @@ a.removeFontSpecialTraits{
             padding:0.7rem 0.5rem;
             margin:0.6rem 0;
         }
+        #eContactDetailsWrapper>.textWrapper>.content>.itm.top>.itm{
+            display:block;
+        }
+        
         #eContactOptionsWrapper .contactOption>.visual{
             width:187px;
             height:187px;
