@@ -17,7 +17,7 @@
         <header id="mainHdr">
             <nav id="mainNav">
                 <h2 class="hdr"><a class="removeFontSpecialTraits" href="./main.htm"><img src="./images/logo.png"/></a></h2>
-                <ul>
+                <ul id="eMainMenuOnDesktop">
                     <li id="eLoginItm">
                         <div>כניסה</div>
                         <ul id="eLoginOptionsItm">
@@ -37,6 +37,17 @@
                     <li><a class="removeFontSpecialTraits" href="http://otorita-journal.net/" target="journalWnd">כתב - עת</a></li>
                     <li><a class="removeFontSpecialTraits" href="contactUs.htm">צור קשר</a></li>
                 </ul>
+                <ul id="eMainMenuOnMobile" class="minHeight">
+                        <li id="eCloseMainMenuOnMobileBtn" class="itm"><div class="img" onclick="setMainMenuOnMobileState(0)"></div></li>
+                        <li class="itm"><a href="./main.htm">דף הבית</a></li>
+                        <li class="itm"><a href="./about.htm">אודות</a></li>
+                        <li class="itm"><a href="./workWorld.htm">עולם העבודה</a></li>
+                        <li class="itm"><a href="./monetaryWorld.htm">עולם הכספים</a></li>
+                        <li class="itm"><a href="https://otorita.net/academy/%D7%90%D7%95%D7%98%D7%95%D7%A8%D7%99%D7%98%D7%94-%D7%94%D7%90%D7%A7%D7%93%D7%9E%D7%99%D7%94.asp">האקדמיה</a></li>
+                        <li class="itm"><a href="http://otorita-journal.net/">כתב-העת</a></li>
+                        <li class="itm"><a href="./contactUs.htm">צור קשר</a></li>
+                </ul>
+                <div id="eMainMenuBtn" onclick="setMainMenuOnMobileState(1)"></div>
             </nav>
         </header>
         <main>

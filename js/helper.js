@@ -193,3 +193,14 @@ function handleTouchMove(evt) {
     xDown = null;
     yDown = null;                                             
 };
+function setMainMenuOnMobileState(bState){
+  const liMenuClassList=document.getElementById("eMainMenuOnMobile").classList;
+  if (!!bState){
+    liMenuClassList.add("showMobileMenu","maxHeight");
+    liMenuClassList.remove("hideMobileMenu", "minHeight");
+  }
+  else{
+    liMenuClassList.add("hideMobileMenu","minHeight" );
+    liMenuClassList.remove("showMobileMenu","maxHeight");
+  }
+}
