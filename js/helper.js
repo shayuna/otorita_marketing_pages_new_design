@@ -198,9 +198,11 @@ function setMainMenuOnMobileState(bState){
   if (!!bState){
     liMenuClassList.add("showMobileMenu","maxHeight");
     liMenuClassList.remove("hideMobileMenu", "minHeight");
+    $("#eMainNavInFtr>.section").addClass("resetZIndex");/* a hack in order to prevent this section to override the mobile menu*/
   }
   else{
     liMenuClassList.add("hideMobileMenu","minHeight" );
     liMenuClassList.remove("showMobileMenu","maxHeight");
+    $("#eMainNavInFtr>.section").removeClass("resetZIndex");/* a hack in order to prevent this section to override the mobile menu*/
   }
 }

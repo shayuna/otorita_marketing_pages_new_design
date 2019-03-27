@@ -1284,6 +1284,9 @@ a.removeFontSpecialTraits{
 .minHeight{
     height:0;
 }
+.resetZIndex{
+    z-index:0 !important;
+}
 /* helper classes - end */
 
 /* desktop */
@@ -1494,6 +1497,9 @@ a.removeFontSpecialTraits{
     #mainNav,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeContent,#eRecommendersWrapper,#eFreeTryRegWrapper>.formWrapper,#eFirstStripeInHomePgWrapper,#eContactDetailsWrapper,#eContactOptionsWrapper,#eClientsStripeInAboutPgWrapperWrapper,#eMainMenuOnMobile>.itm{
         width:82%;
     }
+    #eSolutionsWrapper,#eRecommendersWrapper,#eContactOptionsWrapper{
+        width:100%;
+    }
     #mainNav{
         justify-content:space-between;
     }
@@ -1507,11 +1513,11 @@ a.removeFontSpecialTraits{
         position:fixed;
         top:0;
         left:0;
-        z-index:1;
         flex-direction: column;
         justify-content:flex-start;
         align-items: center;
         overflow:hidden;
+        z-index:2;
     }
     #eMainMenuOnMobile>.itm:not(#eCloseMainMenuOnMobileBtn){
         padding:2rem 0;
