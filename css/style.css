@@ -1494,9 +1494,19 @@ a.removeFontSpecialTraits{
         display:flex;
         flex-direction:column;
     }
-    #mainNav,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,.stripeContent,#eRecommendersWrapper,#eFreeTryRegWrapper>.formWrapper,#eFirstStripeInHomePgWrapper,#eContactDetailsWrapper,#eContactOptionsWrapper,#eClientsStripeInAboutPgWrapperWrapper,#eMainMenuOnMobile>.itm{
+    #mainNav,#eMainNavInFtr,#eSocialNetworksControlPanel,#eSolutionsWrapper,
+    .stripeContent,#eRecommendersWrapper,#eFreeTryRegWrapper>.formWrapper,
+    #eFirstStripeInHomePgWrapper,#eContactDetailsWrapper,#eContactOptionsWrapper,
+    #eClientsStripeInAboutPgWrapperWrapper,#eMainMenuOnMobile>.itm,
+    #eRecommendersWrapper .recommender>.content,
+    #eRecommendersWrapper .recommender>.caption,
+    #eSolutionsWrapper .solution>.content,
+    #eSolutionsWrapper .solution>.caption,
+    #eContactOptionsWrapper .contactOption>.content{
         width:82%;
     }
+    
+    
     #eSolutionsWrapper,#eRecommendersWrapper,#eContactOptionsWrapper{
         width:100%;
     }
@@ -1625,7 +1635,10 @@ a.removeFontSpecialTraits{
         outline:0;
     }
     .solution >.caption{
-        margin:0.4rem 0 0 0;
+        margin:0.4rem auto 0 auto;
+    }
+    .solution >.content{
+        margin:auto;
     }
     .solution>.visual{
         margin:auto;
@@ -1674,7 +1687,6 @@ a.removeFontSpecialTraits{
     .recommender{
         margin:2rem auto !important;
     }
-    #eRecommendersWrapper .recommender>.content,
     #eRecommendersWrapper .recommender>.caption>.content{
         width:auto;
     }
