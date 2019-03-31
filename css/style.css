@@ -575,8 +575,7 @@ ul,ol{
 }
 #eRecommendersWrapper .recommender>.visual,
 #eRecommendersWrapper .recommender>.content,
-#eRecommendersWrapper .recommender>.caption>.content,
-#eRecommendersWrapper .recommender>.caption>.recommenderName{
+#eRecommendersWrapper .recommender>.caption{
     margin:auto;
 }
 
