@@ -176,7 +176,7 @@ ul,ol{
 }
 .solution .visual.law{
     background-color:#002b4e;
-    background-image:url(../images/law.png);
+    background-image:url(../images/law_white.png);
 }
 .solution .visual.workWorld{
     background-color:#77acc4;
@@ -869,7 +869,7 @@ ul,ol{
 }
 */
 #eMainNavInFtr .itmWrapper{
-    list-style-image: url(../images/arrow_left.png);
+    list-style-image: url(../images/arrow_left_black.png);
     padding-inline-start:20px;
 }
 #eMainPg #eMainNavInFtr .itmWrapper{
